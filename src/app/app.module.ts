@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< Updated upstream
 import { CommonModule} from '@angular/common';
 import { NgModule } from '@angular/core';
 import {Route,RouterModule} from '@angular/router'
@@ -36,10 +37,43 @@ const ROUTES: Route[] = [
   {path:'createclosure',component:CreateclosureComponent},
   {path:'accountclosure',component:AccountclosureComponent}
 ]
+=======
+import {MatButtonModule, MatCheckboxModule,MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,MatFormFieldModule,
+  MatSidenavModule,MatListModule,
+  MatSelectModule,MatOptionModule,MatDatepickerModule } from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import {RouterModule,Routes} from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms';
+
+
+
+
+import { AppComponent } from './app.component';
+import { RepoComponent } from './repo/repo.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { IndividudualcollectComponent } from './individudualcollect/individudualcollect.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+
+const appRoutes:Routes=[
+  {path:'home', component:RepoComponent},
+  {path:'home/individualcollection', component:IndividudualcollectComponent},
+  {path:'home/dashboard', component:DashboardComponent},
+  {path:'' ,redirectTo:'home', pathMatch:'full'}
+ 
+
+
+];
+>>>>>>> Stashed changes
 
 
 @NgModule({
   declarations: [
+<<<<<<< Updated upstream
     AppComponent,
     CreateclientComponent,
     LoginComponent,
@@ -59,6 +93,18 @@ const ROUTES: Route[] = [
     BrowserAnimationsModule,MatDatepickerModule,MatNativeDateModule,
     MatIconModule,MatButtonModule,MatFormFieldModule,MatMenuModule,MatOptionModule,
     MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,MatSelectModule
+=======
+    AppComponent, RepoComponent, NavbarComponent, IndividudualcollectComponent, DashboardComponent
+  ],
+  imports: [
+    BrowserModule,MatButtonModule, MatCheckboxModule,MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,MatFormFieldModule,MatSidenavModule,
+    MatListModule,MatSelectModule,MatOptionModule,MatDatepickerModule,
+    ReactiveFormsModule,BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes)
+>>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent]

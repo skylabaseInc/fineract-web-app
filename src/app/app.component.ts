@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+<<<<<<< Updated upstream
      
   }
 
+=======
+  title = 'app';
+
+ 
+}
+>>>>>>> Stashed changes

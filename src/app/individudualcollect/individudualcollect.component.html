@@ -1,0 +1,32 @@
+<mat-card class="example-card">
+    <mat-form-field class="fineract-form">
+        <mat-select placeholder="Select office" [formControl]="animalControl" required>
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let animal of animals" [value]="animal">
+            {{animal.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="animalControl.hasError('required')">Please select office </mat-error>
+        <mat-hint>{{animalControl.value?.sound}}</mat-hint>
+      </mat-form-field>
+      <br/>
+
+      
+  <br/>
+
+  <mat-form-field  class="fineract-form">
+    <mat-select placeholder="staff">
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{ food.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br/>
+
+  <button mat-button color="primary">submit<mat-icon>send</mat-icon>
+  </button>
+  <br/>
+  <button mat-button class="fineract-button">Cancel</button>
+
+</mat-card>
+  
