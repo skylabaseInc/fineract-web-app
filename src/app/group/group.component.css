@@ -1,0 +1,42 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+    margin-left: 5%;
+  
+  }
+
+  .example-container1{
+    max-height: 500px;
+    min-width: 300px;
+    margin-left: 8%;
+
+  }
+
+  .example-full-width{
+    width:360px;
+  }
+
+  .example-full-width1{
+    width:420px;
+  }
+
+  .header{
+    margin-top: 4%;
+     margin-left: 9%;
+  
+  }
+  
+  .mat-table {
+    max-width:1000px;
+    max-height: 500px;
+    margin-left: 5%;
+  }
+  
+  .btn{
+    margin-left:85%;
+    margin-top:5px;
+    size:13%;
+    width:13%;
+  }

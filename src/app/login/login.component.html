@@ -1,0 +1,89 @@
+<div class="example-container2">
+  <p>change language:
+    <mat-form-field>
+      <mat-select placeholder="English">
+        <mat-option *ngFor="let language of languages" [value]="language.value">
+          {{ language.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+</div>
+
+<div class="mifos">
+  <h3>Fineract</h3>
+</div>
+
+
+<!--login form here -->
+<div class="example-container">
+  <form [formGroup]="form">
+    <mat-input-container class="full-width-input">
+      <input matInput placeholder="User" formControlName="userName" required>
+    </mat-input-container>
+    <br>
+
+    <mat-input-container class="full-width-input">
+      <input matInput type="password" placeholder="Password" formControlName="password" required>
+    </mat-input-container>
+    <br>
+
+    <button mat-raised-button color="primary" type="submit" (click)="onLoginClick()">Login</button>
+  </form>
+</div>
+
+
+
+<br>
+<br>
+<br>
+
+<div>
+  <mat-card>
+    <p class="center-align">RESOURCES</p>
+    <p class="center-align">
+      <a href="#"> User Manual</a>
+      <br>
+      <a href="#">Functional Specifications</a>
+      <br>
+      <a href="#"> Developer Zone</a>
+    </p>
+  </mat-card>
+
+  <mat-card>
+    <h6 class="center-align">COMMUNITY</h6>
+    <p class="center-align">
+      <a href="#">User Group</a>
+      <br>
+      <a href="#">Developer Group</a>
+      <br>
+      <a href="#">IRC</a>
+    </p>
+  </mat-card>
+
+  <mat-card>
+    <h6 class="center-align">CONTRIBUTE</h6>
+    <p class="center-align">
+      <a href="#">Key design principles</a>
+      <br>
+      <a href="#">Working with code</a>
+      <br>
+      <a href="#"> Donate</a>
+    </p>
+  </mat-card>
+</div>
+
+<br>
+<br>
+<div class="example-container1">
+  <p>Mifos X is designed by the
+    <a href="#"> Mifos Initiative</a>.
+    <a href="#">A global community </a>that aims to speed</p>
+  <p>the elimination of poverty by enabling Organizations to more effectively and efficiently deliver </p>
+  <p>responsible financial services to the world’s poor and unbanked </p>
+  <p>Sounds interesting?
+    <a href="#">Get involved!</a>
+  </p>
+  <p>Version 17.07.01.RELEASE </p>
+  <p>Mifos X is upto date</p>
+</div>
