@@ -9,7 +9,6 @@ MatMenuModule,MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,
 MatSelectModule,MatOptionModule,MatDatepickerModule,MatNativeDateModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { CreateclientComponent } from './createclient/createclient.component';
 import { LoginComponent } from './login/login.component';
 import { ClientComponent } from './client/client.component';
 import { NotificationComponent } from './notification/notification.component';
@@ -19,6 +18,8 @@ import { CreatecenterComponent } from './createcenter/createcenter.component';
 import { CreategroupComponent } from './creategroup/creategroup.component';
 import { CreateclosureComponent } from './createclosure/createclosure.component';
 import { AccountclosureComponent } from './accountclosure/accountclosure.component';
+import { CreateclientComponent } from './createclient/createclient.component';
+import { AccountingComponent } from './accounting/accounting.component';
 
 
 
@@ -34,14 +35,14 @@ const ROUTES: Route[] = [
   {path:'createcenter',component:CreatecenterComponent},
   {path:'creategroup',component:CreategroupComponent},
   {path:'createclosure',component:CreateclosureComponent},
-  {path:'accountclosure',component:AccountclosureComponent}
+  {path:'accountclosure',component:AccountclosureComponent},
+  {path:'accounting',component:AccountingComponent}
 ]
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateclientComponent,
     LoginComponent,
     ClientComponent,
     NotificationComponent,
@@ -50,7 +51,9 @@ const ROUTES: Route[] = [
     CreatecenterComponent,
     CreategroupComponent,
     CreateclosureComponent,
-    AccountclosureComponent
+    AccountclosureComponent,
+    CreateclientComponent,
+    AccountingComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES),

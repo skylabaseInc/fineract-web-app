@@ -1,123 +1,124 @@
 <div class="example-container">
 
-  <p>
-    <a [routerLink]="['/client']">Clients</a>
-    <a>/Create Client</a>
-  </p>
-
-
-  <p>
-    <mat-icon>arrow_forward</mat-icon>
-    <mat-icon>panorama_fish_eye</mat-icon>
-    <a>Create Client</a>
-  </p>
-
-
-  <h3>Create Clients</h3>
-  <div class="example-container1 mat-elevation-z2">
-    <form class="example-form" [formGroup]="form" ngSubmit="onSubmit()" novalidate>
-      <mat-form-field class="example-full-width">
-        <label>Office:</label>
-        <mat-select placeholder="Head Office">
-          <mat-option value="option">Option</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <mat-form-field class="example-full-width">
-        <label>staff:</label>
-        <mat-select placeholder="Staff">
-          <mat-option value="option">Option</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <br>
-
-      <mat-form-field class="example-full-width">
-        <mat-select placeholder="Select legal form">
-          <mat-option *ngFor="let form of forms" [value]="form.value">
-            {{ form.viewValue }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <br>
-
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Firstname" formControlName="firstname" required>
-      </mat-form-field>
-      <br>
-
-      <mat-form-field class="example-full-width">
-        <label>Middle name</label>
-        <input matInput formControlName="middlename">
-      </mat-form-field>
-      <mat-checkbox>Is Staff</mat-checkbox>
-      <br>
-
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Lastname" formControlName="lastname" required>
-      </mat-form-field>
-      <br>
-
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Mobile#" formControlName="mobile" type="tel">
-      </mat-form-field>
-      <br>
-
-      <mat-form-field class="example-full-width">
-        <input matInput [matDatepicker]="picker" placeholder="Date of birth">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
-      </mat-form-field>
-
-      <mat-form-field class="example-full-width">
-        <mat-select placeholder="Gender">
-          <mat-option *ngFor="let gender of genders" [value]="gender.value">
-            {{ gender.viewValue }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <br>
-
-      <mat-form-field class="example-full-width">
-        <mat-select placeholder="--Select Client Type--">
-          <mat-option *ngFor="let client of clients" [value]="client.value">
-            {{ client.viewValue }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <mat-form-field class="example-full-width">
-        <mat-select placeholder="select client classification">
-          <mat-option *ngFor="let classif of classifs" [value]="classif.value">
-            {{ classif.viewValue }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <br>
-
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="External Id" formControlName="mobile#" type="number">
-      </mat-form-field>
-      <br>
-
-      <mat-checkbox>Active</mat-checkbox>
-      <br>
-
-      <mat-form-field class="example-full-width">
-        <input matInput [matDatepicker]="picker" placeholder="Submitted on">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
-      </mat-form-field>
-      <br>
-
-      <div class="example-container2">
-        <button mat-button mat-raised-button>
-          Cancel
-        </button>
-
-        <button mat-button mat-raised-button color="primary">
-          Submit
-        </button>
-      </div>
-
-    </form>
-  </div>
+    <p>
+      <a [routerLink]="['/client']">Clients</a>
+      <a>/Create Client</a>
+    </p>
+  
+  
+    <p>
+      <mat-icon>arrow_forward</mat-icon>
+      <mat-icon>panorama_fish_eye</mat-icon>
+      <a>Create Client</a>
+    </p>
+  
+  
+    <h3>Create Clients</h3>
+    <div class="example-container1 mat-elevation-z2">
+      <form class="example-form" [formGroup]="form" ngSubmit="onSubmit()" novalidate>
+        <mat-form-field class="example-full-width">
+          <label>Office:</label>
+          <mat-select placeholder="Head Office">
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <label>staff:</label>
+          <mat-select placeholder="Staff">
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+  
+        <mat-form-field class="example-full-width">
+          <mat-select placeholder="Select legal form">
+            <mat-option *ngFor="let form of forms" [value]="form.value">
+              {{ form.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Firstname" formControlName="firstname" required>
+        </mat-form-field>
+        <br>
+  
+        <mat-form-field class="example-full-width">
+          <label>Middle name</label>
+          <input matInput formControlName="middlename">
+        </mat-form-field>
+        <mat-checkbox>Is Staff</mat-checkbox>
+        <br>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Lastname" formControlName="lastname" required>
+        </mat-form-field>
+        <br>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Mobile#" formControlName="mobile" type="tel">
+        </mat-form-field>
+        <br>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput [matDatepicker]="picker" placeholder="Date of birth">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <mat-select placeholder="Gender">
+            <mat-option *ngFor="let gender of genders" [value]="gender.value">
+              {{ gender.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+  
+        <mat-form-field class="example-full-width">
+          <mat-select placeholder="--Select Client Type--">
+            <mat-option *ngFor="let client of clients" [value]="client.value">
+              {{ client.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <mat-select placeholder="select client classification">
+            <mat-option *ngFor="let classif of classifs" [value]="classif.value">
+              {{ classif.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="External Id" formControlName="id" type="number">
+        </mat-form-field>
+        <br>
+  
+        <mat-checkbox>Active</mat-checkbox>
+        <br>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput [matDatepicker]="picker" placeholder="Submitted on">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+        </mat-form-field>
+        <br>
+  
+        <div class="example-container2">
+          <button mat-button mat-raised-button>
+            Cancel
+          </button>
+  
+          <button mat-button mat-raised-button color="primary">
+            Submit
+          </button>
+        </div>
+  
+      </form>
+    </div>
+  

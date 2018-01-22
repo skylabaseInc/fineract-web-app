@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit} from '@angular/core'
 import {MatTableDataSource} from '@angular/material';
 import {RouterLink } from '@angular/router'
 
@@ -15,7 +15,9 @@ export class AccountclosureComponent implements OnInit {
 
   ngOnInit() {
   }
-  export interface Element {
+}
+
+ export interface Element {
     office: string;
     account:number;
     comment:string;
@@ -25,5 +27,5 @@ export class AccountclosureComponent implements OnInit {
   const ELEMENT_DATA: Element[] = [
     {office:'labase',account:2018,comment:'#########@@',close:'me'}]
 
-
+  
 
