@@ -5,20 +5,23 @@
 
 <div class="example-container mat-elevation-z2">
 
-  <p class="account">Accounting Closures</p>
+  <p class="account">Accounting Closures
     <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/createclosure']">
       <mat-icon>add</mat-icon>
       Create Closure</button>
-
+  </p>
   <p>Filter By Office</p>
-  <mat-form-field class="example-full-width">
-    <mat-select placeholder="All Offices">
-      <mat-option value="option">Head office</mat-option>
-    </mat-select>
-  </mat-form-field>
 
-  <button mat-button mat-raised-button color="primary" class="btn2">
-    Submit</button>
+  <p>
+    <mat-form-field class="example-full-width">
+      <mat-select placeholder="All Offices">
+        <mat-option value="option">Head office</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-button mat-raised-button color="primary" class="btn2">
+      Submit</button>
+  </p>
 
   <div>
     <mat-table #table [dataSource]="dataSource">

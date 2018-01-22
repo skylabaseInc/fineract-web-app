@@ -10,6 +10,7 @@
 
   .example-full-width{
     width:300px;
+    margin-left:1%;
   }
   .accountclosure{
     margin-top: 4%;
@@ -22,13 +23,14 @@
     max-height: 500px;
     margin-left: 3%;
   }
-.btn{
- margin-left: 80%;
- width:13%;
-}
-.account .btn{
-    display:inline-block;
-}
+  .btn{
+    margin-left:70%;
+  }
+  .account{
+    margin-left:2%;
+  }
+
 .btn2{
     width:2px;
+    margin-left: 30%;
 }
