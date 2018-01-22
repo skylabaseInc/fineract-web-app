@@ -1,0 +1,16 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+    margin-left: 14%;
+    margin-top:5%;
+    margin-right:3%;
+
+  }
+  
+  .mat-table {
+    max-width:1000px;
+    max-height: 500px;
+    margin-left: 2%;
+  }

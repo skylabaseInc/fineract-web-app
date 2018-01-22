@@ -1,0 +1,28 @@
+.example-container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 40%;
+  }
+
+  .example-form{
+    padding-left: 5%;
+}
+
+.center{
+    padding-left: 10%;
+}
+.example-container2{
+  padding-left: 30%;
+}
