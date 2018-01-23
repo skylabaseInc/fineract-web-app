@@ -12,7 +12,6 @@ MatSelectModule,MatOptionModule,MatDatepickerModule,MatNativeDateModule,
 MatToolbarModule,MatSidenavModule,MatListModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { CreateclientComponent } from './createclient/createclient.component';
 import { LoginComponent } from './login/login.component';
 import { ClientComponent } from './client/client.component';
 import { NotificationComponent } from './notification/notification.component';
@@ -26,6 +25,9 @@ import { RepoComponent } from './repo/repo.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IndividudualcollectComponent } from './individudualcollect/individudualcollect.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CreateclientComponent } from './createclient/createclient.component';
+import { AccountingComponent } from './accounting/accounting.component';
+
 
 
 
@@ -45,8 +47,9 @@ const ROUTES: Route[] = [
   {path:'home/individualcollection', component:IndividudualcollectComponent},
   {path:'home/dashboard', component:DashboardComponent},
   {path:'navbar', component:NavbarComponent},
-  {path:'home',component:RepoComponent}
+  {path:'home',component:RepoComponent},
 
+  {path:'accounting',component:AccountingComponent}
 ]
 
 
@@ -64,7 +67,6 @@ const ROUTES: Route[] = [
 @NgModule({
   declarations: [
     AppComponent,
-    CreateclientComponent,
     LoginComponent,
     ClientComponent,
     NotificationComponent,
@@ -77,7 +79,10 @@ const ROUTES: Route[] = [
     RepoComponent,
     NavbarComponent, 
     IndividudualcollectComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateclientComponent,
+    AccountingComponent
+
   ],
   imports: [
     RouterModule.forRoot(ROUTES),
