@@ -1,0 +1,25 @@
+.fineract-button{
+    padding-left:70%;
+}
+.fineract-card1{
+    
+    float: left;
+    max-width: 160px;
+    
+}
+.fineract-card2{
+    
+    float:center
+    
+    
+
+}
+.fineract-card3{
+    
+    align-self: flex-end;
+    
+}
+.fineract-div{
+    display:inline-block;
+    
+}
