@@ -14,19 +14,21 @@
 
 
 <mat-card class="example-card">
-   <div>
-        <h3>
-          <strong>Welcome, Mifos</strong></h3>
-          <ul id="list"><li>
-          <a [routerLink]="['/home/dashboard']">
-            <button mat-button >Dashboard</button></a>
-            </li>
+   
+        <h2>
+          <strong>Welcome, Mifos</strong></h2>
 
-            <li>
-            <a [routerLink]="['/home']">
-                <button mat-button >Home</button></a>
-            </li>
-        </ul>
+          <div class="alist">
+          
+          <a [routerLink]="['/home']" class="alist1">
+            <button mat-raised-button color="primary">Home</button></a>
+            
+
+            
+            <a [routerLink]="['/home/Dashboard']" class="alist2">
+                <button mat-raised-button color="primary">Dashboard</button></a>
+            
+        
         </div>
           
 
@@ -35,34 +37,29 @@
           
             
               <div>
-                  <input matInput placeholder="State">
+                  <input matInput placeholder="Search activities" class="fineract-search">
                   </div>
                 
             
           
 
-          <h3 class="para-mine"> you can navigate your way through mifosX using:</h3>
+          <p class="fineract-para"> you can navigate your way through mifosX using:</p>
+              
+              <div class="fineract-div">
+              <mat-icon>arrow_back</mat-icon>the shortcuts to the left &nbsp;
+               <mat-icon>arrow_upward</mat-icon>the menu at the top &nbsp;
+               <mat-icon>arrow_upward</mat-icon>the search tool at the top right
+          </div>
          
     
           
         </mat-card>
     
 
-      
 
+        <p class="fineract-para2">Realise version: 17.07.01.RELEASE | mifosX Release date: 4/Jul/2017</p>
 
-
-        <p class="param2-mine">Realise version: 17.07.01.RELEASE | mifosX Release date: 4/Jul/2017</p>
-
-      
-
-
-
-     
-
-    
-
-  
+       
 </body>
 
 </html>

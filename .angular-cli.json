@@ -21,18 +21,16 @@
       "styles": [
         "styles.css"
         
+
       ],
-      "scripts": [
-       
-        "../node_modules/jquery/dist/jquery.min.js"
-      ],
-<<<<<<< Updated upstream
+      
+
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js"
         
       ],
-=======
->>>>>>> Stashed changes
+
+
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
