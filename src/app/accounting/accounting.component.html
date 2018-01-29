@@ -1,7 +1,81 @@
 <div class="example-container">
   <h3>Accounting</h3>
   <hr>
-  <mat-list>
-    
-  </mat-list>
+  <mat-card class="card">
+    <mat-list>
+      <mat-list-item>
+        <a [routerLink]="['/frequentpostings']">
+          <mat-icon>forward</mat-icon>Frequent Postings
+          <br> These are predefined postings
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a  [routerLink]="['/addjournalentry']">
+          <mat-icon>add</mat-icon>Add Journal Entries
+          <br> Manual journal entry transactions recorded in a journal
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/searchjournal']">
+          <mat-icon>search</mat-icon>Search Journal Entries
+          <br> Advance search option for journal entries
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/financialactivity']">
+          <mat-icon>shuffle</mat-icon>Accounts Linked to Financial Activities
+          <br> List of Financial Activity and GL Accounnt Mappings
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/migrateopening']">
+          <mat-icon>currency</mat-icon>Migrate Opening Balances(Office-wise)
+          <br> Set or update office-level opening balances for GL Accounts
+        </a>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-list>
+      <mat-list-item>
+        <a [routerLink]="['/chartaccount']">
+          <mat-icon></mat-icon>Chart of Accounts
+          <br> List of the accounts used by the organisation
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/accountclosure']">
+          <mat-icon>folder</mat-icon>Closing Entries
+          <br> Journal Entries made at the end of the accounting period
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/accountingrules']">
+          <mat-icon>lock</mat-icon>Accounting Rules
+          <br> Lists all Accounting rules
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/accruals']">
+          <mat-icon>settings</mat-icon>Accruals
+          <br> Accrues income,expenses and liabilities as on the provided date
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/provisioningentry']">
+          <mat-icon>settings</mat-icon>Provisioning Entries
+          <br> Create Provisioning Entries
+        </a>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
 </div>

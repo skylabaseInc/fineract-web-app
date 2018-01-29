@@ -1,0 +1,59 @@
+<p class="provisioning">
+    <a [routerLink]="['/accounting']">Accounting</a>
+    <a>/View Provisioning Entry</a>
+  </p>
+
+  <div class="example-container mat-elevation-z2">
+    <p class="line"> 
+    
+    <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/createprovisioning']">
+    <mat-icon>add</mat-icon>Create Provisioning Entry</button>
+    </p><br>
+
+    <div>
+        <mat-table #table [dataSource]="dataSource">
+      
+          <ng-container matColumnDef="by">
+            <mat-header-cell *matHeaderCellDef>Created By</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.by}} </mat-cell>
+          </ng-container>
+      
+        
+          <ng-container matColumnDef="on">
+            <mat-header-cell *matHeaderCellDef>Created On</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.on}} </mat-cell>
+          </ng-container>
+      
+          
+          <ng-container matColumnDef="journal">
+            <mat-header-cell *matHeaderCellDef>Journal Entry Created</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.journal}} </mat-cell>
+          </ng-container>
+    
+          <ng-container matColumnDef="report">
+            <mat-header-cell *matHeaderCellDef>View Report</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.report}} </mat-cell>
+          </ng-container>
+    
+          <ng-container matColumnDef="recreate">
+              <mat-header-cell *matHeaderCellDef>Recreate Provisioning</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.recreate}} </mat-cell>
+            </ng-container>
+      
+            <ng-container matColumnDef="view">
+              <mat-header-cell *matHeaderCellDef>View Journal Entries</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.view}} </mat-cell>
+            </ng-container>
+      
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    
+      </div>
+      <br>
+      <button mat-button mat-raised-button color="primary" class="btn2">
+        <mat-icon>arrow_back</mat-icon>previous</button>
+
+      <button mat-button mat-raised-button color="primary" class="btn3">
+       next<mat-icon>arrow_forward</mat-icon> </button>  
+  </div>

@@ -1,0 +1,18 @@
+<p class="accruals">
+    <a [routerLink]="['/accounting']">Accounting</a>
+    <a>/Periodic Accrual Accounting</a>
+  </p>
+
+  <div class="example-container mat-elevation-z2">
+    <h3>Execute Periodic Accrual Accounting</h3>
+    <hr>
+    <mat-form-field class="example-full-width">
+        <input matInput [matDatepicker]="picker" placeholder="Accrue Till">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+      </mat-form-field>
+      <br>
+
+      <button mat-button mat-raised-button class="btn">cancel</button>
+      <button mat-button mat-raised-button color="primary">Run Periodic Accrual</button>
+  </div>

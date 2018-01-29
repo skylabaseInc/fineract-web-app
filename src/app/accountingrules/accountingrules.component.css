@@ -1,0 +1,23 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+    margin-left: 10%;
+  }
+  .mat-table {
+    max-width:1000px;
+    max-height: 500px;
+    margin-left: 3%;
+  }
+
+  .accountingrules{
+    margin-top: 4%;
+     margin-left:8%;
+  
+  }
+  .btn{
+    margin-left:82%;
+    width:10%;
+    
+  }

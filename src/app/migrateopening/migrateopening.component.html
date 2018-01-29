@@ -1,0 +1,23 @@
+<p class="openingbalance">
+  <a [routerLink]="['/accounting']">Accounting</a>
+  <a>/Migrate Opening Balances</a>
+</p>
+<div class="example-container mat-elevation-z2">
+  <h3> Opening Balances</h3>
+  <hr>
+  <mat-form-field class="example-full-width" required>
+    <mat-select placeholder="select Office">
+      <mat-option value="option">Head Office</mat-option>
+      <mat-option value="option">Select Office</mat-option>
+    </mat-select>
+  </mat-form-field> <span>&nbsp;&nbsp;</span>
+  
+  <mat-form-field class="example-full-width">
+    <mat-select placeholder="Currency">
+      <mat-option value="option">US Dollar ($)</mat-option>
+    </mat-select>
+  </mat-form-field><span>&nbsp;&nbsp;</span>
+  
+  <button mat-button mat-raised-button color="primary" class="btn">Search Data</button>
+ 
+</div>

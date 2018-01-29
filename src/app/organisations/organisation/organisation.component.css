@@ -8,8 +8,13 @@
     width:45%;
 }
 div mat-card{
-    display:inline-block
+    display:inline-block;
+    vertical-align: top;
+    margin-top: 2%;
 }
 a {
     font-size: 14px;
+}
+.card2{
+    margin-left: 2%;
 }

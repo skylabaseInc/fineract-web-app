@@ -1,0 +1,57 @@
+<p class="chartaccount">
+  <a [routerLink]="['/accounting']">Accounting</a>
+  <a>/ Chart of Accounts</a>
+</p>
+<div class="example-container mat-elevation-z2">
+  <p class="header">Chart of Accounts
+    <button mat-button mat-raised-button color="primary" class="btn"[routerLink]="['/treeview']">Tree View</button>
+    <button mat-button mat-raised-button color="primary" [routerLink]="['/create-gl']">
+      <mat-icon>add</mat-icon>Add Account</button>
+  </p>
+
+  <mat-form-field class="example-full-width">
+    <input type="text" placeholder="Filter by Account/GL code/Account type" matInput>
+  </mat-form-field>
+
+  <div>
+    <mat-table #table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="account">
+        <mat-header-cell *matHeaderCellDef>Account</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.account}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="code">
+        <mat-header-cell *matHeaderCellDef>GL code</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.code}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="type">
+        <mat-header-cell *matHeaderCellDef>Account type</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="disable">
+        <mat-header-cell *matHeaderCellDef>Disabled?</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.disable}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="entries">
+        <mat-header-cell *matHeaderCellDef>Manual Entries Allowed</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.entries}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="used">
+        <mat-header-cell *matHeaderCellDef>Used As</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.used}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+  </div>
+
+</div>
