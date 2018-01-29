@@ -8,8 +8,9 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import{ BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule,MatButtonModule,MatFormFieldModule,
 MatMenuModule,MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,
+MatToolbarModule,MatSidenavModule,MatListModule,
 MatSelectModule,MatOptionModule,MatDatepickerModule,MatNativeDateModule,
-MatToolbarModule,MatSidenavModule,MatListModule} from '@angular/material';
+MatDividerModule,MatAutocompleteModule,MatRadioModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -27,6 +28,21 @@ import { IndividudualcollectComponent } from './individudualcollect/individudual
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateclientComponent } from './createclient/createclient.component';
 import { AccountingComponent } from './accounting/accounting.component';
+import { AccountingrulesComponent } from './accountingrules/accountingrules.component';
+import { MigrateopeningComponent } from './migrateopening/migrateopening.component';
+import { ProvisioningentryComponent } from './provisioningentry/provisioningentry.component';
+import { CreateprovisioningComponent } from './createprovisioning/createprovisioning.component';
+import { FinancialactivityComponent } from './financialactivity/financialactivity.component';
+import { AddfinancialactivityComponent } from './addfinancialactivity/addfinancialactivity.component';
+import { AccrualsComponent } from './accruals/accruals.component';
+import { SearchjournalComponent } from './searchjournal/searchjournal.component';
+import { FrequentpostingsComponent } from './frequentpostings/frequentpostings.component';
+import { ChartaccountComponent } from './chartaccount/chartaccount.component';
+import { CreateGlComponent } from './create-gl/create-gl.component';
+import { TreeviewComponent } from './treeview/treeview.component';
+import { AddjournalentryComponent } from './addjournalentry/addjournalentry.component';
+import { AddruleComponent } from './addrule/addrule.component';
+import { OrganisationComponent } from './organisations/organisation/organisation.component';
 
 
 
@@ -35,7 +51,7 @@ import { AccountingComponent } from './accounting/accounting.component';
 
 const ROUTES: Route[] = [
   {path:'',component:LoginComponent},
-  { path: 'createclient', component: CreateclientComponent},
+  {path: 'createclient', component: CreateclientComponent},
   {path:'client',component:ClientComponent},
   {path:'notification',component:NotificationComponent},
   {path:'group',component:GroupComponent},
@@ -48,21 +64,26 @@ const ROUTES: Route[] = [
   {path:'home/dashboard', component:DashboardComponent},
   {path:'navbar', component:NavbarComponent},
   {path:'home',component:RepoComponent},
+  {path:'accounting',component:AccountingComponent},
+  {path:'accounting',component:AccountingComponent},
+  {path:'accountingrules',component:AccountingrulesComponent},
+  {path:'migrateopening',component:MigrateopeningComponent},
+  {path:'provisioningentry',component:ProvisioningentryComponent},
+  {path:'createprovisioning',component:CreateprovisioningComponent},
+  {path:'financialactivity',component:FinancialactivityComponent},
+  {path:'addfinancialactivity',component:AddfinancialactivityComponent},
+  {path:'accruals',component:AccrualsComponent},
+  {path:'searchjournal',component:SearchjournalComponent},
+  {path:'frequentpostings',component:FrequentpostingsComponent},
+  {path:'chartaccount',component:ChartaccountComponent},
+  {path:'create-gl',component:CreateGlComponent},
+  {path:'treeview',component:TreeviewComponent},
+  {path:'addjournalentry',component:AddjournalentryComponent},
+  {path:'addrule',component:AddruleComponent},
+  {path:'organisation',component:OrganisationComponent}
 
-  {path:'accounting',component:AccountingComponent}
+
 ]
-
-
-
-
-
-
-
-
- 
-
-
-
 
 @NgModule({
   declarations: [
@@ -81,8 +102,23 @@ const ROUTES: Route[] = [
     IndividudualcollectComponent,
     DashboardComponent,
     CreateclientComponent,
-    AccountingComponent
-
+    AccountingComponent,
+    AccountingComponent,
+    AccountingrulesComponent,
+    MigrateopeningComponent,
+    ProvisioningentryComponent,
+    CreateprovisioningComponent,
+    FinancialactivityComponent,
+    AddfinancialactivityComponent,
+    AccrualsComponent,
+    SearchjournalComponent,
+    FrequentpostingsComponent,
+    ChartaccountComponent,
+    CreateGlComponent,
+    TreeviewComponent,
+    AddjournalentryComponent,
+    AddruleComponent,
+    OrganisationComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES),
@@ -91,8 +127,9 @@ const ROUTES: Route[] = [
     BrowserAnimationsModule,MatDatepickerModule,MatNativeDateModule,
     MatIconModule,MatButtonModule,MatFormFieldModule,MatMenuModule,MatOptionModule,
     MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,MatSelectModule,
-    MatToolbarModule,MatSidenavModule,MatListModule
-
+    MatToolbarModule,MatSidenavModule,MatListModule, MatCheckboxModule,MatInputModule,
+    MatTableModule,MatCardModule,MatSelectModule,MatListModule,MatDividerModule,
+    MatAutocompleteModule,MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

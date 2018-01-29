@@ -1,0 +1,27 @@
+<p class="financialactivity">
+  <a [routerLink]="['/accounting']">Accounting</a>
+  <a>/Financial Activity Mappings</a>
+</p>
+<div class="example-container mat-elevation-z2">
+  <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/addfinancialactivity']">
+    <mat-icon>add</mat-icon>Define New Mapping</button>
+  <br>
+
+  <div>
+    <mat-table #table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="financial">
+        <mat-header-cell *matHeaderCellDef>Financial Activity</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.financial}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="account">
+        <mat-header-cell *matHeaderCellDef>Account Name</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.account}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>

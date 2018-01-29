@@ -1,0 +1,49 @@
+<p class="accountingrules">
+  <a [routerLink]="['/accounting']">Accounting</a>
+  <a>/Accounting Rules</a>
+</p>
+<div class="example-container mat-elevation-z2">
+  <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/addrule']">
+    <mat-icon>add</mat-icon>Add Rule</button>
+
+  <div>
+    <mat-table #table [dataSource]="dataSource">
+
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="office">
+        <mat-header-cell *matHeaderCellDef>Office</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.office}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="debittag">
+        <mat-header-cell *matHeaderCellDef>Debit Tags</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.debittag}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="debitaccount">
+        <mat-header-cell *matHeaderCellDef>Debit Account</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.debitaccount}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="credittag">
+        <mat-header-cell *matHeaderCellDef>Credit Tags</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.credittag}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="creditaccount">
+        <mat-header-cell *matHeaderCellDef>Credit Accounts</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.creditaccount}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+
+</div>
