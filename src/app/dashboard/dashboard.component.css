@@ -1,25 +1,37 @@
-.fineract-button{
+
+.fineract-div{
     padding-left:70%;
-}
-.fineract-card1{
-    
-    float: left;
-    max-width: 160px;
+    display:inline;
     
 }
-.fineract-card2{
+mat-form-field{
+    size: 100%;
+}
+
+
+
+.fineract-card,.fineract-card2,.fineract-card3{
     
-    float:center
-    
-    
+    width:25%;
+    display:inline-block;
+    vertical-align:top;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.fineract-card4{
+    width:50%;
 
 }
-.fineract-card3{
-    
-    align-self: flex-end;
-    
+.fineract-card5{
+    width:25%;
 }
-.fineract-div{
+.fineract-card4,.fineract-card5{
     display:inline-block;
-    
+    vertical-align:top;
+    margin-left: 30px;
+    margin-top: 30px;
+    height:300px;
+}
+.example-card{
+    margin:50px;
 }

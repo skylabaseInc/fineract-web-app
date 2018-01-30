@@ -10,7 +10,11 @@ import {MatIconModule,MatButtonModule,MatFormFieldModule,
 MatMenuModule,MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,
 MatToolbarModule,MatSidenavModule,MatListModule,
 MatSelectModule,MatOptionModule,MatDatepickerModule,MatNativeDateModule,
+<<<<<<< Updated upstream
 MatDividerModule,MatAutocompleteModule,MatRadioModule} from '@angular/material';
+=======
+MatToolbarModule,MatSidenavModule,MatListModule,MatTabsModule} from '@angular/material';
+>>>>>>> Stashed changes
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -28,6 +32,7 @@ import { IndividudualcollectComponent } from './individudualcollect/individudual
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateclientComponent } from './createclient/createclient.component';
 import { AccountingComponent } from './accounting/accounting.component';
+<<<<<<< Updated upstream
 import { AccountingrulesComponent } from './accountingrules/accountingrules.component';
 import { MigrateopeningComponent } from './migrateopening/migrateopening.component';
 import { ProvisioningentryComponent } from './provisioningentry/provisioningentry.component';
@@ -43,6 +48,26 @@ import { TreeviewComponent } from './treeview/treeview.component';
 import { AddjournalentryComponent } from './addjournalentry/addjournalentry.component';
 import { AddruleComponent } from './addrule/addrule.component';
 import { OrganisationComponent } from './organisations/organisation/organisation.component';
+=======
+import { AllreportsComponent } from './reports/allreports/allreports.component';
+import { ClientsComponent } from './reports/clients/clients.component';
+import { LoansComponent } from './reports/loans/loans.component';
+import { SavingsComponent } from './reports/savings/savings.component';
+import { XbrlComponent } from './reports/xbrl/xbrl.component';
+import { FundsComponent } from './reports/funds/funds.component';
+import { ReportsaccountingComponent } from './reports/reportsaccounting/reportsaccounting.component';
+import { ClientlistingComponent } from './reports/clientlisting/clientlisting.component';
+import { ClientlistingpentahoComponent } from './reports/clientlistingpentaho/clientlistingpentaho.component';
+import { ClientloanslistingComponent } from './reports/clientloanslisting/clientloanslisting.component';
+import { ClientloanslistingpentahoComponent } from './reports/clientloanslistingpentaho/clientloanslistingpentaho.component';
+import { ClientsavingssummaryComponent } from './reports/clientsavingssummary/clientsavingssummary.component';
+import { SavingsaccountsdormancyreportComponent } from './reports/savingsaccountsdormancyreport/savingsaccountsdormancyreport.component';
+import { SavingstransactionsComponent } from './reports/savingstransactions/savingstransactions.component';
+import { FundsdatessummaryComponent } from './reports/fundsdatessummary/fundsdatessummary.component';
+import { FundsdatessummaryofficeComponent } from './reports/fundsdatessummaryoffice/fundsdatessummaryoffice.component';
+import { FundssummaryofficepentahoComponent } from './reports/fundssummaryofficepentaho/fundssummaryofficepentaho.component';
+import { FundssummarypentahoComponent } from './reports/fundssummarypentaho/fundssummarypentaho.component'
+>>>>>>> Stashed changes
 
 
 
@@ -64,6 +89,7 @@ const ROUTES: Route[] = [
   {path:'home/dashboard', component:DashboardComponent},
   {path:'navbar', component:NavbarComponent},
   {path:'home',component:RepoComponent},
+<<<<<<< Updated upstream
   {path:'accounting',component:AccountingComponent},
   {path:'accounting',component:AccountingComponent},
   {path:'accountingrules',component:AccountingrulesComponent},
@@ -81,6 +107,35 @@ const ROUTES: Route[] = [
   {path:'addjournalentry',component:AddjournalentryComponent},
   {path:'addrule',component:AddruleComponent},
   {path:'organisation',component:OrganisationComponent}
+=======
+  {path:'reports/allreports',component:AllreportsComponent},
+  {path:'accounting',component:AccountingComponent},
+  {path:'reports/clients', component:ClientsComponent},
+  {path:'reports/loans', component:LoansComponent},
+  {path:'reports/savings', component:SavingsComponent},
+  {path:'reports/xbrl', component:XbrlComponent},
+  {path:'reports/funds', component:FundsComponent},
+  {path:'reports/accounting', component:ReportsaccountingComponent},
+  {path:'reports/clients/Client Listing', component:ClientlistingComponent},
+  {path:'reports/clients/Client Listing(Pentaho)', component:ClientlistingpentahoComponent},
+  {path:'reports/clients/Client Loan Listing', component:ClientloanslistingComponent},
+  {path:'reports/clients/Client Loan Listing(Pentaho)', component:ClientloanslistingpentahoComponent},
+  {path:'reports/savings/Client Savings Summary', component:ClientsavingssummaryComponent},
+  {path:'reports/savings/Savings Account Dormancy Report', component:SavingsaccountsdormancyreportComponent},
+  {path:'reports/savings/Savings Transactions', component:SavingstransactionsComponent}
+
+]
+
+
+
+
+
+
+
+
+ 
+
+>>>>>>> Stashed changes
 
 
 ]
@@ -103,6 +158,7 @@ const ROUTES: Route[] = [
     DashboardComponent,
     CreateclientComponent,
     AccountingComponent,
+<<<<<<< Updated upstream
     AccountingComponent,
     AccountingrulesComponent,
     MigrateopeningComponent,
@@ -119,6 +175,29 @@ const ROUTES: Route[] = [
     AddjournalentryComponent,
     AddruleComponent,
     OrganisationComponent
+=======
+    AllreportsComponent,
+    ClientsComponent,
+    LoansComponent,
+    SavingsComponent,
+    XbrlComponent,
+    FundsComponent,
+    ReportsaccountingComponent,
+    ClientlistingComponent,
+    ClientlistingpentahoComponent,
+    ClientloanslistingComponent,
+    ClientloanslistingpentahoComponent,
+    ClientsavingssummaryComponent,
+    SavingsaccountsdormancyreportComponent,
+    SavingstransactionsComponent,
+    FundsdatessummaryComponent,
+    FundsdatessummaryofficeComponent,
+    FundssummaryofficepentahoComponent,
+    FundssummarypentahoComponent
+    
+    
+
+>>>>>>> Stashed changes
   ],
   imports: [
     RouterModule.forRoot(ROUTES),
@@ -127,9 +206,14 @@ const ROUTES: Route[] = [
     BrowserAnimationsModule,MatDatepickerModule,MatNativeDateModule,
     MatIconModule,MatButtonModule,MatFormFieldModule,MatMenuModule,MatOptionModule,
     MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,MatSelectModule,
+<<<<<<< Updated upstream
     MatToolbarModule,MatSidenavModule,MatListModule, MatCheckboxModule,MatInputModule,
     MatTableModule,MatCardModule,MatSelectModule,MatListModule,MatDividerModule,
     MatAutocompleteModule,MatRadioModule
+=======
+    MatToolbarModule,MatSidenavModule,MatListModule,MatTabsModule
+
+>>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,46 @@
+<div class="fineract-div">Reports/Run reports
+<div class="example-container mat-elevation-z8">
+    Client Loan Listing
+    <div>
+      Enter Account No
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Account No">
+          </mat-form-field>
+          <br/>
+          <mat-form-field>
+              <input matInput [matDatepicker]="picker1" placeholder="Start Date">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+              <br/>
+              <mat-form-field>
+              <input matInput [matDatepicker]="picker2" placeholder="End Date">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+            <br/>
+            output type:
+            <mat-form-field>
+                <mat-select placeholder="Normal format">
+                  <mat-option *ngFor="let format of formats" [value]="format.value">
+                    {{ format.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <br/>
+          
+            Decimal places:
+            <mat-form-field>
+                <mat-select placeholder="Zero decimal places">
+                  <mat-option *ngFor="let decimal of decimals" [value]="decimal.value">
+                    {{ decimal.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              </div>
+              <a mat-raised-button color="primary" class="fineract-button">
+                Run Report
+              </a>
+              
+            
+        </div>
