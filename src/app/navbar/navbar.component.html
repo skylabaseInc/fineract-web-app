@@ -1,9 +1,9 @@
 
-<div>
+<div  class="flex-container">
   <mat-toolbar>
     
 
-      <ul id="menu">
+      <ul id="menu" class="search2">
         <li>
           <button mat-button  (click)="sidenav.toggle()" class="dropdown-button">
             <mat-icon class="fineract-toolicon">menu</mat-icon>
@@ -25,7 +25,7 @@
         
         </li>
         <li>
-            <a  href="collapsible.html" >
+            <a>
               <button mat-button class="dropdown-button">Accounting
               </button>
             </a>
@@ -33,14 +33,15 @@
         <li>
             <button mat-button [matMenuTriggerFor]="report" class="dropdown-button">Reports
                 <mat-icon>arrow_drop_down</mat-icon>
-              </button>
+            </button>
               <mat-menu #report="matMenu">
-                <button mat-menu-item>All</button>
-                <button mat-menu-item>Clients</button>
-                <button mat-menu-item>Saving</button>
-                <button mat-menu-item>Loans</button>
-                <button mat-menu-item>Accounting</button>
-                <button mat-menu-item>XBRL</button>
+                <a mat-menu-item [routerLink]="['/reports/allreports']">All</a>
+                <a mat-menu-item [routerLink]="['/reports/clients']">Clients</a>
+                <a mat-menu-item [routerLink]="['/reports/loans']">Loans</a>
+                <a mat-menu-item [routerLink]="['/reports/savings']">Savings</a>
+                <a mat-menu-item [routerLink]="['/reports/funds']">Funds</a>
+                <a mat-menu-item [routerLink]="['/reports/accounting']">Accounting</a>
+                <a mat-menu-item [routerLink]="['/reports/xbrl']">XBRL</a>
               </mat-menu>
         </li>
         <li>
@@ -67,7 +68,7 @@
                 <mat-icon>arrow_drop_down</mat-icon>
               </button>
               <mat-menu #admin="matMenu">
-                <button mat-menu-item>All</button>
+                <button mat-menu-item >All</button>
                 <button mat-menu-item>Clients</button>
                 <button mat-menu-item>Saving</button>
                 <button mat-menu-item>Loans</button>

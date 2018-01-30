@@ -1,12 +1,134 @@
 <mat-card class="example-card">
-  <div>
-    <h3>Dashboard</h3>
-    <button mat-button class="fineract-button">Dashboard</button>
-    <button mat-button class="fineract-button">Home</button>
+  
+    <h2>Dashboard</h2>
+    <div class="fineract-div">
+    <a mat-raised-button color="primary" >Dashboard</a>
+    <a mat-raised-button color="primary">Home</a>
   </div>
   <mat-divider></mat-divider>
-  <div class="first-div">
+  <div class="flex-container">
+    <mat-card class="fineract-card">
+      
+      
+        
+            Recent Activities
+          
+          <mat-divider></mat-divider>
+      
+      
+      
+      <mat-list>
+        <a mat-list-item><button mat-button>individualcollectionsheet</button></a>
+        <a mat-list-item><button mat-button >Collection sheet</button></a>
+        <a mat-list-item><button mat-button >Journal entry</button></a>
+        <a mat-list-item><button mat-button >Frequent posting</button></a>
+        <a mat-list-item><button mat-button >Account closure</button></a>
+        <a mat-list-item><button mat-button >Clients</button></a>
+        <a mat-list-item><button mat-button >Accounting</button></a>
+        <a mat-list-item><button mat-button >Help</button></a>
+        
+
+      </mat-list>
+
+    </mat-card>
     
+    <mat-card class="fineract-card2">
+        
+      
+            Frequent Activities
+          
+          <mat-divider></mat-divider>
+          
+          
+          <mat-list>
+            <a mat-list-item><button mat-button>dashboard</button></a>
+            <a mat-list-item><button mat-button >individualcollectionsheet</button></a>
+            <a mat-list-item><button mat-button >Collection sheet</button></a>
+            <a mat-list-item><button mat-button >Reports</button></a>
+            <a mat-list-item><button mat-button >Create Group</button></a>
+            <a mat-list-item><button mat-button >Accounting</button></a>
+            <a mat-list-item><button mat-button >reportsclient</button></a>
+            
+    
+          </mat-list>
+
+    </mat-card>
+    <mat-card class="fineract-card3">
+        
+      
+            Amount Disbursed For Today
+            <mat-divider></mat-divider>
+            <form>
+              <mat-form-field >
+                <mat-select placeholder="--Office--" [(ngModel)]="selectedValue" name="office">
+                  <mat-option *ngFor="let office of offices" [value]="office.value">
+                    {{office.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            
+            
+            </form>
+            
+          
+          
+          
+
+    </mat-card>
+
+  </div>
+  <div>
+      <mat-card class="fineract-card4">
+        
+      
+          Clients Trends For Head Office (Days)
+          <mat-divider></mat-divider>
+          <form>
+            <mat-form-field>
+              <mat-select placeholder="--Office--" [(ngModel)]="selectedValue" name="office">
+                <mat-option *ngFor="let office of offices" [value]="office.value">
+                  {{office.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div>
+              <a mat-raised-button color="primary"><mat-icon>today</mat-icon>Week</a>
+              <a mat-raised-button color="primary"><mat-icon>today</mat-icon>Month</a>
+              <a mat-raised-button color="primary"><mat-icon>today</mat-icon>Day</a>
+                </div>
+          
+          
+          </form>
+          
+        
+        
+        
+
+  </mat-card>
+  <mat-card class="fineract-card5">
+        
+      
+      Amount Collected For Today
+      <mat-divider></mat-divider>
+      <form>
+        <mat-form-field>
+          <mat-select placeholder="--Office--" [(ngModel)]="selectedValue" name="office">
+            <mat-option *ngFor="let office of offices" [value]="office.value">
+              {{office.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+      
+      </form>
+      
+    
+    
+    
+
+</mat-card>
+
+
 
   </div>
 

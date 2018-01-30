@@ -1,0 +1,34 @@
+
+  <div class="fineract-div">Reports/Run reports
+  <div class="example-container mat-elevation-z8">
+    Client Listing
+    <div>
+      Office:      
+      <mat-form-field>
+        <mat-select placeholder="select an office" [formControl]="animalControl" required>
+          <mat-option>-office-</mat-option>
+          <mat-option *ngFor="let office of offices" [value]="animal">
+            {{office.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="animalControl.hasError('required')">Please choose an office</mat-error>
+        
+      </mat-form-field>
+      
+        <br/>
+        Decimal places:
+        <mat-form-field>
+            <mat-select placeholder="Zero decimal places">
+              <mat-option *ngFor="let decimal of decimals" [value]="decimal.value">
+                {{ decimal.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          </div>
+          <a mat-raised-button color="primary" class="fineract-button">
+            Run Report
+          </a>
+          
+        
+    </div>
+    </div>

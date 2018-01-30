@@ -23,7 +23,7 @@
     
 }
 .fineract-toolicon{
-    color:white;
+    color:teal;
 }
 .wrapper{
     margin:50px;
@@ -32,10 +32,14 @@ ul#menu li{
     display: inline;
 }
 .search1{
-    margin-left: 80px;
-    margin-top:24px
+    
+    margin-left:20%;
+    
 }
 .fineract-toolsearch{
-    width:5px;
+    width:110px;
+}
+.search2{
+    padding-left:0%;
 }
   
