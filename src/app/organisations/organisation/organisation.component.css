@@ -1,16 +1,14 @@
 .example-container{
-    margin-left: 8%;
-    margin-top: 5%;
+    margin-left: 5%;
+    margin-top: 3%;
     
 }
 
-.card{
-    width:45%;
-}
 div mat-card{
     display:inline-block;
     vertical-align: top;
     margin-top: 2%;
+    width:40%;
 }
 a {
     font-size: 14px;

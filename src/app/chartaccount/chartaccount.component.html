@@ -1,11 +1,12 @@
 <p class="chartaccount">
-  <a [routerLink]="['/accounting']">Accounting</a>
+  <a [routerLink]="['/navbar/accounting']">Accounting</a>
   <a>/ Chart of Accounts</a>
 </p>
 <div class="example-container mat-elevation-z2">
   <p class="header">Chart of Accounts
-    <button mat-button mat-raised-button color="primary" class="btn"[routerLink]="['/treeview']">Tree View</button>
-    <button mat-button mat-raised-button color="primary" [routerLink]="['/create-gl']">
+    <button mat-button mat-raised-button color="primary" 
+    class="btn"[routerLink]="['/navbar/treeview']">Tree View</button>
+    <button mat-button mat-raised-button color="primary" [routerLink]="['/navbar/create-gl']">
       <mat-icon>add</mat-icon>Add Account</button>
   </p>
 

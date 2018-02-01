@@ -1,0 +1,13 @@
+<p class="addrule">
+  <a [routerLink]="['/organisation']">Organisation</a>
+  <a [routerLink]="['/manageoffice']">/Manage Offices</a>
+  <a>/Create Office</a>
+</p>
+
+<div class="example-container mat-elevation z2">
+  <form class="example-form" [formGroup]="form">
+    <mat-form-field>
+      <input matInput type="text" id="office" class="form-control" formControlName="office">
+    </mat-form-field>
+  </form>
+</div>

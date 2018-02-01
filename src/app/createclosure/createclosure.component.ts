@@ -16,7 +16,8 @@ export class CreateclosureComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({     
-      date: ['', Validators.required]
+      date: ['', Validators.required],
+      comment: ['']
     });
   }
 }

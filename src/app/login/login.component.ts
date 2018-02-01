@@ -29,7 +29,7 @@ export class LoginComponent{
   }
 
 public onLoginClick(loginForm){
-  this.router.navigate(['./createclient']);
+  this.router.navigate(['./navbar']);
 }
 
 
