@@ -21,12 +21,14 @@
 .app-sidenav{
     width:240px;
     
+    
 }
 .fineract-toolicon{
     color:teal;
 }
 .wrapper{
     margin:50px;
+    
 }
 ul#menu li{
     display: inline;

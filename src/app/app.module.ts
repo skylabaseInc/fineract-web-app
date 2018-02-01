@@ -10,11 +10,7 @@ import {MatIconModule,MatButtonModule,MatFormFieldModule,
 MatMenuModule,MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,
 MatToolbarModule,MatSidenavModule,MatListModule,
 MatSelectModule,MatOptionModule,MatDatepickerModule,MatNativeDateModule,
-<<<<<<< Updated upstream
-MatDividerModule,MatAutocompleteModule,MatRadioModule} from '@angular/material';
-=======
-MatToolbarModule,MatSidenavModule,MatListModule,MatTabsModule} from '@angular/material';
->>>>>>> Stashed changes
+MatDividerModule,MatAutocompleteModule,MatRadioModule,MatTabsModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -32,7 +28,6 @@ import { IndividudualcollectComponent } from './individudualcollect/individudual
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateclientComponent } from './createclient/createclient.component';
 import { AccountingComponent } from './accounting/accounting.component';
-<<<<<<< Updated upstream
 import { AccountingrulesComponent } from './accountingrules/accountingrules.component';
 import { MigrateopeningComponent } from './migrateopening/migrateopening.component';
 import { ProvisioningentryComponent } from './provisioningentry/provisioningentry.component';
@@ -48,7 +43,6 @@ import { TreeviewComponent } from './treeview/treeview.component';
 import { AddjournalentryComponent } from './addjournalentry/addjournalentry.component';
 import { AddruleComponent } from './addrule/addrule.component';
 import { OrganisationComponent } from './organisations/organisation/organisation.component';
-=======
 import { AllreportsComponent } from './reports/allreports/allreports.component';
 import { ClientsComponent } from './reports/clients/clients.component';
 import { LoansComponent } from './reports/loans/loans.component';
@@ -67,7 +61,10 @@ import { FundsdatessummaryComponent } from './reports/fundsdatessummary/fundsdat
 import { FundsdatessummaryofficeComponent } from './reports/fundsdatessummaryoffice/fundsdatessummaryoffice.component';
 import { FundssummaryofficepentahoComponent } from './reports/fundssummaryofficepentaho/fundssummaryofficepentaho.component';
 import { FundssummarypentahoComponent } from './reports/fundssummarypentaho/fundssummarypentaho.component'
->>>>>>> Stashed changes
+import { ManageofficeComponent } from './organisations/manageoffice/manageoffice.component';
+import { TreeviewOrgComponent } from './organisations/treeview-org/treeview-org.component';
+import { CreateofficeComponent } from './organisations/createoffice/createoffice.component';
+
 
 
 
@@ -75,41 +72,47 @@ import { FundssummarypentahoComponent } from './reports/fundssummarypentaho/fund
 
 
 const ROUTES: Route[] = [
-  {path:'',component:LoginComponent},
-  {path: 'createclient', component: CreateclientComponent},
-  {path:'client',component:ClientComponent},
-  {path:'notification',component:NotificationComponent},
-  {path:'group',component:GroupComponent},
-  {path:'center',component:CenterComponent},
-  {path:'createcenter',component:CreatecenterComponent},
-  {path:'creategroup',component:CreategroupComponent},
-  {path:'createclosure',component:CreateclosureComponent},
-  {path:'accountclosure',component:AccountclosureComponent},
-  {path:'home/individualcollection', component:IndividudualcollectComponent},
+    {path:'login',component:LoginComponent},
+    {path:'navbar', component:NavbarComponent,children:[
+    {path:'',redirectTo:'home',pathMatch:'full' },
+    {path:'home',component:RepoComponent},
+    {path:'frequentpostings',component:FrequentpostingsComponent},
+    {path:'individualcollection', component:IndividudualcollectComponent},
+    {path:'chartaccount',component:ChartaccountComponent},
+    {path: 'createclient', component: CreateclientComponent},
+    {path:'createcenter',component:CreatecenterComponent},
+    {path:'creategroup',component:CreategroupComponent},
+    {path:'notification',component:NotificationComponent},
+    {path:'accountclosure',component:AccountclosureComponent},
+    {path:'addjournalentry',component:AddjournalentryComponent},
+    {path:'accounting',component:AccountingComponent},
+    {path:'searchjournal',component:SearchjournalComponent},
+    {path:'accruals',component:AccrualsComponent},
+    {path:'accountingrules',component:AccountingrulesComponent},
+    {path:'migrateopening',component:MigrateopeningComponent},
+    {path:'provisioningentry',component:ProvisioningentryComponent},
+    {path:'financialactivity',component:FinancialactivityComponent},
+    {path:'client',component:ClientComponent},
+    {path:'group',component:GroupComponent},
+    {path:'center',component:CenterComponent},
+    {path:'treeview',component:TreeviewComponent},
+    {path:'create-gl',component:CreateGlComponent},
+    {path:'createclosure',component:CreateclosureComponent},
+    {path:'addrule',component:AddruleComponent},
+    {path:'createprovisioning',component:CreateprovisioningComponent},
+    {path:'addfinancialactivity',component:AddfinancialactivityComponent},
+    {path:'organisation',component:OrganisationComponent},
+    {path:'manageoffice',component:ManageofficeComponent},
+    {path:'treeview-org',component:TreeviewOrgComponent}
+
+
+ ]},
+
+
+ 
+  
   {path:'home/dashboard', component:DashboardComponent},
-  {path:'navbar', component:NavbarComponent},
-  {path:'home',component:RepoComponent},
-<<<<<<< Updated upstream
-  {path:'accounting',component:AccountingComponent},
-  {path:'accounting',component:AccountingComponent},
-  {path:'accountingrules',component:AccountingrulesComponent},
-  {path:'migrateopening',component:MigrateopeningComponent},
-  {path:'provisioningentry',component:ProvisioningentryComponent},
-  {path:'createprovisioning',component:CreateprovisioningComponent},
-  {path:'financialactivity',component:FinancialactivityComponent},
-  {path:'addfinancialactivity',component:AddfinancialactivityComponent},
-  {path:'accruals',component:AccrualsComponent},
-  {path:'searchjournal',component:SearchjournalComponent},
-  {path:'frequentpostings',component:FrequentpostingsComponent},
-  {path:'chartaccount',component:ChartaccountComponent},
-  {path:'create-gl',component:CreateGlComponent},
-  {path:'treeview',component:TreeviewComponent},
-  {path:'addjournalentry',component:AddjournalentryComponent},
-  {path:'addrule',component:AddruleComponent},
-  {path:'organisation',component:OrganisationComponent}
-=======
   {path:'reports/allreports',component:AllreportsComponent},
-  {path:'accounting',component:AccountingComponent},
   {path:'reports/clients', component:ClientsComponent},
   {path:'reports/loans', component:LoansComponent},
   {path:'reports/savings', component:SavingsComponent},
@@ -122,21 +125,10 @@ const ROUTES: Route[] = [
   {path:'reports/clients/Client Loan Listing(Pentaho)', component:ClientloanslistingpentahoComponent},
   {path:'reports/savings/Client Savings Summary', component:ClientsavingssummaryComponent},
   {path:'reports/savings/Savings Account Dormancy Report', component:SavingsaccountsdormancyreportComponent},
-  {path:'reports/savings/Savings Transactions', component:SavingstransactionsComponent}
-
-]
-
-
-
-
-
-
-
-
+  {path:'reports/savings/Savings Transactions', component:SavingstransactionsComponent},
+  
  
-
->>>>>>> Stashed changes
-
+ 
 
 ]
 
@@ -158,8 +150,6 @@ const ROUTES: Route[] = [
     DashboardComponent,
     CreateclientComponent,
     AccountingComponent,
-<<<<<<< Updated upstream
-    AccountingComponent,
     AccountingrulesComponent,
     MigrateopeningComponent,
     ProvisioningentryComponent,
@@ -174,8 +164,7 @@ const ROUTES: Route[] = [
     TreeviewComponent,
     AddjournalentryComponent,
     AddruleComponent,
-    OrganisationComponent
-=======
+    OrganisationComponent,
     AllreportsComponent,
     ClientsComponent,
     LoansComponent,
@@ -193,11 +182,11 @@ const ROUTES: Route[] = [
     FundsdatessummaryComponent,
     FundsdatessummaryofficeComponent,
     FundssummaryofficepentahoComponent,
-    FundssummarypentahoComponent
-    
-    
-
->>>>>>> Stashed changes
+    FundssummarypentahoComponent,
+    OrganisationComponent,
+    ManageofficeComponent,
+    TreeviewOrgComponent,
+    CreateofficeComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES),
@@ -206,14 +195,10 @@ const ROUTES: Route[] = [
     BrowserAnimationsModule,MatDatepickerModule,MatNativeDateModule,
     MatIconModule,MatButtonModule,MatFormFieldModule,MatMenuModule,MatOptionModule,
     MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,MatSelectModule,
-<<<<<<< Updated upstream
     MatToolbarModule,MatSidenavModule,MatListModule, MatCheckboxModule,MatInputModule,
     MatTableModule,MatCardModule,MatSelectModule,MatListModule,MatDividerModule,
-    MatAutocompleteModule,MatRadioModule
-=======
-    MatToolbarModule,MatSidenavModule,MatListModule,MatTabsModule
+    MatAutocompleteModule,MatRadioModule,MatListModule,MatTabsModule
 
->>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent]

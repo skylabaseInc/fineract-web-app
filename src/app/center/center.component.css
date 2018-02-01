@@ -3,25 +3,25 @@
     flex-direction: column;
     max-height: 500px;
     min-width: 300px;
-    margin-left: 5%;
+    margin-left: 2%;
   }
   .example-container1{
     max-height: 500px;
     min-width: 300px;
-    margin-left: 8%;
+  
 
   }
   .example-full-width{
-    width:340px;
+    width:300px;
   }
   .header{
-    margin-top: 4%;
-     margin-left: 9%;
+    margin-top: 2%;
+     margin-left: 2%;
   
   }
   
   .mat-table {
     max-width:1000px;
     max-height: 500px;
-    margin-left: 3%;
+    margin-left: 1%;
   }
