@@ -1,32 +1,42 @@
+<div class="fineract-div">collection sheet
 <mat-card class="example-card">
+  Branch Office:
     <mat-form-field class="fineract-form">
         <mat-select placeholder="Select office" [formControl]="animalControl" required>
           <mat-option>--</mat-option>
-          <mat-option *ngFor="let animal of animals" [value]="animal">
-            {{animal.name}}
+          <mat-option *ngFor="let office of offices" [value]="office">
+            {{office.name}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="animalControl.hasError('required')">Please select office </mat-error>
+        <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
         <mat-hint>{{animalControl.value?.sound}}</mat-hint>
       </mat-form-field>
       <br/>
+      Repayment date:
+      <mat-form-field>
+          <input matInput [matDatepicker]="picker1" [formControl]="date">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
 
       
   <br/>
-
+Staff:
   <mat-form-field  class="fineract-form">
-    <mat-select placeholder="staff">
-      <mat-option *ngFor="let food of foods" [value]="food.value">
-        {{ food.viewValue }}
+    <mat-select placeholder="select loan officer">
+        <mat-option>--</mat-option>
+      <mat-option *ngFor="let staff of staffs" [value]="staff.value">
+        {{ staff.viewValue }}
       </mat-option>
     </mat-select>
   </mat-form-field>
   <br/>
-
-  <button mat-button color="primary">submit<mat-icon>send</mat-icon>
-  </button>
-  <br/>
-  <button mat-button class="fineract-button">Cancel</button>
-
+<div>
+  <button mat-raised-button color="primary">collection sheet<mat-icon>arrow_forward</mat-icon></button>
+  </div>
+  <div>
+  <button mat-raised-button class="fineract-button">Cancel</button>
+  </div>
 </mat-card>
+</div>
   

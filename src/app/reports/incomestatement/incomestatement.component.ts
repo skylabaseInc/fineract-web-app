@@ -1,21 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
+
+
 @Component({
-  selector: 'app-fundssummarypentaho',
-  templateUrl: './fundssummarypentaho.component.html',
-  styleUrls: ['./fundssummarypentaho.component.css']
+  selector: 'app-incomestatement',
+  templateUrl: './incomestatement.component.html',
+  styleUrls: ['./incomestatement.component.css']
 })
-export class FundssummarypentahoComponent implements OnInit {
+export class IncomestatementComponent implements OnInit {
   animalControl = new FormControl('', [Validators.required]);
 
-  currencies = [
-    { name: 'US Dollar' },
-    { name: 'All' }
-  ];
-  funds = [{ name: '-' },
-  { name: 'All' },
-  ];
   decimals = [
     { value: 'zero', viewValue: 'Zero decimal places' },
     { value: '4', viewValue: '4' },
@@ -32,6 +27,10 @@ export class FundssummarypentahoComponent implements OnInit {
     {value: 'PDF format', viewValue: 'PDF format '},
     
   ];
+  offices = [
+    { name: 'Head office' },
+  ];
+
 
   constructor() { }
 

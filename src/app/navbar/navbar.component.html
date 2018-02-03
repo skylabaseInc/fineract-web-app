@@ -33,13 +33,13 @@
           <mat-icon>arrow_drop_down</mat-icon>
         </button>
         <mat-menu #report="matMenu">
-          <a mat-menu-item [routerLink]="['/reports/allreports']">All</a>
-          <a mat-menu-item [routerLink]="['/reports/clients']">Clients</a>
-          <a mat-menu-item [routerLink]="['/reports/loans']">Loans</a>
-          <a mat-menu-item [routerLink]="['/reports/savings']">Savings</a>
-          <a mat-menu-item [routerLink]="['/reports/funds']">Funds</a>
-          <a mat-menu-item [routerLink]="['/reports/accounting']">Accounting</a>
-          <a mat-menu-item [routerLink]="['/reports/xbrl']">XBRL</a>
+          <a mat-menu-item [routerLink]="['/navbar/reports/allreports']">All</a>
+          <a mat-menu-item [routerLink]="['/navbar/reports/clients']">Clients</a>
+          <a mat-menu-item [routerLink]="['/navbar/reports/loans']">Loans</a>
+          <a mat-menu-item [routerLink]="['/navbar/reports/savings']">Savings</a>
+          <a mat-menu-item [routerLink]="['/navbar/reports/funds']">Funds</a>
+          <a mat-menu-item [routerLink]="['/navbar/reports/accounting']">Accounting</a>
+          <a mat-menu-item [routerLink]="['/navbar/reports/xbrl']">XBRL</a>
         </mat-menu>
       </li>
       <li>
@@ -51,7 +51,7 @@
           <button mat-menu-item [routerLink]="['/navbar/organisation']">Organisations</button>
           <button mat-menu-item>Systems</button>
           <button mat-menu-item>Productss</button>
-          <button mat-menu-item>Template</button>
+          <button mat-menu-item [routerLink]="['admin/templates']">Template</button>
 
         </mat-menu>
       </li>

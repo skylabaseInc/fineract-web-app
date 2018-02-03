@@ -1,0 +1,56 @@
+<div class="fineract-div">Reports/Run reports
+  <div class="example-container mat-elevation-z8">
+    <div>
+    Client Listing
+    <a mat-raised-button color="primary" class="fineract-button"><mat-icon>expand_more</mat-icon>Parameters</a>
+    </div>
+    <br/>
+    <div>
+      <a mat-raised-button color="primary" class="fineract-button"><mat-icon>note</mat-icon>Export CSV</a>
+    </div>
+    <div class="fineract-table">
+        <mat-table #table [dataSource]="dataSource">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+        
+            <!-- Position Column -->
+            <ng-container matColumnDef="office/branch">
+              <mat-header-cell *matHeaderCellDef> Office/Branch </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.office}} </mat-cell>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="account No">
+              <mat-header-cell *matHeaderCellDef> Client Account No. </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.accNumber}} </mat-cell>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            </ng-container>
+        
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="status">
+              <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="activation">
+                <mat-header-cell *matHeaderCellDef> Activation</mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.activation}} </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="external Id">
+                  <mat-header-cell *matHeaderCellDef>External Id</mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.ID}} </mat-cell>
+                </ng-container>
+        
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+
+    </div>
+    </div>

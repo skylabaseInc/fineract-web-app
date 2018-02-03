@@ -6,11 +6,11 @@
     <mat-form-field>
       <mat-select placeholder="select an office" [formControl]="animalControl" required>
         <mat-option>-office-</mat-option>
-        <mat-option *ngFor="let office of offices" [value]="animal">
+        <mat-option *ngFor="let office of offices" [value]="office">
           {{office.name}}
         </mat-option>
       </mat-select>
-      <mat-error *ngIf="animalControl.hasError('required')">Please choose an office</mat-error>
+      <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
       
     </mat-form-field>
     <br/>
@@ -33,7 +33,7 @@
           </mat-select>
         </mat-form-field>
         </div>
-        <a mat-raised-button color="primary" class="fineract-button">
+        <a mat-raised-button color="primary" class="fineract-button" [routerLink]="['/navbar/reports/clients/Client Listing(Pentaho)/run_report']">
           Run Report
         </a>
         

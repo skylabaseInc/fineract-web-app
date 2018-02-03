@@ -1,0 +1,66 @@
+<div class="fineract-div">Reports/Run reports
+    <div class="example-container mat-elevation-z8">
+      General Ledger Report
+      <div>
+      Office:      
+        <mat-form-field>
+          <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+            <mat-option>--select one--</mat-option>
+            <mat-option *ngFor="let office of offices" [value]="office">
+              {{office.name}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="animalControl.hasError('required')">Please choose an office</mat-error>
+          
+        </mat-form-field>
+        <br/>
+        GLAccountNO:      
+        <mat-form-field>
+          <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+            <mat-option>--select one--</mat-option>
+            <mat-option *ngFor="let office of offices" [value]="office">
+              
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="animalControl.hasError('required')">Please choose an office</mat-error>
+          
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker1" placeholder="Start Date">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+          <br/>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker2" placeholder="End Date">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+          <br/> 
+          output type:
+          <mat-form-field>
+              <mat-select placeholder="Normal format">
+                <mat-option *ngFor="let format of formats" [value]="format.value">
+                  {{ format.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        <br/>
+          Decimal places:
+          <mat-form-field>
+              <mat-select placeholder="Zero decimal places">
+                <mat-option *ngFor="let decimal of decimals" [value]="decimal.value">
+                  {{ decimal.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            </div>
+            <a mat-raised-button color="primary" class="fineract-button">
+              Run Report
+            </a>
+            
+          
+      </div>
+      </div>
+    

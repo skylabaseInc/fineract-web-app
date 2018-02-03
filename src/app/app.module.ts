@@ -1,16 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 
 
-import { CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import {Route,RouterModule} from '@angular/router'
-import {FormsModule,ReactiveFormsModule} from '@angular/forms'
-import{ BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatIconModule,MatButtonModule,MatFormFieldModule,
-MatMenuModule,MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,
-MatToolbarModule,MatSidenavModule,MatListModule,
-MatSelectModule,MatOptionModule,MatDatepickerModule,MatNativeDateModule,
-MatDividerModule,MatAutocompleteModule,MatRadioModule,MatTabsModule} from '@angular/material';
+import { Route, RouterModule } from '@angular/router'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatIconModule, MatButtonModule, MatFormFieldModule,
+  MatMenuModule, MatCheckboxModule, MatInputModule, MatTableModule, MatCardModule,
+  MatToolbarModule, MatSidenavModule, MatListModule,
+  MatSelectModule, MatOptionModule, MatDatepickerModule, MatNativeDateModule,
+  MatDividerModule, MatAutocompleteModule, MatRadioModule,
+  MatTabsModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -64,7 +67,15 @@ import { FundssummarypentahoComponent } from './reports/fundssummarypentaho/fund
 import { ManageofficeComponent } from './organisations/manageoffice/manageoffice.component';
 import { TreeviewOrgComponent } from './organisations/treeview-org/treeview-org.component';
 import { CreateofficeComponent } from './organisations/createoffice/createoffice.component';
-
+import { BalancesheetComponent } from './reports/balancesheet/balancesheet.component';
+import { GeneralledgerreportComponent } from './reports/generalledgerreport/generalledgerreport.component';
+import { IncomestatementComponent } from './reports/incomestatement/incomestatement.component';
+import { TrialbalanceComponent } from './reports/trialbalance/trialbalance.component';
+import { RunclientlistComponent } from './reports/runclientlist/runclientlist.component';
+import { RunclientlistpentahoComponent } from './reports/runclientlistpentaho/runclientlistpentaho.component';
+import { RunclientloanpehtahoComponent } from './reports/runclientloanpehtaho/runclientloanpehtaho.component';
+import { RunclientloanComponent } from './reports/runclientloan/runclientloan.component';
+import { TemplatesComponent } from './templates/templates/templates.component'
 
 
 
@@ -72,6 +83,7 @@ import { CreateofficeComponent } from './organisations/createoffice/createoffice
 
 
 const ROUTES: Route[] = [
+    {path:'', redirectTo:'login', pathMatch:'full'},
     {path:'login',component:LoginComponent},
     {path:'navbar', component:NavbarComponent,children:[
     {path:'',redirectTo:'home',pathMatch:'full' },
@@ -103,15 +115,8 @@ const ROUTES: Route[] = [
     {path:'addfinancialactivity',component:AddfinancialactivityComponent},
     {path:'organisation',component:OrganisationComponent},
     {path:'manageoffice',component:ManageofficeComponent},
-    {path:'treeview-org',component:TreeviewOrgComponent}
-
-
- ]},
-
-
- 
-  
-  {path:'home/dashboard', component:DashboardComponent},
+    {path:'treeview-org',component:TreeviewOrgComponent},
+    {path:'home/dashboard', component:DashboardComponent},
   {path:'reports/allreports',component:AllreportsComponent},
   {path:'reports/clients', component:ClientsComponent},
   {path:'reports/loans', component:LoansComponent},
@@ -126,11 +131,32 @@ const ROUTES: Route[] = [
   {path:'reports/savings/Client Savings Summary', component:ClientsavingssummaryComponent},
   {path:'reports/savings/Savings Account Dormancy Report', component:SavingsaccountsdormancyreportComponent},
   {path:'reports/savings/Savings Transactions', component:SavingstransactionsComponent},
+  { path: 'reports/funds/Funds Disbursed Between Dates Summary', component: FundsdatessummaryComponent },
+  { path: 'reports/funds/Funds Disbursed Between Dates Summary by Office', component: FundsdatessummaryofficeComponent },
+  { path: 'reports/funds/Funds Disbursed Between Dates Summary by Office(Pentaho)', component:FundssummaryofficepentahoComponent },
+  { path: 'reports/funds/Funds Disbursed Between Dates Summary(Pentaho)', component: FundssummarypentahoComponent },
+  { path: 'reports/accounting/Balance sheet', component: BalancesheetComponent },
+  { path: 'reports/accounting/General Ledger Report', component:GeneralledgerreportComponent },
+  { path: 'reports/accounting/Income Statement', component: IncomestatementComponent },
+  { path: 'reports/accounting/Trial Balance', component: TrialbalanceComponent},
+  { path: 'reports/clients/Client Listing/run_report', component: RunclientlistComponent},
+  { path: 'reports/clients/Client Listing(Pentaho)/run_report', component: RunclientlistpentahoComponent},
+  { path: 'reports/clients/Client Loan Listing(Pentaho)/run_report', component: RunclientloanpehtahoComponent},
+  {path:'admin/templates', component:TemplatesComponent},
+
+
+ ]},
+
+
+ 
   
- 
- 
+  
+  
+  
+
 
 ]
+
 
 @NgModule({
   declarations: [
@@ -145,7 +171,7 @@ const ROUTES: Route[] = [
     CreateclosureComponent,
     AccountclosureComponent,
     RepoComponent,
-    NavbarComponent, 
+    NavbarComponent,
     IndividudualcollectComponent,
     DashboardComponent,
     CreateclientComponent,
@@ -186,18 +212,30 @@ const ROUTES: Route[] = [
     OrganisationComponent,
     ManageofficeComponent,
     TreeviewOrgComponent,
-    CreateofficeComponent
+    CreateofficeComponent,
+    BalancesheetComponent,
+    GeneralledgerreportComponent,
+    IncomestatementComponent,
+    TrialbalanceComponent,
+    RunclientlistComponent,
+    RunclientlistpentahoComponent,
+    RunclientloanpehtahoComponent,
+    RunclientloanComponent,
+    TemplatesComponent
+
+
+
   ],
   imports: [
     RouterModule.forRoot(ROUTES),
     BrowserModule,
-    CommonModule,FormsModule,ReactiveFormsModule,
-    BrowserAnimationsModule,MatDatepickerModule,MatNativeDateModule,
-    MatIconModule,MatButtonModule,MatFormFieldModule,MatMenuModule,MatOptionModule,
-    MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,MatSelectModule,
-    MatToolbarModule,MatSidenavModule,MatListModule, MatCheckboxModule,MatInputModule,
-    MatTableModule,MatCardModule,MatSelectModule,MatListModule,MatDividerModule,
-    MatAutocompleteModule,MatRadioModule,MatListModule,MatTabsModule
+    CommonModule, FormsModule, ReactiveFormsModule,
+    BrowserAnimationsModule, MatDatepickerModule, MatNativeDateModule,
+    MatIconModule, MatButtonModule, MatFormFieldModule, MatMenuModule, MatOptionModule,
+    MatCheckboxModule, MatInputModule, MatCardModule, MatSelectModule,
+    MatToolbarModule, MatSidenavModule, MatListModule,
+    MatTableModule, MatDividerModule,
+    MatAutocompleteModule, MatRadioModule, MatTabsModule
 
   ],
   providers: [],
