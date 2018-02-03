@@ -7,7 +7,7 @@
       <mat-form-field>
         <mat-select placeholder="select an office" [formControl]="animalControl" required>
           <mat-option>-office-</mat-option>
-          <mat-option *ngFor="let office of offices" [value]="animal">
+          <mat-option *ngFor="let office of offices" [value]="office">
             {{office.name}}
           </mat-option>
         </mat-select>
@@ -25,7 +25,7 @@
             </mat-select>
           </mat-form-field>
           </div>
-          <a mat-raised-button color="primary" class="fineract-button">
+          <a mat-raised-button color="primary" class="fineract-button" [routerLink]="['/navbar/reports/clients/Client Listing/run_report']">
             Run Report
           </a>
           

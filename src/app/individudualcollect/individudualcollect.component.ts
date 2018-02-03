@@ -9,16 +9,12 @@ import {FormControl, Validators} from '@angular/forms';
 export class IndividudualcollectComponent implements OnInit {
   animalControl = new FormControl('', [Validators.required]);
 
-  animals = [
-    {name: 'Dog', sound: 'Woof!'},
-    {name: 'Cat', sound: 'Meow!'},
-    {name: 'Cow', sound: 'Moo!'},
-    {name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!'},
+  offices = [
+    {name: 'Head Office'},
+    
   ];
-  foods = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
+  staffs = [
+    
   ];
 
 
