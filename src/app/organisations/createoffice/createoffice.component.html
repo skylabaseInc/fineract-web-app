@@ -1,13 +1,43 @@
-<p class="addrule">
-  <a [routerLink]="['/organisation']">Organisation</a>
-  <a [routerLink]="['/manageoffice']">/Manage Offices</a>
+<p class="createoffice">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a [routerLink]="['/navbar/manageoffice']">/Manage Offices</a>
   <a>/Create Office</a>
 </p>
 
-<div class="example-container mat-elevation z2">
+<div class="example-container mat-elevation-z2">
+  <h2>Create Office</h2>
+  <hr>
   <form class="example-form" [formGroup]="form">
-    <mat-form-field>
-      <input matInput type="text" id="office" class="form-control" formControlName="office">
+    Office*:
+    <mat-form-field class="example-full-width" required>
+      <input matInput type="text" id="office" class="form-control" [formControl]="office"
+       formControlName="office">
+       <mat-error *ngIf="office.hasError('required')">Required field</mat-error>
     </mat-form-field>
-  </form>
+    <br>
+  Parent Office*:
+  <mat-form-field class="example-full-width" required>
+    <mat-select placeholder="">
+      <mat-option *ngFor="let option of options" [value]="option.value">
+        {{ option.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> 
+  <br>
+  Opened On*:
+  <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="picker" placeholder="" required formControlName="date" >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+    <br>
+    External Id:
+    <mat-form-field class="example-full-width">
+        <input matInput type="number" id="id" class="form-control"
+         formControlName="id">
+      </mat-form-field>  
+      <br>
+      <button mat-button mat-raised-button class="btn">Cancel</button>
+      <button mat-button mat-raised-button color="primary">Submit</button> 
+</form>
 </div>

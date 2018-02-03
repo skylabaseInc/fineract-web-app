@@ -1,0 +1,51 @@
+<p class="workingday">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a>/ Working Days</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h2>Working Days</h2>
+  <hr>
+  <p class="work">Working Days</p>
+
+  <ul class="days">
+    <li>
+      <mat-checkbox>Monday</mat-checkbox>
+    </li>
+    <li>
+      <mat-checkbox>Tuesday</mat-checkbox>
+    </li>
+    <li>
+      <mat-checkbox>Wednesday</mat-checkbox>
+    </li>
+    <li>
+      <mat-checkbox>Thursday</mat-checkbox>
+    </li>
+    <li>
+      <mat-checkbox>Friday</mat-checkbox>
+    </li>
+    <li>
+      <mat-checkbox>Saturday</mat-checkbox>
+    </li>
+    <li>
+      <mat-checkbox>Sunday</mat-checkbox>
+    </li>
+  </ul>
+
+  Payments due on non working days
+  <mat-form-field class="example-full-width" required>
+    <mat-select placeholder="">
+      <mat-option *ngFor="let option of options" [value]="option.value">
+        {{ option.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p class="work">
+    <mat-checkbox></mat-checkbox>Extend the term for loansfollowing a daily repaymentschedule</p>
+
+  <form>
+    <button mat-button mat-raised-button class="btn">Cancel</button>
+    <button mat-button mat-raised-button color="primary">Submit</button>
+  </form>
+
+</div>

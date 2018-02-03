@@ -5,16 +5,16 @@
 }
 
 .card{
-    width:40%;
+    margin-right:2%;
+    margin-left:2%;
 }
 div mat-card{
     display:inline-block;
     vertical-align: top;
+    width:42%;
+    margin-bottom:2%;
 
 }
 a {
     font-size: 14px;
-}
-card1{
-    margin-right: 5%;
 }

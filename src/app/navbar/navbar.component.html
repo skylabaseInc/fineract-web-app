@@ -1,7 +1,5 @@
 <div class="flex-container">
   <mat-toolbar>
-
-
     <ul id="menu" class="search2">
       <li>
         <button mat-button (click)="sidenav.toggle()" class="dropdown-button">
@@ -20,8 +18,6 @@
           <a mat-menu-item [routerLink]="['/navbar/group']">Group</a>
           <a mat-menu-item [routerLink]="['/navbar/center']">Center</a>
         </mat-menu>
-
-
       </li>
       <li>
         <button mat-button  [routerLink]="['/navbar/accounting']"  class="dropdown-button">Accounting
@@ -89,13 +85,8 @@
 
         </mat-menu>
       </li>
-
-
     </ul>
-
-
   </mat-toolbar>
-
 </div>
 
 
@@ -103,13 +94,13 @@
 <mat-sidenav-container class="app-container">
   <mat-sidenav #sidenav class="app-sidenav mat-elevation-z2" mode="side" opened="true">
     <mat-list>
-      <a mat-list-item href="badges.html">
+      <a mat-list-item [routerLink]="['/navbar/keyboardshortcut']">
         <button mat-button>
           <mat-icon>keyboard</mat-icon>
           keyboard shortcut</button>
       </a>
       <mat-divider></mat-divider>
-      <a mat-list-item href="badges.html">
+      <a mat-list-item [routerLink]="['/navbar/navigation']">
         <button mat-button>
           <mat-icon>navigation</mat-icon>
           navigation</button>

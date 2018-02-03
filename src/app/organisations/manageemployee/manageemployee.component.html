@@ -1,0 +1,43 @@
+<p class="manageemployee">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a>/ Manage Employee</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Filter by name">
+  </mat-form-field>
+  <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/createemployee']">
+    <mat-icon>add</mat-icon> Create Employee</button>
+
+  <div>
+    <mat-table #table [dataSource]="dataSource">
+
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Holiday Name</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="isloan">
+        <mat-header-cell *matHeaderCellDef>Is Loan Officer</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.isloan}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="office">
+        <mat-header-cell *matHeaderCellDef>Office</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.office}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="active">
+        <mat-header-cell *matHeaderCellDef>Active</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.active}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>

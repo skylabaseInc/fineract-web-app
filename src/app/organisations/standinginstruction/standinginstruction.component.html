@@ -1,0 +1,116 @@
+<p class="standinginstruction">
+    <a [routerLink]="['/navbar/organisation']">Organisation</a>
+    <a>/ Standing Instruction History</a>
+  </p>
+  
+  <div class="example-container mat-elevation-z2">
+
+    <div *ngIf="hide" class="history">
+      <form>
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="Client Name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="number" placeholder="Client Id">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-select placeholder="type">
+                <mat-option value="option">Transfer Type</mat-option>
+                <mat-option value="option1">Account Transfer</mat-option>
+                <mat-option value="option2">Loan Repayment</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-select placeholder=" Accounttype">
+                    <mat-option value="option" (click)="Onshow1()">Account Type</mat-option>
+                    <mat-option value="option1" (click)="Onshow()">Savings Account</mat-option>
+                    <mat-option value="option2" (click)="Onshow()">Loan Savings</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <div *ngIf=show2>
+                    <mat-form-field class="example-full-width">
+                        <input matInput type="number" placeholder="From Account Id">
+                      </mat-form-field>
+                </div>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput [matDatepicker]="picker" placeholder="From Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                  </mat-form-field>
+                  
+                  <mat-form-field class="example-full-width">
+                    <input matInput [matDatepicker]="picker1" placeholder="To Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
+                  </mat-form-field>
+
+      <button mat-button mat-raised-button color="primary" (click)="display()">
+        <mat-icon>search</mat-icon></button>
+    </form>
+    </div>
+
+    <div  *ngIf="show" class="table">
+
+      <button mat-button mat-raised-button color="primary" class="btn" (click)="displayBoth()">
+        <mat-icon>expand_more</mat-icon>Parameters</button>
+
+        <mat-table #table [dataSource]="dataSource">
+    
+          <ng-container matColumnDef="fromC">
+            <mat-header-cell *matHeaderCellDef>From Client</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.fromC}} </mat-cell>
+          </ng-container>
+    
+    
+          <ng-container matColumnDef="fromA">
+            <mat-header-cell *matHeaderCellDef>From Account</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.fromA}} </mat-cell>
+          </ng-container>
+    
+    
+          <ng-container matColumnDef="toC">
+            <mat-header-cell *matHeaderCellDef>To Client</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.toC}} </mat-cell>
+          </ng-container>
+    
+          <ng-container matColumnDef="toA">
+            <mat-header-cell *matHeaderCellDef>To Account</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.toA}} </mat-cell>
+          </ng-container>
+    
+          <ng-container matColumnDef="execT">
+            <mat-header-cell *matHeaderCellDef>Execution Time</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.execT}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="amt">
+              <mat-header-cell *matHeaderCellDef>Amount</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.amt}} </mat-cell>
+            </ng-container>
+      
+      
+            <ng-container matColumnDef="status">
+              <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+            </ng-container>
+      
+      
+            <ng-container matColumnDef="error">
+              <mat-header-cell *matHeaderCellDef>Error Log</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.error}} </mat-cell>
+            </ng-container>
+
+    
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        <button mat-button mat-raised-button class="btn1"><mat-icon>arrow_back</mat-icon>Previous</button>
+        <button mat-button mat-raised-button ><mat-icon>arrow_forward</mat-icon>Next</button>
+      </div>
+    
+
+  </div>

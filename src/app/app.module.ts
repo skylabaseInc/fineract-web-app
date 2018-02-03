@@ -1,6 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router'
@@ -12,8 +10,11 @@ import {
   MatToolbarModule, MatSidenavModule, MatListModule,
   MatSelectModule, MatOptionModule, MatDatepickerModule, MatNativeDateModule,
   MatDividerModule, MatAutocompleteModule, MatRadioModule,
-  MatTabsModule
+  MatTabsModule,
+  MatExpansionModule
 } from '@angular/material';
+
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -76,6 +77,18 @@ import { RunclientlistpentahoComponent } from './reports/runclientlistpentaho/ru
 import { RunclientloanpehtahoComponent } from './reports/runclientloanpehtaho/runclientloanpehtaho.component';
 import { RunclientloanComponent } from './reports/runclientloan/runclientloan.component';
 import { TemplatesComponent } from './templates/templates/templates.component'
+import { KeyboardshortcutComponent } from './keyboardshortcut/keyboardshortcut.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { Navigation } from 'selenium-webdriver';
+import { ManageholidaysComponent } from './organisations/manageholidays/manageholidays.component';
+import { CreateholidayComponent } from './organisations/createholiday/createholiday.component';
+import { ManageemployeeComponent } from './organisations/manageemployee/manageemployee.component';
+import { CreateemployeeComponent } from './organisations/createemployee/createemployee.component';
+import { StandinginstructionComponent } from './organisations/standinginstruction/standinginstruction.component';
+import { PasswordpreferencesComponent } from './organisations/passwordpreferences/passwordpreferences.component';
+import { WorkingdayComponent } from './organisations/workingday/workingday.component';
+import { BulkloanComponent } from './organisations/bulkloan/bulkloan.component';
+
 
 
 
@@ -85,6 +98,7 @@ import { TemplatesComponent } from './templates/templates/templates.component'
 const ROUTES: Route[] = [
     {path:'', redirectTo:'login', pathMatch:'full'},
     {path:'login',component:LoginComponent},
+    {path:'',redirectTo:'login',pathMatch:'full'},
     {path:'navbar', component:NavbarComponent,children:[
     {path:'',redirectTo:'home',pathMatch:'full' },
     {path:'home',component:RepoComponent},
@@ -117,6 +131,18 @@ const ROUTES: Route[] = [
     {path:'manageoffice',component:ManageofficeComponent},
     {path:'treeview-org',component:TreeviewOrgComponent},
     {path:'home/dashboard', component:DashboardComponent},
+    {path:'createoffice',component:CreateofficeComponent},
+    {path:'keyboardshortcut',component:KeyboardshortcutComponent},
+    {path:'navigation',component:NavigationComponent},
+    {path:'manageholidays',component:ManageholidaysComponent},
+    {path:'createholiday',component:CreateholidayComponent},
+    {path:'manageemployee',component:ManageemployeeComponent},
+    {path:'createemployee',component:CreateemployeeComponent},
+    {path:'standinginstruction',component:StandinginstructionComponent},
+    {path:'passwordpreferences',component:PasswordpreferencesComponent},
+    {path:'workingday',component:WorkingdayComponent},
+    {path:'bulkloan',component:BulkloanComponent},
+  {path:'home/dashboard', component:DashboardComponent},
   {path:'reports/allreports',component:AllreportsComponent},
   {path:'reports/clients', component:ClientsComponent},
   {path:'reports/loans', component:LoansComponent},
@@ -144,17 +170,7 @@ const ROUTES: Route[] = [
   { path: 'reports/clients/Client Loan Listing(Pentaho)/run_report', component: RunclientloanpehtahoComponent},
   {path:'admin/templates', component:TemplatesComponent},
 
-
  ]},
-
-
- 
-  
-  
-  
-  
-
-
 ]
 
 
@@ -221,21 +237,28 @@ const ROUTES: Route[] = [
     RunclientlistpentahoComponent,
     RunclientloanpehtahoComponent,
     RunclientloanComponent,
-    TemplatesComponent
-
-
-
+    TemplatesComponent,
+    KeyboardshortcutComponent,
+    NavigationComponent,
+    ManageholidaysComponent,
+    CreateholidayComponent,
+    ManageemployeeComponent,
+    CreateemployeeComponent,
+    StandinginstructionComponent,
+    PasswordpreferencesComponent,
+    WorkingdayComponent,
+    BulkloanComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES),
     BrowserModule,
-    CommonModule, FormsModule, ReactiveFormsModule,
-    BrowserAnimationsModule, MatDatepickerModule, MatNativeDateModule,
-    MatIconModule, MatButtonModule, MatFormFieldModule, MatMenuModule, MatOptionModule,
-    MatCheckboxModule, MatInputModule, MatCardModule, MatSelectModule,
-    MatToolbarModule, MatSidenavModule, MatListModule,
-    MatTableModule, MatDividerModule,
-    MatAutocompleteModule, MatRadioModule, MatTabsModule
+    CommonModule,FormsModule,ReactiveFormsModule,
+    BrowserAnimationsModule,MatDatepickerModule,MatNativeDateModule,
+    MatIconModule,MatButtonModule,MatFormFieldModule,MatMenuModule,MatOptionModule,
+    MatCheckboxModule,MatInputModule,MatTableModule,MatCardModule,MatSelectModule,
+    MatToolbarModule,MatSidenavModule,MatListModule, MatCheckboxModule,MatInputModule,
+    MatTableModule,MatCardModule,MatSelectModule,MatListModule,MatDividerModule,
+    MatAutocompleteModule,MatRadioModule,MatListModule,MatTabsModule,MatExpansionModule
 
   ],
   providers: [],
