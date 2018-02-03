@@ -1,0 +1,28 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+    margin-left: 3%;
+  }
+  .mat-table {
+    max-width:1000px;
+    max-height: 500px;
+  }
+
+  .manageholidays{
+    margin-top: 4%;
+     margin-left:3%;
+  
+  }
+  .btn{
+    margin-left:20%;
+    width:15%;
+    
+  }
+  .example-full-width{
+      width:30%;
+  }
+  div mat-form-field{
+      display:inline-block;
+  }

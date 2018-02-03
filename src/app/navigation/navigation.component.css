@@ -1,0 +1,15 @@
+.example-container{
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.example-full-width{
+    width:30%;
+    margin-left: 3%;
+}
+body{
+    margin-left: 2%;
+}
+.title{
+    width:20%;
+    margin-left: 3%;
+}

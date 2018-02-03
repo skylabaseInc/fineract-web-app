@@ -3,16 +3,17 @@
     margin-right: 5%;
     
 }
-.addjournalentry{
+.createemployee{
     margin-left: 5%;
     margin-top: 3%;
 }
-.example-full-width{
-    width:30%;
+.example-form{
+    margin-left: 5%;
 }
 .btn{
     margin-left: 30%;
+    margin-bottom: 2%;
 }
-.example-form{
-margin-left:4%;
+.example-full-width{
+    width:35%;
 }

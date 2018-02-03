@@ -3,6 +3,8 @@
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import '~material-design-icons/iconfont/material-icons.css';
+
 body{
-    height:100%;
+    margin:0;
+    height: 100%;
 }

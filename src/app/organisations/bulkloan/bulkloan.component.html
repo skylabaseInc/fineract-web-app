@@ -1,0 +1,43 @@
+<p class="bulkloan">
+    <a [routerLink]="['/navbar/organisation']">Organisation</a>
+    <a>/ Bulk Loan Reassignment</a>
+  </p>
+
+  <div class="example-container mat-elevation-z2">
+    <h2 class="header" >Bulk Loan Reassignment</h2>
+    <hr>
+    <form class="example-form" [formGroup]="form">
+        Office*:
+        <mat-form-field class="example-full-width" required>
+            <mat-select placeholder="">
+              <mat-option *ngFor="let option of options" [value]="option.value">
+                {{ option.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+          Assignment date*:
+        <mat-form-field class="example-full-width" required>
+            <input matInput [matDatepicker]="picker" placeholder="" required formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+          </mat-form-field>
+          <br>
+          From loan officer*:
+          <mat-form-field class="example-full-width" required>
+              <mat-select placeholder="Select one">
+                  <mat-option value="option">Option</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <br>
+              To loan officer*:
+          <mat-form-field class="example-full-width" required>
+              <mat-select placeholder="Select one">
+                  <mat-option value="option">Option</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <br>
+              <button mat-button mat-raised-button class="btn">Cancel</button>
+              <button mat-button mat-raised-button color="primary">Submit</button>
+    </form>
+  </div>
