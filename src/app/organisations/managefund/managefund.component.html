@@ -1,0 +1,45 @@
+<p class="managefund">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a>/ Manage Funds</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h2 class="header">Manage Funds</h2>
+  <hr>
+  <mat-form-field class="example-full-width" required>
+    <input matInput type="text" placeholder="New Fund">
+  </mat-form-field>
+  <button mat-button mat-raised-button color="primary">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <div class="one">
+    <form [formGroup]="form">
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="1111" id="num" formControlName="num">
+      </mat-form-field>
+      <button mat-button mat-raised-button color="primary" (click)="disable()">
+        <mat-icon>edit</mat-icon>
+      </button>
+      </form>
+  </div>
+
+  <div class="two">
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="22222222" disabled>
+    </mat-form-field>
+    <button mat-button mat-raised-button color="primary">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+
+  <div class="three">
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="90000" disabled>
+    </mat-form-field>
+    <button mat-button mat-raised-button color="primary">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+
+</div>

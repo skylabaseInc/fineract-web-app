@@ -1,0 +1,35 @@
+
+.createprovisioning{
+    margin-left: 2%;
+    margin-top: 3%;
+}
+.example-full-width{
+    width:40%;
+}
+
+.all,.but,.selected{
+    display: inline-block;
+}
+.but{
+    width:10%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.all{
+    margin-left: 20%;
+}
+th, td {
+
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.mat-table{
+    width:100%;
+}
+th{
+    background-color: #ddd;
+}
+.btn2{
+    margin-left:30%;
+}

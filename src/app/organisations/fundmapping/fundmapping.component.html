@@ -1,0 +1,139 @@
+<p>Advance Search</p>
+
+<div class="example-container mat-elevation-z2">
+  <p class="header">Adhoc Query Search For Loans</p>
+  <hr>
+  <div class="one">
+    Loan Status
+    <mat-checkbox>All</mat-checkbox><br>
+    <mat-checkbox>Active</mat-checkbox><br>
+    <mat-checkbox>Overpaid</mat-checkbox>
+  </div>
+  <div class="two">
+      <mat-checkbox>Closed (obligation met)</mat-checkbox><br>
+      <mat-checkbox>Closed (written-off)</mat-checkbox>
+  </div>
+  <br> 
+  <div class="three">
+    Product
+    <mat-form-field>
+        <mat-select>
+          <mat-option value="option1">Income Generating loan</mat-option>
+          <mat-option value="option2">For Prepay-Calculate till preclosure</mat-option>
+          <mat-option value="option3">For Preclose-Calculate till rest frequent</mat-option>
+          <mat-option value="option2">BGS Prepay Loan</mat-option>
+          <mat-option value="option2">15000 Loan Product</mat-option>
+          <mat-option value="option2">BC 1</mat-option>
+          <mat-option value="option2">For Foreclosure</mat-option>
+          <mat-option value="option2">INterest only 36mo</mat-option>
+          <mat-option value="option3">Topup loans</mat-option>
+          <mat-option value="option2">test</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+  <div class="four">
+    Office
+    <mat-form-field>
+        <mat-select>
+          <mat-option value="option1">Head Office</mat-option>
+          <mat-option value="option2">Morogoro branch</mat-option>
+          <mat-option value="option3">Katuba</mat-option>
+          <mat-option value="option2">Loan Officer</mat-option>
+          <mat-option value="option2">dla</mat-option>
+          <mat-option value="option2">Nikitaben patel</mat-option>
+          <mat-option value="option2">yay</mat-option>
+          <mat-option value="option2">Office-1 P-m</mat-option>
+          <mat-option value="option3">322</mat-option>
+          <mat-option value="option2">buea</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+  <br>
+  <div class="five">
+    Select date type
+    <mat-form-field>
+        <mat-select placeholder="--select one--">
+          <mat-option value="option1">Approval date</mat-option>
+          <mat-option value="option2">Creation date</mat-option>
+          <mat-option value="option3">Disburesement date</mat-option>
+        </mat-select>
+    </mat-form-field>    
+  </div>
+ <div class="six">
+   between
+   <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="" required >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+    and
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker1" placeholder="" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+ </div>
+ <br>
+ <div class="seven">
+   Loan Outstanding Percentage
+   <mat-checkbox (click)="show=!show" ></mat-checkbox>
+ </div>
+ <div *ngIf="show" class="between">
+        <mat-form-field>
+            <mat-select placeholder="between">
+              <mat-option value="option1">between</mat-option>
+              <mat-option value="option2"> <=</mat-option>
+              <mat-option value="option3"> >= </mat-option>
+              <mat-option value="option2"> < </mat-option>
+              <mat-option value="option2"> > </mat-option>
+              <mat-option value="option2"> = </mat-option>
+              </mat-select>
+        </mat-form-field>
+    
+    <div class="and">
+      between
+      <mat-form-field class="example-full-width" required>
+          <input matInput type="text" placeholder="">
+        </mat-form-field>
+      and
+      <mat-form-field class="example-full-width" required>
+          <input matInput type="text" placeholder="">
+        </mat-form-field>
+    </div>
+   </div>
+ <br>
+
+ <div class="eight">
+    Loan Outstanding Amount
+    <mat-checkbox (click)="show1=!show1"></mat-checkbox>
+  </div>
+  <div *ngIf="show1" class="between1">
+      <mat-form-field>
+          <mat-select placeholder="between">
+            <mat-option value="option1">between</mat-option>
+            <mat-option value="option2"> <=</mat-option>
+            <mat-option value="option3"> >= </mat-option>
+            <mat-option value="option2"> < </mat-option>
+            <mat-option value="option2"> > </mat-option>
+            <mat-option value="option2"> = </mat-option>
+            </mat-select>
+      </mat-form-field>
+  
+  <div class="and">
+    between
+    <mat-form-field class="example-full-width" required>
+        <input matInput type="text" placeholder="">
+      </mat-form-field>
+    and
+    <mat-form-field class="example-full-width" required>
+        <input matInput type="text" placeholder="">
+      </mat-form-field>
+  </div>
+ </div>
+  
+
+<br>
+<br>
+<button mat-button mat-raised-button color="primary" class="btn">Summary</button>
+
+</div>

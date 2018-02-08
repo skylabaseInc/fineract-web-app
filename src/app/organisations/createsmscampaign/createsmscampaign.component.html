@@ -1,0 +1,72 @@
+<p class="createsms">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a [routerLink]="['/navbar/smscampaign']">/ SMS Campaign</a>
+  <a>/Create Campaign</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <mat-tab-group>
+     <mat-tab  label="Campaign">
+      <h2>Message Details</h2>
+      <form class="example-form" [formGroup]="form">
+        Campaign Name*:
+        <mat-form-field class="example-full-width" required>
+          <input matInput type="text" formControlName="campaign">
+        </mat-form-field>
+        <br> SMS Provider*:
+        <mat-form-field class="example-full-width" required>
+          <mat-select placeholder="Entity" formCOntrolName="sms">
+            <mat-option value="option">option1</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br> Trigger Type*:
+        <mat-form-field class="example-full-width" required>
+          <mat-select placeholder="Entity" formCOntrolName="type">
+            <mat-option value="option">type1</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br> Business Rule*:
+        <mat-form-field class="example-full-width" required>
+          <mat-select placeholder="Entity" formCOntrolName="business">
+            <mat-option value="option">option1</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+      </form>
+      <h2>Business Rule Parameters</h2>
+    </mat-tab>
+
+    <mat-tab label="message">
+      <h2>Message</h2>
+      Campaign Message*:
+      <mat-form-field class="example-full-width" required>
+        <textarea matInput="text" placeholder="Type message here maximum length is 480" minlength="480"></textarea>
+      </mat-form-field>
+      <h2>Available Template Parameters</h2>
+  </mat-tab>
+
+  <mat-tab label="Preview">
+    <table class="mat-table">
+      <tr>
+        <th>Details</th>
+      </tr>
+      <tr>
+        <td>Campaign Name</td>
+        </tr>
+        <tr>
+        <td>SMS Provider</td>
+        </tr>
+        <tr>
+        <td>Business Rule</td>
+      </tr>
+        <tr>
+        <td>Campaign Message</td>
+      </tr>
+    </table>
+  </mat-tab>
+  </mat-tab-group>
+  <hr>
+
+  <br>
+  <button mat-button mat-raised-button color="primary" class="btn">Proceed</button>
+</div>

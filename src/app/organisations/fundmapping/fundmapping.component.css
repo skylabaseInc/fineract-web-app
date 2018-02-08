@@ -1,0 +1,30 @@
+.example-container{
+    margin-left: 5%;
+    
+}
+.header{
+    margin:2%;
+    font-size: 20px;
+}
+.one,.two{
+    display:inline-block;
+}
+.three,.four{
+    display:inline-block;
+}
+.five,.six{
+    display: inline-block;
+}
+div {
+    margin-left:12%; 
+}
+.btn{
+    margin-left: 30%;
+    margin-bottom: 2%;
+}
+.seven,.and{
+    display:inline-block;
+}
+.eight,.between1{
+    display:inline-block;
+}

@@ -1,0 +1,29 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+    margin-left: 2%;
+  }
+  
+.addcurrency{
+    margin-top: 4%;
+    margin-left:3%;
+  }
+
+  .btn{
+    width:13%;
+    margin-left: 80%;
+}
+.mat-table{
+    width:100%;
+    height:100%;
+}
+.example-full-width{
+    width:30%;
+}
+.btn2{
+    margin-left: 45%;
+}
+ 
+  

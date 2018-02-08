@@ -1,0 +1,42 @@
+<p class="transaction">
+    <a [routerLink]="['/navbar/organisation']">Organisation</a>
+    <a [routerLink]="['/navbar/teller']">/ Tellers</a>
+    <a>/Transactions</a>
+  </p>
+
+  <div class="example-container mat-elevation-z2">
+    <p>Branch:Head office | Teller:0000000 | Cashier:NJUE,JOHN
+        <mat-form-field class="example-full-width1" required>
+            <mat-select placeholder="Select currency">
+              <mat-option *ngFor="let option of options" [value]="option.value">
+                {{ option.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+       <button mat-button mat-raised-button color="primary">show Txn</button>
+       Net:0
+       <button mat-button mat-raised-button color="accent" [routerLink]="['/navbar/settlecash']">
+         <mat-icon>arrow_upward</mat-icon>Settle Cash</button>
+       <button mat-button mat-raised-button color="primary" [routerLink]="['/navbar/allocatecash']"><mat-icon>arrow_downward</mat-icon>Allocate Cash</button>
+
+    </p>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Filter by name/external id">
+    </mat-form-field>
+
+    <table clas="mat-table">
+      <tr>
+        <th>Date</th>
+        <th>Transaction</th>
+        <th>Allocation:0</th>
+        <th>Cash In:0</th>
+        <th>Cash Out:0</th>
+        <th>Settlement:0</th>
+      </tr>
+      <tr>
+        <td>08 July 2017</td>
+        <td>Allocate Cash</td>
+        <td>4,000</td>
+      </tr>
+    </table>  
+  </div>

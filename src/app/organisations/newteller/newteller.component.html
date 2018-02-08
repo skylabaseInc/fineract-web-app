@@ -1,0 +1,57 @@
+<p class="newteller">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a [routerLink]="['/navbar/teller']">/ Teller</a>
+  <a>Create Teller</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h2 class="header"> Create Teller</h2>
+  <hr>
+  <form class="example-form" [formGroup]="form" novalidate>
+    <label class="text">Teller Name*:</label>
+    <mat-form-field class="example-full-width" required>
+      <input matInput type="text" id="tname" class="form-control" [formControl]="tname" formControlName="tname">
+      <mat-error *ngIf="tname.hasError('required')">Required field</mat-error>
+    </mat-form-field>
+    <br>
+    <label class="text">Office*:</label>
+    <mat-form-field class="example-full-width" required>
+      <mat-select placeholder="">
+        <mat-option *ngFor="let option of options" [value]="option.value">
+          {{ option.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <label class="text">Description*:</label>
+    <mat-form-field class="example-full-width" required>
+    <textarea matInput type="text" formControlName="description"></textarea>
+    </mat-form-field>
+    <br> start date*:
+    <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="picker" placeholder="" required formControlName="startdate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+    <br>
+    End date:
+    <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="picker1" placeholder="" required formControlName="enddate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+    <br>
+    Status*:
+    <mat-form-field class="example-full-width" required>
+        <mat-select placeholder="">
+          <mat-option *ngFor="let status of statuses" [value]="status.value">
+            {{ status.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <br>
+    <button mat-button mat-raised-button class="btn">Cancel</button>
+    <button mat-button mat-raised-button color="primary">Submit</button>
+
+  </form>
+</div>

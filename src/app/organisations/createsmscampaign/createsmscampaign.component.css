@@ -1,0 +1,28 @@
+.example-container{
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+.createsms{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.example-full-width{
+    width:40%;
+    margin-left: 5%;
+    
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    margin:15px;
+}
+.btn{
+    margin-left: 70%;
+    margin-bottom: 3%;
+}
+.mat-table{
+    width:100%;
+}

@@ -1,0 +1,61 @@
+<p class="viewprovisioning">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a [routerLink]="['/navbar/loanprovisioning']"> / Provisioning Criteria</a>
+  <a>View Provisioning Criteria</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <p class="header">Car Loan Provisioning
+    <button mat-button mat-raised-button class="btn" color="primary" [routerLink]="['/navbar/createprovisioningcriteria']">
+      <mat-icon>edit</mat-icon>Edit</button>
+    <button mat-button mat-raised-button color="warn" (click)="openDialog()">Delete</button>
+  </p>
+  <hr>
+  <p class="para">Loan Product
+    <mat-form-field class="example-full-width">
+      <textarea matInput type="text" placeholder="Group loan short term" disabled></textarea>
+      </mat-form-field>
+    </p>
+    <table class="mat-table">
+      <tr>
+        <th>Category</th>
+        <th>Min Age</th>
+        <th>Max Age</th>
+        <th>Percentage</th>
+        <th>Liability Account</th>
+        <th>Expense Account</th>
+      </tr>
+      <tr>
+        <td>SUB-STANDARD</td>
+        <td>30</td>
+        <td>60</td>
+        <td>5</td>
+        <td>Liability provisi</td>
+        <td>Expense provisi</td>
+      </tr>
+      <tr>
+          <td>STANDARD</td>
+          <td>0</td>
+          <td>29</td>
+          <td>0</td>
+          <td>Overpayment Liability on Loans</td>
+          <td>Bad Debts</td>
+        </tr>
+        <tr>
+            <td>DOUBTFUL</td>
+            <td>180</td>
+            <td>359</td>
+            <td>30</td>
+            <td>Liability provisi</td>
+            <td>Expense provisi</td>
+          </tr>
+          <tr>
+              <td>LOSS</td>
+              <td>360</td>
+              <td>720</td>
+              <td>100</td>
+              <td>Liability provisi</td>
+              <td>Expense provisi</td>
+            </tr>
+    </table>
+  </div>
