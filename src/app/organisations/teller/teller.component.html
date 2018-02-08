@@ -1,0 +1,66 @@
+<p class="teller">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a>/ Tellers</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <p>
+    <mat-form-field class="example-full-width" required>
+      <input matInput type="text" id="position" placeholder="Filter by name/external id">
+    </mat-form-field>
+    <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/newteller']">
+      <mat-icon>add</mat-icon>New Teller</button>
+  </p>
+
+  <table class="mat-table">
+    <tr id="header">
+      <th>Branch</th>
+      <th>Teller</th>
+      <th>Status</th>
+      <th>Started On</th>
+    </tr>
+    <tr [routerLink]="['/navbar/cashier']">
+      <td>Head Office</td>
+      <td>000000</td>
+      <td>INACTIVE</td>
+      <td>08 July 2017</td>
+      <td>
+        <button mat-button mat-raised-button color="accent">
+          <mat-icon>vissibility</mat-icon>
+          View</button>
+      </td>
+      <td>
+        <button mat-button mat-raised-button color="primary">
+          <mat-icon>edit</mat-icon>
+          Edit</button>
+      </td>
+      <td>
+        <button mat-button mat-raised-button color="warn">
+          <mat-icon>delete</mat-icon>
+          Delete</button>
+      </td>
+    </tr>
+
+    <tr [routerLink]="['/navbar/organisation']">
+      <td>Head Office</td>
+      <td>11111</td>
+      <td>ACTIVE</td>
+      <td>01 February 2017</td>
+      <td>
+        <button mat-button mat-raised-button color="accent">
+          <mat-icon>view</mat-icon>
+          View</button>
+      </td>
+      <td>
+        <button mat-button mat-raised-button color="primary">
+          <mat-icon>edit</mat-icon>
+          Edit</button>
+      </td>
+      <td>
+        <button mat-button mat-raised-button color="warn">
+          <mat-icon>delete</mat-icon>
+          Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>

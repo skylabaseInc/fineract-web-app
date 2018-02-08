@@ -1,0 +1,26 @@
+<p class="smscampaign">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a>/ SMS Campaigns</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h2 class="header"> SMS Campaigns </h2>
+  <hr>
+  <mat-form-field class="example-full-width" required>
+    <input matInput type="text" placeholder="New Fund">
+  </mat-form-field>
+  <button mat-button mat-raised-button color="primary" [routerLink]="['/navbar/createsmscampaign']">
+    <mat-icon>add</mat-icon>Create Campaign</button>
+  
+  <table class="mat-table">
+    <tr>
+      <th>Campaign Name</th>
+      <th>Template Message</th>
+      <th>Campaign Type</th>
+      <th>Trigger Type</th>
+      <th>Status</th>
+      <th>Approved by</th>
+    </tr>
+  </table>  
+
+</div>

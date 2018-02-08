@@ -32,7 +32,7 @@
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+          <a [routerLink]="['/navbar/fundmapping']">
             <mat-icon>bill</mat-icon>Fund Mapping<br>
           Bulk entry screen for mapping fund sources to loans
         </a>
@@ -46,14 +46,14 @@
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+          <a [routerLink]="['/navbar/loanprovisioning']">
             <mat-icon>edit</mat-icon>Loan Provisioning Criteria<br>
           Define Loan Provisioning Criteria for Organisations
         </a>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+          <a [routerLink]="['/navbar/entitydata']">
             <mat-icon>check</mat-icon>Entity Data Table Checks<br>
           Define Entity Data Table Check for Organisations
         </a>
@@ -64,14 +64,14 @@
   <mat-card class="card2">
     <mat-list>
       <mat-list-item>
-        <a>
-          <mat-icon>cogs</mat-icon>Currency Configurations<br>
+          <a [routerLink]="['/navbar/currency']">
+          <mat-icon></mat-icon>Currency Configurations<br>
           Currencies available across organisation for different produts
         </a>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+        <a [routerLink]="['/navbar/managefund']">
           <mat-icon>money</mat-icon>Manage Funds<br>
           Funds are associated with loans
         </a>
@@ -85,7 +85,7 @@
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+          <a [routerLink]="['/navbar/teller']">
           <mat-icon>money</mat-icon>Teller / Cashier Management<br>
           Manage Teller/Cashier and Cash Allocation and Settlement
         </a>
@@ -99,14 +99,14 @@
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+        <a [routerLink]="['/navbar/paymenttype']">
           <mat-icon>attach_money</mat-icon>Payment Type<br>
           Manage payment types
         </a>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+          <a [routerLink]="['/navbar/smscampaign']">
           <mat-icon>sms</mat-icon>SMS Campaigns<br>
           Define SMS Campaigns for Organisation
         </a>

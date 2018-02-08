@@ -1,0 +1,26 @@
+.example-container{
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+.smscampaign{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.example-full-width{
+    width:40%;
+    margin-left: 2%;
+    margin-right: 20%;
+}
+.header{
+    margin:2%;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    margin:15px;
+}
+.btn{
+    margin-left: 30%;
+}

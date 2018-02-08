@@ -1,0 +1,51 @@
+<p class="newteller">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a [routerLink]="['/navbar/teller']">/ Tellers</a>
+  <a>/ Cashiers</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <p>Branch : Head Office | Teller :0000000</p>
+  <p>
+    <mat-form-field class="example-full-width" required>
+      <input matInput type="text" id="position" placeholder="Filter by name/external id">
+    </mat-form-field>
+    <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/newcashier']">
+      <mat-icon>add</mat-icon>New Cashier For Teller</button>
+  </p>
+
+  <table class="mat-table">
+    <tr id="header">
+      <th>Period</th>
+      <th>Cashier/Staff</th>
+      <th>Full Day/Time</th>
+      <th>Vault Actions</th>
+    </tr>
+    <tr [routerLink]="['/navbar/transaction']">
+      <td>26 June 2017 - 27 June 2017</td>
+      <td>NJUE,JOHN</td>
+      <td>Yes</td>
+      <td>
+        <mat-icon color="primary">list</mat-icon>
+      </td>
+      <td>
+        <button mat-button mat-raised-button class="allocate" [routerLink]="['/navbar/allocatecash']">
+          <mat-icon>arrow_forward</mat-icon>
+          Allocate Cash</button>
+      </td>
+      <td>
+        <button mat-button mat-raised-button class="settle" [routerLink]="['/navbar/settlecash']">
+          <mat-icon>arrow_downward</mat-icon>
+          Settle Cash</button>
+      </td>
+      <td>
+        <button mat-button color="primary"><mat-icon>remove_red_eye</mat-icon></button>
+      </td>
+      <td>
+      <mat-icon color="warn">delete</mat-icon>
+      </td>
+
+    </tr>
+  </table>
+
+</div>

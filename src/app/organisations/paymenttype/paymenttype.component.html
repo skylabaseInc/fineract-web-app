@@ -1,0 +1,28 @@
+<p class="paymenttype">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a>/ Payment Type</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <p class="header"> Payment Type
+    <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/addpayment']">
+      <mat-icon>add</mat-icon>Add Payment Type</button>
+  </p>
+  <hr>
+  <table class="mat-table">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Is Cash Payment</th>
+      <th>Position</th>
+    </tr>
+    <tr>
+      <td>Waire transfer</td>
+      <td>Automated transfer</td>
+      <td>true</td>
+      <td>1</td>
+      <td><mat-icon>edit</mat-icon>Edit</td>
+      <td><mat-icon>close</mat-icon></td>
+    </tr>
+  </table>
+</div>

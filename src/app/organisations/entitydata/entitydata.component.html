@@ -1,0 +1,48 @@
+<p class="entitydata">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a>/ Entity Data Table Checks</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <mat-form-field class="example-full-width" required>
+    <input matInput type="text" placeholder="Filter by Name">
+  </mat-form-field>
+  <button mat-button mat-raised-button color="primary"(click)="openDialogCreate()">
+    <mat-icon>add</mat-icon>Create Entity-Data Table Check</button>
+
+
+<table class="mat-table">
+  <tr>
+    <th>Entity</th>
+    <th>Product</th>
+    <th>Data table</th>
+    <th>Status</th>
+    <th>System Defined</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <td>Loan</td>
+    <td>For Prepay-Calculate till preclosure date</td>
+    <td>Agreement Form</td>
+    <td>CREATE</td>
+    <td>False</td>
+    <td><button mat-button mat-raised-button color="warn" (click)="openDialog()"><mat-icon>delete</mat-icon></button></td>
+  </tr>
+  <tr>
+      <td>Loan</td>
+      <td>Income Generating Loan</td>
+      <td>Loan Scoring</td>
+      <td>CREATE</td>
+      <td>False</td>
+      <td><button mat-button mat-raised-button color="warn" (click)="openDialog()"><mat-icon>delete</mat-icon></button></td>
+    </tr>
+    <tr>
+        <td>Loan</td>
+        <td>For Prepay-Calculate till preclosure date</td>
+        <td>Ama</td>
+        <td>APPROVE</td>
+        <td>False</td>
+        <td><button mat-button mat-raised-button color="warn" (click)="openDialog()"><mat-icon>delete</mat-icon></button></td>
+      </tr>
+</table>    
+</div>

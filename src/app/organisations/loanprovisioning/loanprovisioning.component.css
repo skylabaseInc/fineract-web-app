@@ -1,0 +1,30 @@
+.example-container{
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+.loanprovisioning{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.example-full-width{
+    width:40%;
+    margin-left: 2%;
+    margin-right: 25%;
+}
+.header{
+    margin:2%;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    margin:15px;
+}
+tr:hover {background-color: rgb(16, 179, 233);}
+.mat-table{
+    width:100%;
+}
+th{
+    background-color: #ddd;
+}

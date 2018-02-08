@@ -1,0 +1,57 @@
+<p class="settlecash">
+    <a [routerLink]="['/navbar/organisation']">Organisation</a>
+    <a [routerLink]="['/navbar/teller']">/ Tellers</a>
+    <a [routerLink]="['/navbar/cashier']">/0000000</a>
+    <a>Settle Cash</a>
+
+  </p>
+
+  <div class="example-container mat-elevation-z2">
+    <form class="example-form" [formGroup]="form">
+      Office:
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Head office" disabled>
+      </mat-form-field>
+      Teller Name:
+      <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="0000000" disabled>
+        </mat-form-field>
+      <br>
+      Cashier:
+      <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="NJUE,JOHN" disabled>
+        </mat-form-field>
+      Assignment Period:
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="26 June 2017-27 June 2017()" disabled>
+          </mat-form-field>
+      <br> 
+      Date*:
+      <mat-form-field class="example-full-width">
+          <input matInput [matDatepicker]="picker" placeholder="" required formControlName="startdate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+        </mat-form-field>
+       Currency*:
+       <mat-form-field class="example-full-width1" required>
+          <mat-select placeholder="Select currency" formControlName="currency">
+            <mat-option *ngFor="let option of options" [value]="option.value">
+              {{ option.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>   
+        Amount*:
+        <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="" formControlName="amount">
+          </mat-form-field>
+        Notes/Comments*:
+        <mat-form-field class="example-full-width" required>
+            <textarea matInput type="text" formControlName="description"></textarea>
+           </mat-form-field>  
+           <br>
+
+      <button mat-button mat-raised-button class="btn">Cancel</button>
+      <button mat-button mat-raised-button color="accent"><mat-icon>arrow_upward</mat-icon>Settle Cash</button>
+    </form>
+  </div>

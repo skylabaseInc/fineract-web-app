@@ -2,8 +2,6 @@
 
     color:teal;
 }
-
-   
 .app-container {
     flex: 1;
     width: 100%;
@@ -42,4 +40,4 @@ ul#menu li{
 .search2{
     padding-left:0%;
 }
-  
+

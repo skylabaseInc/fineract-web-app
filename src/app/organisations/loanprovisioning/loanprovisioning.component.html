@@ -1,0 +1,35 @@
+<p class="loanprovisioning">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a>/ Provisioning Criteria</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <mat-form-field class="example-full-width" required>
+    <input matInput type="text" placeholder="Filter by Name">
+  </mat-form-field>
+  <button mat-button mat-raised-button color="primary" [routerLink]="['/navbar/createprovisioningcriteria']">
+    <mat-icon>add</mat-icon>Create Provisioning Criteria</button>
+
+  <table class="mat-table">
+    <tr>
+      <th> Name</th>
+      <th>Created By</th>
+    </tr>
+    <tr [routerLink]="['/navbar/viewprovisioning']">
+      <td>Car Loan Provisioning</td>
+      <td>Mifos</td>
+    </tr>
+    <tr>
+      <td>Cruteria test 01</td>
+      <td>Mifos</td>
+    </tr>
+    <tr>
+      <td>House Loan Provisioning</td>
+      <td>Mifos</td>
+    </tr>
+    <tr>
+      <td>Individual Loan</td>
+      <td>Mifos</td>
+    </tr>
+  </table>
+</div>

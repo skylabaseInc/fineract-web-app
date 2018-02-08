@@ -1,0 +1,28 @@
+<p class="currency">
+    <a [routerLink]="['/navbar/organisation']">Organisation</a>
+    <a>/ Currency Configuration</a>
+  </p>
+
+  <div class="example-container mat-elevation-z2">
+    <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/addcurrency']">
+      <mat-icon>add</mat-icon>Add/Edit</button>
+      
+      <table class="mat-table">
+        <tr>
+          <th>Currency Name</th>
+          <th>Currency Code</th>
+        </tr>
+        <tr>
+          <td>Afghanistan Afghani</td>
+          <td>AFN</td>
+        </tr>
+        <tr>
+          <td>Albanian Lek</td>
+          <td>ALL</td>
+        </tr>
+        <tr>
+          <td>Algerian Dinar</td>
+          <td>DZD</td>
+        </tr>
+      </table>
+  </div>

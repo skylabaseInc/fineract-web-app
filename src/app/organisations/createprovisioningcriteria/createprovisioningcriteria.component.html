@@ -1,0 +1,94 @@
+<p class="createprovisioning">
+  <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <a [routerLink]="['/navbar/loanprovisioning']"> / Provisioning Criteria</a>
+  <a>Loan Provisioning Criteria</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <form class="example-form" [formGroup]="form">
+    Provisioning Criteria*:
+    <mat-form-field class="example-full-width" required>
+      <input matInput type="text" formControlName="criteria">
+    </mat-form-field>
+    <br>
+    <div class="all">
+      <h5>All Products</h5>
+      <mat-form-field>
+        <mat-select>
+          <mat-option value="option1">Income Generating loan</mat-option>
+          <mat-option value="option2">For Prepay-Calculate till preclosure</mat-option>
+          <mat-option value="option3">For Preclose-Calculate till rest frequent</mat-option>
+          <mat-option value="option2">For Foreclosure</mat-option>
+          <mat-option value="option3">Topup loans</mat-option>
+          <mat-option value="option2">test</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="but">
+      <button mat-button mat-raised-button color="primary">
+        <mat-icon>fast_forward</mat-icon>
+      </button>
+      <br>
+      <button mat-button mat-raised-button color="primary">
+        <mat-icon>fast_rewind</mat-icon>
+      </button>
+    </div>
+
+    <div class="selected">
+      <h5>Selected Products</h5>
+      <mat-form-field>
+          <mat-select>
+            <mat-option value="option1">Income Generating loan</mat-option>
+            <mat-option value="option2">For Prepay-Calculate till preclosure</mat-option>
+          </mat-select>
+        </mat-form-field>
+  </div>
+  <table class="mat-table">
+      <tr>
+        <th>Category</th>
+        <th>Min Age</th>
+        <th>Max Age</th>
+        <th>Percentage</th>
+        <th>Liability Account</th>
+        <th>Expense Account</th>
+      </tr>
+      <tr>
+          <td>STANDARD</td>
+         <td> <mat-form-field class="example-full-width" required>
+              <input matInput type="number" formControlName="min" placeholder="In Days">
+            </mat-form-field></td>
+          <td><mat-form-field class="example-full-width" required>
+              <input matInput type="number" formControlName="max" placeholder="In Days">
+            </mat-form-field></td>
+          <td><mat-form-field class="example-full-width" required>
+              <input matInput type="number" formControlName="percentage" placeholder="Amount">
+            </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+              <mat-select placeholder="select liability account">
+                <mat-option value="option1">Test Temp</mat-option>
+                <mat-option value="option2">Penalties Receivables</mat-option>
+                <mat-option value="option3">Recurring Deposits</mat-option>
+                <mat-option value="option2">Tax Account(sales taxes)</mat-option>
+                <mat-option value="option3">loans-Minx Int</mat-option>
+                <mat-option value="option2">Mandatory Savings</mat-option>
+              </mat-select>
+            </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+              <mat-select placeholder="select Expense account">
+                <mat-option value="option1">staff training</mat-option>
+                <mat-option value="option2">Testing expenses</mat-option>
+                <mat-option value="option3">Office expenses</mat-option>
+                <mat-option value="option2">Salary and wages</mat-option>
+                <mat-option value="option3">Office expense text</mat-option>
+                <mat-option value="option2">professional</mat-option>
+              </mat-select>
+            </mat-form-field></td>
+        </tr>
+      </table>
+      <br>
+      <br>
+<button mat-button mat-raised-button class="btn2">Cancel</button>
+<button mat-button mat-raised-button color="primary">Submit</button>
+  </form>
+</div>
