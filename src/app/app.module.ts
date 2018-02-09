@@ -110,6 +110,11 @@ import { EntitydataComponent } from './organisations/entitydata/entitydata.compo
 import { DeleteEntitydataDialogComponent } from './organisations/delete-entitydata-dialog/delete-entitydata-dialog.component';
 import { CreatentitydataDialogComponent } from './organisations/createntitydata-dialog/createntitydata-dialog.component';
 import { CreatesmscampaignComponent } from './organisations/createsmscampaign/createsmscampaign.component';
+import { UserComponent } from './Users/user/user.component';
+import { CreateuserComponent } from './Users/createuser/createuser.component';
+import { ClickuserComponent } from './Users/clickuser/clickuser.component';
+import { DeleteuserDialogComponent } from './Users/deleteuser-dialog/deleteuser-dialog.component';
+import { ChangepasswordDialogComponent } from './Users/changepassword-dialog/changepassword-dialog.component';
 
 
 
@@ -212,7 +217,12 @@ const ROUTES: Route[] = [
             {path:'entitydata',component:EntitydataComponent},
             {path:'deleteEntitydata-dialog',component:DeleteEntitydataDialogComponent},
             {path:'createntitydata-dialog',component:CreatentitydataDialogComponent},
-            {path:'createsmscampaign',component:CreatesmscampaignComponent}
+            {path:'createsmscampaign',component:CreatesmscampaignComponent},
+            {path:'user',component:UserComponent},
+            {path:'createuser',component:CreateuserComponent},
+            {path:'clickuser',component:ClickuserComponent},
+            {path:'deleteuser-dialog',component:DeleteuserDialogComponent},
+            {path:'changepassword-dialog',component:ChangepasswordDialogComponent}
 
         ]
     },
@@ -314,7 +324,12 @@ const ROUTES: Route[] = [
         EntitydataComponent,
         DeleteEntitydataDialogComponent,
         CreatentitydataDialogComponent,
-        CreatesmscampaignComponent
+        CreatesmscampaignComponent,
+        UserComponent,
+        CreateuserComponent,
+        ClickuserComponent,
+        DeleteuserDialogComponent,
+        ChangepasswordDialogComponent
     ],
     imports: [
         RouterModule.forRoot(ROUTES),

@@ -8,6 +8,7 @@ import {RouterLink } from '@angular/router'
   styleUrls: ['./createclient.component.css']
 })
 export class CreateclientComponent implements OnInit {
+  startDate = new Date(1990, 0, 1);
 
   forms = [
     {value: 'per', viewValue: 'PERSON'},

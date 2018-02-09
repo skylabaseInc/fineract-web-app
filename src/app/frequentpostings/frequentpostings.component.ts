@@ -7,6 +7,7 @@ import {FormControl,ReactiveFormsModule} from '@angular/forms'
   styleUrls: ['./frequentpostings.component.css']
 })
 export class FrequentpostingsComponent implements OnInit {
+  startDate = new Date(1990, 0, 1);
   show = false;
 
   myControl: FormControl = new FormControl();

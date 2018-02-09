@@ -7,6 +7,8 @@ import {FormGroup,FormBuilder,Validators,FormControl} from '@angular/forms';
   styleUrls: ['./newcashier.component.css']
 })
 export class NewcashierComponent implements OnInit {
+  startDate = new Date(1990, 0, 1);
+  
   form:FormGroup;
   options = [
     {value:'office',viewValue:'Mi-Cbs,Mi Cbs'},

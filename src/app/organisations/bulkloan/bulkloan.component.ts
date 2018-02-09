@@ -7,6 +7,7 @@ import {FormGroup,FormBuilder,Validators,FormControl} from '@angular/forms';
   styleUrls: ['./bulkloan.component.css']
 })
 export class BulkloanComponent implements OnInit {
+  startDate = new Date(1990, 0, 1);
 
   options = [
     {value: 'mor', viewValue: 'Head Office'},
