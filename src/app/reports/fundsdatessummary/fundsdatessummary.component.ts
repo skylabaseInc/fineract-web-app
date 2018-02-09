@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-fundsdatessummary',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fundsdatessummary.component.css']
 })
 export class FundsdatessummaryComponent implements OnInit {
+  animalControl = new FormControl('', [Validators.required]);
+
   currencies=[
     {name:'US Dollar'},
     {name:'All'}
