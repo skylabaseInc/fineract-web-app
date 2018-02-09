@@ -1,0 +1,66 @@
+<p class="user">
+  Users
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h2>List of Users</h2>
+  <hr>
+  <p>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Filter by name">
+    </mat-form-field>
+    <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/createuser']">
+      <mat-icon>add</mat-icon>Create User</button>
+  </p>
+  <hr>
+  <table class="mat-table">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Office</th>
+    </tr>
+    <tr [routerLink]="['/navbar/clickuser']">
+      <td>App</td>
+      <td>Administrator</td>
+      <td>demomfi@mifos.org</td>
+      <td>Head Office</td>
+    </tr>
+    <tr>
+      <td>Apurwa</td>
+      <td>raghuvanshi</td>
+      <td>apurwa@yahoo.co.in</td>
+      <td>Group G2</td>
+    </tr>
+    <tr>
+      <td>as12</td>
+      <td>as12</td>
+      <td>as@as.com.mx</td>
+      <td>Head Office</td>
+    </tr>
+    <tr>
+      <td>as12</td>
+      <td>as12</td>
+      <td>as@as.com.mx</td>
+      <td>Head Office</td>
+    </tr>
+    <tr>
+      <td>as12</td>
+      <td>as12</td>
+      <td>as@as.com.mx</td>
+      <td>Head Office</td>
+    </tr>
+    <tr>
+      <td>as12</td>
+      <td>as12</td>
+      <td>as@as.com.mx</td>
+      <td>Head Office</td>
+    </tr>
+    <tr>
+      <td>as12</td>
+      <td>as12</td>
+      <td>as@as.com.mx</td>
+      <td>Head Office</td>
+    </tr>
+  </table>
+</div>

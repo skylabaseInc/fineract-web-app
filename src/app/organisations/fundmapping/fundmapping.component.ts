@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fundmapping.component.css']
 })
 export class FundmappingComponent implements OnInit {
+  startDate = new Date(1990, 0, 1);
 
   show=false;
   show1=false;

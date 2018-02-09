@@ -7,7 +7,9 @@ import {FormControl,ReactiveFormsModule} from '@angular/forms'
   styleUrls: ['./addjournalentry.component.css']
 })
 export class AddjournalentryComponent implements OnInit {
+  startDate = new Date(1990, 0, 1);
   show=false;
+
   myControl: FormControl = new FormControl();
   
   options = [

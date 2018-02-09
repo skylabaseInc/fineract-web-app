@@ -1,0 +1,106 @@
+<p class="createuser">
+  <a [routerLink]="['/navbar/user']">Users</a>
+  <a> / Create User</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h2>Create User</h2>
+  <hr>
+  <form class="example-form" [formGroup]="form" novalidate>
+    Username*:
+    <mat-form-field class="example-full-width" required>
+      <input matInput type="text" id="username" class="form-control" [formControl]="username" formControlName="username">
+      <mat-error *ngIf="username.hasError('required')">Required field</mat-error>
+    </mat-form-field>
+    <br> First Name*:
+    <mat-form-field class="example-full-width" required>
+      <input matInput type="text" id="fname" class="form-control" [formControl]="fname" formControlName="fname">
+      <mat-error *ngIf="fname.hasError('required')">Required field</mat-error>
+    </mat-form-field>
+    <br> Last Name*:
+    <mat-form-field class="example-full-width" required>
+      <input matInput type="text" id="lname" class="form-control" [formControl]="lname" formControlName="lname">
+      <mat-error *ngIf="lname.hasError('required')">Required field</mat-error>
+    </mat-form-field>
+    <br> Email:
+    <mat-form-field class="example-full-width" required>
+      <input matInput type="email" id="email" class="form-control" [formControl]="email" formControlName="email">
+      <mat-error *ngIf="email.hasError('required')">Required field</mat-error>
+    </mat-form-field>
+    <br>
+
+    <mat-checkbox (click)="show=!show">Auto generate password</mat-checkbox>
+    <mat-checkbox>Override password expiry policy</mat-checkbox>
+    <br>
+
+    <div *ngIf="show">
+      Password*:
+      <mat-form-field class="example-full-width" required>
+        <input matInput type="password" id="password" class="form-control" [formControl]="password" formControlName="password">
+        <mat-error *ngIf="password.hasError('required')">Required field</mat-error>
+      </mat-form-field>
+      <br> Repeat Password*:
+      <mat-form-field class="example-full-width" required>
+        <input matInput type="Rpassword" id="Rpassword" class="form-control" [formControl]="Rpassword" formControlName="Rpassword">
+        <mat-error *ngIf="Rpassword.hasError('required')">Required field</mat-error>
+      </mat-form-field>
+    </div>
+    <br>
+    Office*:
+    <mat-form-field class="example-full-width" required>
+        <mat-select placeholder="--Select office--">
+          <mat-option *ngFor="let option of options" [value]="option.value">
+            {{ option.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      Staff:
+      <mat-form-field class="example-full-width" required>
+          <mat-select placeholder="--Select staff--">
+            <mat-option *ngFor="let staff of staffs" [value]="staff.value">
+              {{ staff.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <div class="available">
+            <h5>Available Roles*</h5>
+            <mat-form-field>
+              <mat-select>
+                <mat-option value="option1">Gerente</mat-option>
+                <mat-option value="option2">Loan reschedule</mat-option>
+                <mat-option value="option3">gf</mat-option>
+                <mat-option value="option2">Loan</mat-option>
+                <mat-option value="option3">test22</mat-option>
+                <mat-option value="option2">tet</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+      
+          <div class="but">
+            <button mat-button mat-raised-button color="primary">
+              <mat-icon>fast_forward</mat-icon>
+            </button>
+            <br>
+            <button mat-button mat-raised-button color="primary">
+              <mat-icon>fast_rewind</mat-icon>
+            </button>
+          </div>
+      
+          <div class="selected">
+            <h5>Selected Roles*</h5>
+            <mat-form-field>
+                <mat-select>
+                  <mat-option value="option1">Admin</mat-option>
+                  <mat-option value="option2">Test1</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+<br>
+<button mat-button mat-raised-button class="btn">Cancel</button>
+<button mat-button mat-raised-button color="primary">Submit</button>
+
+
+  </form>
+</div>

@@ -7,6 +7,7 @@ import {FormGroup,FormBuilder,Validators,FormControl} from '@angular/forms';
   styleUrls: ['./createemployee.component.css']
 })
 export class CreateemployeeComponent implements OnInit {
+  startDate = new Date(1990, 0, 1);
   fname= new FormControl('', [Validators.required]);
   lname= new FormControl('', [Validators.required]);
   mobile=new FormControl('');

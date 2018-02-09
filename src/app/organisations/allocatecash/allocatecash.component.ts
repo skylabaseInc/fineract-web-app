@@ -8,6 +8,7 @@ import {FormGroup,FormBuilder,Validators,FormControl} from '@angular/forms';
   styleUrls: ['./allocatecash.component.css']
 })
 export class AllocatecashComponent implements OnInit {
+  startDate = new Date(1990, 0, 1);
   form:FormGroup;
 
   options = [
