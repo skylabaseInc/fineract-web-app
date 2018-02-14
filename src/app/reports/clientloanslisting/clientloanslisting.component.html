@@ -6,7 +6,7 @@
     <mat-form-field>
       <mat-select placeholder="--select one--" [formControl]="animalControl" required>
         <mat-option>--select one--</mat-option>
-        <mat-option *ngFor="let office of offices" [value]="office">
+        <mat-option *ngFor="let office of offices" [value]="office" (click)="onClick()">
           {{office.name}}
         </mat-option>
       </mat-select>
@@ -31,7 +31,7 @@
     <mat-form-field>
       <mat-select placeholder="--select one--" [formControl]="animalControl" required>
         <mat-option>--select one--</mat-option>
-        <mat-option *ngFor="let currency of currencies" [value]="currency">
+        <mat-option *ngFor="let currency of currencies" [value]="currency" (click)="onSubmit()">
           {{currency.name}}
         </mat-option>
       </mat-select>
@@ -51,8 +51,36 @@
       <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
       
     </mat-form-field>
-    
     <br/>
+    
+    <div *ngIf="submit">
+    Product:      
+    <mat-form-field >
+      <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+        <mat-option>--select one--</mat-option>
+        <mat-option *ngFor="let product of products" [value]="product">
+          {{product.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+      
+    </mat-form-field>
+    
+    </div>
+    <div *ngIf="submitted">
+      Loan Officer:      
+      <mat-form-field >
+        <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+          <mat-option>--select one--</mat-option>
+          <mat-option *ngFor="let officer of officerss" [value]="officer">
+            {{officer.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+        
+      </mat-form-field>
+      
+      </div>
     
       Decimal places:
       <mat-form-field>

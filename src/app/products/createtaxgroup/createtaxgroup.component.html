@@ -1,0 +1,27 @@
+<div class="fineract-div">product / savings products / create saving
+    <div class="example-container mat-elevation-z8">
+      <h2>Create Tax Group</h2>
+      <mat-divider></mat-divider>
+      <div>
+      Name:
+      <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+            <mat-hint>Required!</mat-hint>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Name is
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </form>
+        </div>
+        <h1>Tax Components</h1>
+        <div>
+          Tax component <span>Start date</span>
+        </div>
+        <div>
+            <button mat-raised-button color="primary">Submit</button>
+            <button mat-raised-button color="primary">Cancel</button>
+          </div>
+    </div>
+</div>

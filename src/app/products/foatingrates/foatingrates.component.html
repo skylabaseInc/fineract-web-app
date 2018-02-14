@@ -1,0 +1,46 @@
+<div class="fineract-div">product / Floating rates
+    <div class="example-container mat-elevation-z8">
+  
+      <div class="example-header">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter by name/short name">
+        </mat-form-field>
+        <a mat-raised-button color="primary" [routerLink]="['/navbar/admin/products/savingsproducts/createsaving']">
+          <mat-icon>add</mat-icon>Create Floating Rates</a>
+      </div>
+      <mat-divider></mat-divider>
+      <mat-table #table [dataSource]="dataSource">
+  
+        <!-- Position Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <a routerLink="{{element.name}}">{{element.name}}</a>
+          </mat-cell>
+        </ng-container>
+  
+        <!-- Name Column -->
+        <ng-container matColumnDef="created">
+          <mat-header-cell *matHeaderCellDef> Created By</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.created}} </mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="lendingrate">
+            <mat-header-cell *matHeaderCellDef> Is Base lending rate</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.lendingrate}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="active">
+              <mat-header-cell *matHeaderCellDef> Active</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.active}} </mat-cell>
+            </ng-container>
+      
+    
+          
+  
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+  </div>
+  

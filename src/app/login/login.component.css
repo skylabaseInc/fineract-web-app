@@ -32,3 +32,7 @@ div mat-card{
 div p mat-form-field{
     max-width: 100px;
 }
+.fineract-logo{
+    margin-left:25%;
+    width:40%;
+}

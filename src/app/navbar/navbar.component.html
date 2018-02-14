@@ -7,7 +7,7 @@
         </button>
       </li>
       <li>
-        <a href="#">Logo</a>
+        <a [routerLink]="['home']"><img class="fineract-logo" src="assets/index2.png"></a>
       </li>
       <li>
         <button mat-button [matMenuTriggerFor]="client" class="dropdown-button">Clients
@@ -46,8 +46,8 @@
           <button mat-menu-item [routerLink]="['/navbar/user']">Users</button>
           <button mat-menu-item [routerLink]="['/navbar/organisation']">Organisations</button>
           <button mat-menu-item>Systems</button>
-          <button mat-menu-item>Productss</button>
-          <button mat-menu-item [routerLink]="['admin/templates']">Template</button>
+          <button mat-menu-item [routerLink]="['/navbar/admin/products']">Products</button>
+          <button mat-menu-item [routerLink]="['/navbar/admin/templates']">Template</button>
 
         </mat-menu>
       </li>

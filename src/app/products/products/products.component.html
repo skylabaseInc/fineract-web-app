@@ -1,0 +1,55 @@
+<div class="example-container mat-elevation-z8">
+  <h2>Products</h2>
+  <mat-divider></mat-divider>
+  <br/>
+  <div class="div1">
+    <div class="inside-div">
+     <a [routerLink]="['/navbar/admin/products/loanproducts']">
+      <mat-icon>local_offer</mat-icon><span>Loan Products</span><br/>
+      Add new loan product or modify or inactivate loan product</a>
+    </div>
+    <div class="inside-div">
+      <a [routerLink]="['/navbar/admin/products/savingsproducts']">
+      <mat-icon>business_center</mat-icon><span>Savings Products</span><br/>
+      Add new savings product or modify or inactivate savings product</a>
+    </div>
+    <div class="inside-div">
+      <a [routerLink]="['/navbar/admin/products/shareproducts']">
+      <mat-icon>business_center</mat-icon>
+      <span>Share Products</span><br/>
+      Add new share product or modify or inactivate share product</a>
+    </div>
+    <div class="inside-div">
+        <a [routerLink]="['/navbar/admin/products/charges']">
+      <mat-icon>monetization_on</mat-icon><span>Charges</span><br/>
+      Define charges/penalties for loan products, savings and deposite products </a>
+    </div>
+  </div>
+  &nbsp;&nbsp;
+  <div class="div2">
+<div class="inside-div">
+    <a [routerLink]="['/navbar/admin/products/productmix']">
+  <mat-icon>shuffle</mat-icon><span>Products Mix</span><br>
+  Defines rules for taking multiple rules</a>
+</div>
+<div class="inside-div">
+    <a [routerLink]="['/navbar/admin/products/fixeddepositeproduct']">
+  <mat-icon>business_center</mat-icon><span>Fixed Deposit Product</span><br>
+  Add, modify or inactivate a Fixed deposite product</a>
+</div>
+<div class="inside-div">
+    <a [routerLink]="['/navbar/admin/products/recurringdepositeproduct']">
+  <mat-icon>business_center</mat-icon><span>Reccuring Deposite Product</span><br>
+  Add, modify or inactivate a Recurring deposite product</a>
+</div>
+<div class="inside-div">
+    <a [routerLink]="['/navbar/admin/products/managetax']">
+  <mat-icon>settings</mat-icon><span>Manage Tax Configurations</span><br>
+  Define Tax components and Tax groups</a>
+</div>
+<div class="inside-div">
+  <mat-icon>monetization_on</mat-icon><span>Floating Rates</span><br>
+  Define floating rate for loan products
+</div>
+  </div>
+</div>

@@ -117,112 +117,166 @@ import { DeleteuserDialogComponent } from './Users/deleteuser-dialog/deleteuser-
 import { ChangepasswordDialogComponent } from './Users/changepassword-dialog/changepassword-dialog.component';
 
 
+import { CreatetemplateComponent } from './templates/createtemplate/createtemplate.component';
+import { ProductsComponent } from './products/products/products.component';
+import { LoanproductsComponent } from './products/loanproducts/loanproducts.component';
+import { CreateloanproductComponent } from './products/createloanproduct/createloanproduct.component';
+import { SavingsproductsComponent } from './products/savingsproducts/savingsproducts.component';
+import { CreatsavingComponent } from './products/creatsaving/creatsaving.component';
+import { ShareproductsComponent } from './products/shareproducts/shareproducts.component';
+import { CreateshareComponent } from './products/createshare/createshare.component';
+import { ChargesComponent } from './products/charges/charges.component';
+import { CreatechargeComponent } from './products/createcharge/createcharge.component';
+import { ProductmixComponent } from './products/productmix/productmix.component';
+import { AddmixComponent } from './products/addmix/addmix.component';
+import { FixeddepositeproductsComponent} from './products/fixeddepositeproducts/fixeddepositeproducts.component'
+import { CreatefixeddepositprodComponent} from './products/createfixeddepositprod/createfixeddepositprod.component';
+import { RecurringdepositeComponent } from './products/recurringdeposite/recurringdeposite.component';
+import { CreaterecurringdepositeComponent } from './products/createrecurringdeposite/createrecurringdeposite.component';
+import { FoatingratesComponent } from './products/foatingrates/foatingrates.component';
+import { CreatefloatingratesComponent } from './products/createfloatingrates/createfloatingrates.component';
+import { ManagetaxComponent } from './products/managetax/managetax.component';
+import { ManagetaxcomponentsComponent } from './products/managetaxcomponents/managetaxcomponents.component';
+import { ManagetaxgroupsComponent } from './products/managetaxgroups/managetaxgroups.component';
+import { CreatetaxcomponentComponent } from './products/createtaxcomponent/createtaxcomponent.component';
+import { CreatetaxgroupComponent } from './products/createtaxgroup/createtaxgroup.component'
 
 
 
 
 
 const ROUTES: Route[] = [
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
-    { path: 'login', component: LoginComponent },
-    {
-        path: 'navbar', component: NavbarComponent, children: [
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', component: RepoComponent },
-            { path: 'frequentpostings', component: FrequentpostingsComponent },
-            { path: 'individualcollection', component: IndividudualcollectComponent },
-            { path: 'chartaccount', component: ChartaccountComponent },
-            { path: 'createclient', component: CreateclientComponent },
-            { path: 'createcenter', component: CreatecenterComponent },
-            { path: 'creategroup', component: CreategroupComponent },
-            { path: 'notification', component: NotificationComponent },
-            { path: 'accountclosure', component: AccountclosureComponent },
-            { path: 'addjournalentry', component: AddjournalentryComponent },
-            { path: 'accounting', component: AccountingComponent },
-            { path: 'searchjournal', component: SearchjournalComponent },
-            { path: 'accruals', component: AccrualsComponent },
-            { path: 'accountingrules', component: AccountingrulesComponent },
-            { path: 'migrateopening', component: MigrateopeningComponent },
-            { path: 'provisioningentry', component: ProvisioningentryComponent },
-            { path: 'financialactivity', component: FinancialactivityComponent },
-            { path: 'client', component: ClientComponent },
-            { path: 'group', component: GroupComponent },
-            { path: 'center', component: CenterComponent },
-            { path: 'treeview', component: TreeviewComponent },
-            { path: 'create-gl', component: CreateGlComponent },
-            { path: 'createclosure', component: CreateclosureComponent },
-            { path: 'addrule', component: AddruleComponent },
-            { path: 'createprovisioning', component: CreateprovisioningComponent },
-            { path: 'addfinancialactivity', component: AddfinancialactivityComponent },
-            { path: 'organisation', component: OrganisationComponent },
-            { path: 'manageoffice', component: ManageofficeComponent },
-            { path: 'treeview-org', component: TreeviewOrgComponent },
-            { path: 'home/dashboard', component: DashboardComponent },
-            { path: 'createoffice', component: CreateofficeComponent },
-            { path: 'keyboardshortcut', component: KeyboardshortcutComponent },
-            { path: 'navigation', component: NavigationComponent },
-            { path: 'manageholidays', component: ManageholidaysComponent },
-            { path: 'createholiday', component: CreateholidayComponent },
-            { path: 'manageemployee', component: ManageemployeeComponent },
-            { path: 'createemployee', component: CreateemployeeComponent },
-            { path: 'standinginstruction', component: StandinginstructionComponent },
-            { path: 'passwordpreferences', component: PasswordpreferencesComponent },
-            { path: 'workingday', component: WorkingdayComponent },
-            { path: 'bulkloan', component: BulkloanComponent },
-            { path: 'home/dashboard', component: DashboardComponent },
-            { path: 'reports/allreports', component: AllreportsComponent },
-            { path: 'reports/clients', component: ClientsComponent },
-            { path: 'reports/loans', component: LoansComponent },
-            { path: 'reports/savings', component: SavingsComponent },
-            { path: 'reports/xbrl', component: XbrlComponent },
-            { path: 'reports/funds', component: FundsComponent },
-            { path: 'reports/accounting', component: ReportsaccountingComponent },
-            { path: 'reports/clients/Client Listing', component: ClientlistingComponent },
-            { path: 'reports/clients/Client Listing(Pentaho)', component: ClientlistingpentahoComponent },
-            { path: 'reports/clients/Client Loan Listing', component: ClientloanslistingComponent },
-            { path: 'reports/clients/Client Loan Listing(Pentaho)', component: ClientloanslistingpentahoComponent },
-            { path: 'reports/savings/Client Savings Summary', component: ClientsavingssummaryComponent },
-            { path: 'reports/savings/Savings Account Dormancy Report', component: SavingsaccountsdormancyreportComponent },
-            { path: 'reports/savings/Savings Transactions', component: SavingstransactionsComponent },
-            { path: 'reports/funds/Funds Disbursed Between Dates Summary', component: FundsdatessummaryComponent },
-            { path: 'reports/funds/Funds Disbursed Between Dates Summary by Office', component: FundsdatessummaryofficeComponent },
-            { path: 'reports/funds/Funds Disbursed Between Dates Summary by Office(Pentaho)', component: FundssummaryofficepentahoComponent },
-            { path: 'reports/funds/Funds Disbursed Between Dates Summary(Pentaho)', component: FundssummarypentahoComponent },
-            { path: 'reports/accounting/Balance sheet', component: BalancesheetComponent },
-            { path: 'reports/accounting/General Ledger Report', component: GeneralledgerreportComponent },
-            { path: 'reports/accounting/Income Statement', component: IncomestatementComponent },
-            { path: 'reports/accounting/Trial Balance', component: TrialbalanceComponent },
-            { path: 'reports/clients/Client Listing/run_report', component: RunclientlistComponent },
-            { path: 'reports/clients/Client Listing(Pentaho)/run_report', component: RunclientlistpentahoComponent },
-            { path: 'reports/clients/Client Loan Listing(Pentaho)/run_report', component: RunclientloanpehtahoComponent },
-            { path: 'admin/templates', component: TemplatesComponent },
-            { path: 'paymenttype', component: PaymenttypeComponent },
-            { path: 'addpayment', component: AddpaymentComponent },
-            { path: 'currency', component: CurrencyComponent },
-            { path: 'addcurrency', component: AddcurrencyComponent },
-            { path: 'teller', component: TellerComponent },
-            { path: 'newteller', component: NewtellerComponent },
-            { path: 'cashier', component: CashierComponent },
-            { path: 'newcashier', component: NewcashierComponent },
-            { path: 'transaction', component: TransactionComponent },
-            { path: 'settlecash', component: SettlecashComponent },
-            {path :'allocatecash',component:AllocatecashComponent},
-            {path:'managefund',component:ManagefundComponent},
-            {path:'smscampaign',component:SmscampaignComponent},
-            {path:'loanprovisioning',component:LoanprovisioningComponent},
-            {path:'viewprovisioning',component:ViewprovisioningComponent},
-            {path:'deleteprovisioning-dialog',component:DeleteprovisioningDialogComponent},
-            {path:'createprovisioningcriteria',component:CreateprovisioningcriteriaComponent},
-            {path:'fundmapping',component:FundmappingComponent},
-            {path:'entitydata',component:EntitydataComponent},
-            {path:'deleteEntitydata-dialog',component:DeleteEntitydataDialogComponent},
-            {path:'createntitydata-dialog',component:CreatentitydataDialogComponent},
-            {path:'createsmscampaign',component:CreatesmscampaignComponent},
-            {path:'user',component:UserComponent},
-            {path:'createuser',component:CreateuserComponent},
-            {path:'clickuser',component:ClickuserComponent},
-            {path:'deleteuser-dialog',component:DeleteuserDialogComponent},
-            {path:'changepassword-dialog',component:ChangepasswordDialogComponent}
+
+    {path:'', redirectTo:'login', pathMatch:'full'},
+    {path:'login',component:LoginComponent},
+    {path:'navbar', component:NavbarComponent,children:[
+    {path:'',redirectTo:'home',pathMatch:'full' },
+    {path:'home',component:RepoComponent},
+    {path:'frequentpostings',component:FrequentpostingsComponent},
+    {path:'individualcollection', component:IndividudualcollectComponent},
+    {path:'chartaccount',component:ChartaccountComponent},
+    {path: 'createclient', component: CreateclientComponent},
+    {path:'createcenter',component:CreatecenterComponent},
+    {path:'creategroup',component:CreategroupComponent},
+    {path:'notification',component:NotificationComponent},
+    {path:'accountclosure',component:AccountclosureComponent},
+    {path:'addjournalentry',component:AddjournalentryComponent},
+    {path:'accounting',component:AccountingComponent},
+    {path:'searchjournal',component:SearchjournalComponent},
+    {path:'accruals',component:AccrualsComponent},
+    {path:'accountingrules',component:AccountingrulesComponent},
+    {path:'migrateopening',component:MigrateopeningComponent},
+    {path:'provisioningentry',component:ProvisioningentryComponent},
+    {path:'financialactivity',component:FinancialactivityComponent},
+    {path:'client',component:ClientComponent},
+    {path:'group',component:GroupComponent},
+    {path:'center',component:CenterComponent},
+    {path:'treeview',component:TreeviewComponent},
+    {path:'create-gl',component:CreateGlComponent},
+    {path:'createclosure',component:CreateclosureComponent},
+    {path:'addrule',component:AddruleComponent},
+    {path:'createprovisioning',component:CreateprovisioningComponent},
+    {path:'addfinancialactivity',component:AddfinancialactivityComponent},
+    {path:'organisation',component:OrganisationComponent},
+    {path:'manageoffice',component:ManageofficeComponent},
+    {path:'treeview-org',component:TreeviewOrgComponent},
+    {path:'home/dashboard', component:DashboardComponent},
+    {path:'createoffice',component:CreateofficeComponent},
+    {path:'keyboardshortcut',component:KeyboardshortcutComponent},
+    {path:'navigation',component:NavigationComponent},
+    {path:'manageholidays',component:ManageholidaysComponent},
+    {path:'createholiday',component:CreateholidayComponent},
+    {path:'manageemployee',component:ManageemployeeComponent},
+    {path:'createemployee',component:CreateemployeeComponent},
+    {path:'standinginstruction',component:StandinginstructionComponent},
+    {path:'passwordpreferences',component:PasswordpreferencesComponent},
+    {path:'workingday',component:WorkingdayComponent},
+    {path:'bulkloan',component:BulkloanComponent},
+  {path:'home/dashboard', component:DashboardComponent},
+  {path:'reports/allreports',component:AllreportsComponent},
+  {path:'reports/clients', component:ClientsComponent},
+  {path:'reports/loans', component:LoansComponent},
+  {path:'reports/savings', component:SavingsComponent},
+  {path:'reports/xbrl', component:XbrlComponent},
+  {path:'reports/funds', component:FundsComponent},
+  {path:'reports/accounting', component:ReportsaccountingComponent},
+  {path:'reports/clients/Client Listing', component:ClientlistingComponent},
+  {path:'reports/clients/Client Listing(Pentaho)', component:ClientlistingpentahoComponent},
+  {path:'reports/clients/Client Loan Listing', component:ClientloanslistingComponent},
+  {path:'reports/clients/Client Loan Listing(Pentaho)', component:ClientloanslistingpentahoComponent},
+  {path:'reports/savings/Client Savings Summary', component:ClientsavingssummaryComponent},
+  {path:'reports/savings/Savings Account Dormancy Report', component:SavingsaccountsdormancyreportComponent},
+  {path:'reports/savings/Savings Transactions', component:SavingstransactionsComponent},
+  { path: 'reports/funds/Funds Disbursed Between Dates Summary', component: FundsdatessummaryComponent },
+  { path: 'reports/funds/Funds Disbursed Between Dates Summary by Office', component: FundsdatessummaryofficeComponent },
+  { path: 'reports/funds/Funds Disbursed Between Dates Summary by Office(Pentaho)', component:FundssummaryofficepentahoComponent },
+  { path: 'reports/funds/Funds Disbursed Between Dates Summary(Pentaho)', component: FundssummarypentahoComponent },
+  { path: 'reports/accounting/Balance sheet', component: BalancesheetComponent },
+  { path: 'reports/accounting/General Ledger Report', component:GeneralledgerreportComponent },
+  { path: 'reports/accounting/Income Statement', component: IncomestatementComponent },
+  { path: 'reports/accounting/Trial Balance', component: TrialbalanceComponent},
+  { path: 'reports/clients/Client Listing/run_report', component: RunclientlistComponent},
+  { path: 'reports/clients/Client Listing(Pentaho)/run_report', component: RunclientlistpentahoComponent},
+  { path: 'reports/clients/Client Loan Listing(Pentaho)/run_report', component: RunclientloanpehtahoComponent},
+  {path:'admin/templates', component:TemplatesComponent},
+  {path:'admin/templates/create', component:CreatetemplateComponent},
+  {path:'admin/products/loanproducts', component:LoanproductsComponent},
+  {path:'admin/products', component:ProductsComponent},
+  {path:'admin/products/loanproducts/createloan', component:CreateloanproductComponent},
+  {path:'admin/products/savingsproducts', component:SavingsproductsComponent},
+  {path:'admin/products/savingsproducts/createsaving', component:CreatsavingComponent},
+  {path:'admin/products/shareproducts', component:ShareproductsComponent},
+  {path:'admin/products/shareproducts/createshare', component:CreateshareComponent},
+  {path:'admin/products/charges', component:ChargesComponent},
+  {path:'admin/products/productmix', component:ProductmixComponent},
+  {path:'admin/products/fixeddepositeproduct', component:FixeddepositeproductsComponent},
+  {path:'admin/products/recurringdepositeproduct', component:RecurringdepositeComponent},
+  {path:'admin/products/floatingrates', component:FoatingratesComponent},
+  {path:'admin/products/managetax', component:ManagetaxComponent},
+  {path:'admin/products/managetax/managetaxcomponents', component:ManagetaxcomponentsComponent},
+  {path:'admin/products/managetax/managetaxgroups', component:ManagetaxgroupsComponent},
+  { path: 'paymenttype', component: PaymenttypeComponent },
+  { path: 'addpayment', component: AddpaymentComponent },
+  { path: 'currency', component: CurrencyComponent },
+  { path: 'addcurrency', component: AddcurrencyComponent },
+  { path: 'teller', component: TellerComponent },
+  { path: 'newteller', component: NewtellerComponent },
+  { path: 'cashier', component: CashierComponent },
+  { path: 'newcashier', component: NewcashierComponent },
+  { path: 'transaction', component: TransactionComponent },
+  { path: 'settlecash', component: SettlecashComponent },
+  {path :'allocatecash',component:AllocatecashComponent},
+  {path:'managefund',component:ManagefundComponent},
+  {path:'smscampaign',component:SmscampaignComponent},
+  {path:'loanprovisioning',component:LoanprovisioningComponent},
+  {path:'viewprovisioning',component:ViewprovisioningComponent},
+  {path:'deleteprovisioning-dialog',component:DeleteprovisioningDialogComponent},
+  {path:'createprovisioningcriteria',component:CreateprovisioningcriteriaComponent},
+  {path:'fundmapping',component:FundmappingComponent},
+  {path:'entitydata',component:EntitydataComponent},
+  {path:'deleteEntitydata-dialog',component:DeleteEntitydataDialogComponent},
+  {path:'createntitydata-dialog',component:CreatentitydataDialogComponent},
+  {path:'createsmscampaign',component:CreatesmscampaignComponent},
+  {path:'user',component:UserComponent},
+  {path:'createuser',component:CreateuserComponent},
+  {path:'clickuser',component:ClickuserComponent},
+  {path:'deleteuser-dialog',component:DeleteuserDialogComponent},
+  {path:'changepassword-dialog',component:ChangepasswordDialogComponent}
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
         ]
     },
@@ -230,6 +284,7 @@ const ROUTES: Route[] = [
 
 
 @NgModule({
+
     declarations: [
         AppComponent,
         LoginComponent,
@@ -329,7 +384,30 @@ const ROUTES: Route[] = [
         CreateuserComponent,
         ClickuserComponent,
         DeleteuserDialogComponent,
-        ChangepasswordDialogComponent
+        ChangepasswordDialogComponent,
+        CreatetemplateComponent,
+    ProductsComponent,
+    LoanproductsComponent,
+    CreateloanproductComponent,
+    SavingsproductsComponent,
+    CreatsavingComponent,
+    ShareproductsComponent,
+    CreateshareComponent,
+    ChargesComponent,
+    CreatechargeComponent,
+    ProductmixComponent,
+    AddmixComponent,
+    FixeddepositeproductsComponent,
+    CreatefixeddepositprodComponent,
+    RecurringdepositeComponent,
+    CreaterecurringdepositeComponent,
+    FoatingratesComponent,
+    CreatefloatingratesComponent,
+    ManagetaxComponent,
+    ManagetaxcomponentsComponent,
+    ManagetaxgroupsComponent,
+    CreatetaxcomponentComponent,
+    CreatetaxgroupComponent
     ],
     imports: [
         RouterModule.forRoot(ROUTES),
@@ -342,8 +420,8 @@ const ROUTES: Route[] = [
         MatTableModule, MatCardModule, MatSelectModule, MatListModule, MatDividerModule,
         MatAutocompleteModule, MatRadioModule, MatListModule, MatTabsModule,
          MatExpansionModule,MatDialogModule
-
     ],
+
     providers: [],
     bootstrap: [AppComponent],
     entryComponents: [DeleteprovisioningDialogComponent]

@@ -1,0 +1,66 @@
+<div class="fineract-div">product / savings products / create saving
+    <div class="example-container mat-elevation-z8">
+      <h2>Create Tax Component</h2>
+      <mat-divider></mat-divider>
+      <div>
+      Name:
+      <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+            <mat-hint>Required!</mat-hint>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Name is
+              <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </form>
+        </div>
+        <div>
+          Percentage:
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                  <mat-hint>Required!</mat-hint>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </form>
+        </div>
+        <div>
+          Credit Account Type
+            <mat-form-field>
+                <mat-select>
+                  <mat-option *ngFor="let accounttype of accounttypes" [value]="accounttype.value">
+                    {{accounttype.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div>
+          Credit Account
+            <mat-form-field>
+                <mat-select placeholder="Select an option">
+                  <mat-option>select an option</mat-option>
+                  <mat-option *ngFor="let charge of charges" [value]="charge.value">
+                    {{charge.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div>
+          Start Date
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker1"  [formControl]="date">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+              
+        </div>
+        <div>
+          <button mat-raised-button color="primary">Submit</button>
+          <button mat-raised-button color="primary">Cancel</button>
+        </div>
+    </div>
+    </div>
+    
