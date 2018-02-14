@@ -115,6 +115,20 @@ import { CreateuserComponent } from './Users/createuser/createuser.component';
 import { ClickuserComponent } from './Users/clickuser/clickuser.component';
 import { DeleteuserDialogComponent } from './Users/deleteuser-dialog/deleteuser-dialog.component';
 import { ChangepasswordDialogComponent } from './Users/changepassword-dialog/changepassword-dialog.component';
+import { SystemComponent } from './Systems/system/system.component';
+import { AddroleComponent } from './Systems/addrole/addrole.component';
+import { ViewroleComponent } from './Systems/viewrole/viewrole.component';
+import { ManagehookComponent } from './Systems/managehook/managehook.component';
+import { CreatehookComponent } from './Systems/createhook/createhook.component';
+import { ManagesurveyComponent } from './Systems/managesurvey/managesurvey.component';
+import { CreatesurveyComponent } from './Systems/createsurvey/createsurvey.component';
+import { ManagecodeComponent } from './Systems/managecode/managecode.component';
+import { AddcodeComponent } from './Systems/addcode/addcode.component';
+import { ClickmanagecodeComponent } from './Systems/clickmanagecode/clickmanagecode.component';
+import { AddcodevalueComponent } from './Systems/addcodevalue/addcodevalue.component';
+import { ConfigurationComponent } from './Systems/configuration/configuration.component';
+import { AccountnumberComponent } from './Systems/accountnumber/accountnumber.component';
+import { AddpreferenceComponent } from './Systems/addpreference/addpreference.component';
 
 
 
@@ -222,7 +236,21 @@ const ROUTES: Route[] = [
             {path:'createuser',component:CreateuserComponent},
             {path:'clickuser',component:ClickuserComponent},
             {path:'deleteuser-dialog',component:DeleteuserDialogComponent},
-            {path:'changepassword-dialog',component:ChangepasswordDialogComponent}
+            {path:'changepassword-dialog',component:ChangepasswordDialogComponent},
+            {path:'system',component:SystemComponent},
+            {path:'addrole',component:AddroleComponent},
+            {path:'viewrole',component:ViewroleComponent},
+            {path:'managehook',component:ManagehookComponent},
+            {path:'createhook',component:CreatehookComponent},
+            {path:'managesurvey',component:ManagesurveyComponent},
+            {path:'createsurvey',component:CreatesurveyComponent},
+            {path:'managecode',component:ManagecodeComponent},
+            {path:'addcode',component:AddcodeComponent},
+            {path:'clickmanagecode',component:ClickmanagecodeComponent},
+            {path:'addcodevalue',component:AddcodevalueComponent},
+            {path:'configuration',component:ConfigurationComponent},
+            {path:'accountnumber',component:AccountnumberComponent},
+            {path:'addpreference',component:AddpreferenceComponent}
 
         ]
     },
@@ -329,7 +357,21 @@ const ROUTES: Route[] = [
         CreateuserComponent,
         ClickuserComponent,
         DeleteuserDialogComponent,
-        ChangepasswordDialogComponent
+        ChangepasswordDialogComponent,
+        SystemComponent,
+        AddroleComponent,
+        ViewroleComponent,
+        ManagehookComponent,
+        CreatehookComponent,
+        ManagesurveyComponent,
+        CreatesurveyComponent,
+        ManagecodeComponent,
+        AddcodeComponent,
+        ClickmanagecodeComponent,
+        AddcodevalueComponent,
+        ConfigurationComponent,
+        AccountnumberComponent,
+        AddpreferenceComponent
     ],
     imports: [
         RouterModule.forRoot(ROUTES),

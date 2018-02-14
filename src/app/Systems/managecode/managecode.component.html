@@ -1,0 +1,36 @@
+<p class="managecode">
+  <a [routerLink]="['/navbar/system']">System</a>
+  <a> / Manage Codes </a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <br><br><hr>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Filter by name">
+  </mat-form-field>
+  <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/addcode']">
+    <mat-icon>add</mat-icon>Add Code</button>
+    <br>
+    <table class="mat-table">
+      <tr>
+        <th>Code Name</th>
+        <th>System Defined</th>
+      </tr>
+      <tr [routerLink]="['/navbar/clickmanagecode']">
+        <td>ADDRESS_TYPE</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>Asset account tags</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>CenterClosureReason</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>ClientClassification</td>
+        <td>true</td>
+      </tr>
+    </table>
+</div>

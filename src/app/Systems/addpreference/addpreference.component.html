@@ -1,0 +1,39 @@
+<p class="addpreference">
+  <a [routerLink]="['/navbar/accountnumber']">Account Number Preferences</a>
+  <a>/ Add Account Number Preferences</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h3 class="header">Add Account Number Preferences</h3>
+  <hr>
+  <form class="example-form" [formGroup]="form">
+    Select Account type*:
+    <mat-form-field class="example-full-width" >
+      <mat-select placeholder="--Select Account type--" class="form-control"  formControlName="account">
+        <mat-option *ngFor="let option of options" [value]="option.value">
+          {{ option.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-checkbox (click)="display()">Add Prefix to Account</mat-checkbox>
+    <br>
+
+    <div *ngIf="show">
+      Prefix Field:
+      <mat-form-field class="example-full-width" required>
+        <mat-select placeholder="--select prefix type--">
+          <mat-option value="option">Option</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <br>
+    <button mat-button mat-raised-button class="btn">
+      Cancel
+    </button>
+
+    <button mat-button mat-raised-button color="primary">
+      Submit
+    </button>
+  </form>
+</div>

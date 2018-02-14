@@ -1,0 +1,24 @@
+<p class="addrole">
+  <a [routerLink]="['/navbar/system']">System</a>
+  <a [routerLink]="['/navbar/viewrole']">/View Roles</a>
+  <a>Add Roles</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h3 class="header">Add Role</h3>
+  <hr>
+  <form class="example-form" [formGroup]="form">
+    Name*:
+    <mat-form-field class="example-full-width" required>
+      <input matInput type="text" id="name" class="form-control" [formControl]="name" formControlName="name">
+      <mat-error *ngIf="name.hasError('required')">Required field</mat-error>
+    </mat-form-field>
+    <br> Description*:
+    <mat-form-field class="example-full-width" required>
+      <textarea matInput type="text" formControlName="description"></textarea> 
+    </mat-form-field>
+    <br>
+    <button mat-button mat-raised-button class="btn">Cancel</button>
+    <button mat-button mat-raised-button color="primary">Submit</button>
+  </form>
+</div>

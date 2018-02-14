@@ -1,0 +1,30 @@
+<p class="clickmanagecode">
+  <a [routerLink]="['/navbar/system']">System</a>
+  <a [routerLink]="['/navbar/managecode']"> / Manage Codes</a>
+  <a [routerLink]="['/navbar/clickmanagecode']"> /ADDRESS_TYPE</a>
+  <a> /Add Code Value</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h3 class="header">Add Code Value</h3>
+  <hr>
+  <form class="example-form">
+    Code value:
+    <mat-form-field class="example-full-width">
+      <input matInput type="text">
+    </mat-form-field>
+    <br> Description:
+    <mat-form-field class="example-full-width">
+      <textarea matInput type="text"></textarea>
+    </mat-form-field>
+    <br> Position:
+    <mat-form-field class="example-full-width">
+      <input matInput type="text">
+    </mat-form-field>
+    <br>
+    <mat-checkbox>Active</mat-checkbox>
+    <br>
+    <button mat-button mat-raised-button color="primary" class="btn">
+      <mat-icon>add</mat-icon>Add</button>
+  </form>
+</div>

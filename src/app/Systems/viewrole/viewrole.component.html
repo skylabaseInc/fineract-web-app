@@ -1,0 +1,21 @@
+<p class="viewrole">
+  <a [routerLink]="['/navbar/system']">System</a>
+  <a>/ View Roles</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <button mat-button mat-raised-button class="btn" color="primary" [routerLink]="['/navbar/addrole']">
+    <mat-icon>add</mat-icon>Add Role</button>
+  <table class="mat-table">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>Super user</td>
+      <td>This role provides all application permissions</td>
+      <td>Enabled</td>
+    </tr>
+  </table>
+</div>

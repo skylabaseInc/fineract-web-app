@@ -1,0 +1,22 @@
+<p class="clickmanagecode">
+  <a [routerLink]="['/navbar/system']">System</a>
+  <a [routerLink]="['/navbar/managecode']"> / Manage Codes</a>
+  <a>/ ADDRESS_TYPE</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h3 class="header">ADDRESS_TYPE</h3>
+  <hr>
+  <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/addcodevalue']">
+    <mat-icon>add</mat-icon>Add Code Values</button>
+  <hr>
+
+<table class="mat-table">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Position</th>
+    <th>Active</th>
+  </tr>
+</table>
+</div>

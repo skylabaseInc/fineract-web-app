@@ -1,0 +1,21 @@
+<p class="managehook">
+  <a [routerLink]="['/navbar/system']">System</a>
+  <a>/ Manage Hooks</a>
+</p>
+
+<div class="example-conatainer mat-elevation-z2">
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Filter by name">
+  </mat-form-field>
+  <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/createhook']">
+    <mat-icon>add</mat-icon>Create Hook</button>
+    <hr>
+  
+    <table class="mat-table">
+      <tr>
+        <th>Hook Template</th>
+        <th>Hook Name</th>
+        <th>Active?</th>
+      </tr>
+    </table>
+</div>

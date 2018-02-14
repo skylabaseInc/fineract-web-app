@@ -1,0 +1,27 @@
+<p classs="managesurvey">
+  <a [routerLink]="['/navbar/system']">System</a>
+  <a> / Manage Surveys</a>
+</p>
+
+<div class="example-container mat-elevation-z2">
+  <h3 class="header">List of All Surveys</h3>
+  <hr>
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Search Surveys">
+  </mat-form-field>
+  <button mat-button mat-raised-button color="primary">
+      <mat-icon>search</mat-icon>
+    </button>
+  <button mat-button mat-raised-button class="btn" color="primary" [routerLink]="['/navbar/createsurvey']">
+    <mat-icon>add</mat-icon>Create Survey</button>
+
+  <table class="mat-table">
+    <tr>
+      <th>Key</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Country Code</th>
+      <th>Status</th>
+    </tr>
+  </table>
+</div>
