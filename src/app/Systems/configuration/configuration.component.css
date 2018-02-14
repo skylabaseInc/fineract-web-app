@@ -2,21 +2,26 @@
     margin-left: 3%;
     
 }
-.clickuser{
+.configuration{
     margin-left: 3%;
     margin-top: 3%;
 }
-.btn{
-    margin-left: 60%;
-    margin-top: 2%;
+.header{
+    margin:2%;
 }
-.mat-table{
-    width:100%;
+.example-full-width{
+    width:50%;
+    margin-left: 3%;
 }
- td {
+th, td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
     margin:15px;
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
+.mat-table{
+    width:100%;
+}
+th{
+    background-color: #ddd;
+}

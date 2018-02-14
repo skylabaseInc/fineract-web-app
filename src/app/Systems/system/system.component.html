@@ -1,0 +1,103 @@
+<div class="example-container mat-elevation-z2">
+  <h2 class="header">SYSTEM</h2>
+  <hr>
+  <mat-card class="card1">
+    <mat-list>
+      <mat-list-item>
+        <a>
+          <mat-icon></mat-icon>Manage Data tables
+          <br> Add new extra fields to any entry in form of data table
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/navbar/managecode']">
+          <mat-icon></mat-icon>Manage Codes
+          <br> Codes are used to define drop down values
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/navbar/viewrole']">
+          <mat-icon></mat-icon>Manage Roles and permissions
+          <br>Define or modify roles and associate permissions
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a>
+          <mat-icon></mat-icon>Configure Maker Checker Tasks
+          <br>Define or modify maker checker tasks
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/navbar/managehook']">
+          <mat-icon></mat-icon>Manage Hooks
+          <br> Define hooks
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a>
+          <mat-icon></mat-icon>Entity to Entity Mapping
+          <br> Define or modify entity to entity mappings
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a [routerLink]="['/navbar/managesurvey']">
+          <mat-icon></mat-icon>Manage Surveys
+          <br> Manage your surveys
+        </a>
+      </mat-list-item>
+      </mat-list>
+  </mat-card>
+
+  <mat-card class="card2">
+    <mat-list>
+      <mat-list-item>
+        <a>
+          <mat-icon></mat-icon>Audit Trails
+          <br>Audit logs of all the activities such as create client,disburse loans etc
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a>
+          <mat-icon></mat-icon>Manage Reports
+          <br> Add new and classify reports
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a>
+          <mat-icon></mat-icon>Scheduler Jobs
+          <br> Schedule a job,modify or delete jobs
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+          <a [routerLink]="['/navbar/configuration']">
+          <mat-icon></mat-icon>Configurations
+          <br> Global configuration or cache settings
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+          <a [routerLink]="['/navbar/accountnumber']">
+          <mat-icon></mat-icon>Account Number Preferences
+          <br> Preferences for generating account numbers for client,loan and savings account
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <a>
+          <mat-icon>settings</mat-icon>External Services
+          <br> External serives configuration
+        </a>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+
+</div>

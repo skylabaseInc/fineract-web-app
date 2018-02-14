@@ -1,0 +1,26 @@
+.example-container{
+    margin-left: 3%;
+    margin-top: 3%;
+    
+}
+
+.header{
+    margin-left:2%;
+}
+
+div mat-card{
+    display:inline-block;
+    vertical-align: top;
+    margin-top: 2%;
+    width:40%;
+    margin-bottom: 2%;
+}
+a {
+    font-size: 14px;
+}
+.card2{
+    margin-left: 2%;
+}
+.card1{
+    margin-left: 3%;
+}

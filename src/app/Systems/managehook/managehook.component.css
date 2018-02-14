@@ -2,21 +2,30 @@
     margin-left: 3%;
     
 }
-.clickuser{
+.managehook{
     margin-left: 3%;
     margin-top: 3%;
 }
+
 .btn{
-    margin-left: 60%;
     margin-top: 2%;
+    margin-left: 80%;
 }
-.mat-table{
-    width:100%;
-}
- td {
+th, td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
     margin:15px;
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
+.mat-table{
+    width:100%;
+}
+th{
+    background-color: #ddd;
+}
+tr:hover {
+    background-color: rgb(16, 179, 233);
+}
+.example-full-width{
+    width:40%;
+}

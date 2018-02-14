@@ -7,6 +7,7 @@ import {FormGroup,FormBuilder,Validators,FormControl} from '@angular/forms';
   styleUrls: ['./createholiday.component.css']
 })
 export class CreateholidayComponent implements OnInit {
+  startDate = new Date(1990, 0, 1);
 
   show=false;
   hide=true;
