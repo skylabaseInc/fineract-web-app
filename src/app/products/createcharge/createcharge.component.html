@@ -1,0 +1,15 @@
+<div class="fineract-div">product / charges / create charge
+    <div class="example-container mat-elevation-z8">
+      <div>
+        charge applies to:
+        <mat-form-field>
+            <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+              <mat-option>--select one--</mat-option>
+              <mat-option *ngFor="let charge of charges" [value]="charge">
+                {{charge.name}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+  
+          </mat-form-field>
+      </div>

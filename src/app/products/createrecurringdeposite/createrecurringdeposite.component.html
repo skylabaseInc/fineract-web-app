@@ -1,0 +1,416 @@
+<div class="fineract-div">product / savings products / create saving
+    <div class="example-container mat-elevation-z8">
+      <h2>Details</h2>
+      <mat-divider></mat-divider>
+      <div>
+        <div>
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Product Name" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+              <mat-hint>Required!</mat-hint>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Name is
+                <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </form>
+        </div>
+        <div>
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Short name" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+              <mat-hint>Required!</mat-hint>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                short name is
+                <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </form>
+        </div>
+        <div>
+          <mat-form-field>
+            <textarea matInput placeholder="Description" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
+          </mat-form-field>
+        </div>
+        <h2>Currency</h2>
+        <mat-divider></mat-divider>
+        <div>
+          Currency:
+          <mat-form-field>
+            <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+              <mat-option>--select one--</mat-option>
+              <mat-option *ngFor="let currency of currencies" [value]="currency">
+                {{currency.name}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+  
+          </mat-form-field>
+          Decimal places:
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput value="2" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+              <mat-hint>Required!</mat-hint>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Decimal places is
+                <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </form>
+  
+        </div>
+        <div>
+          Multiples of :
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput value="0" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+              <mat-hint>Required!</mat-hint>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                This field is
+                <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </form>
+  
+        </div>
+        <h2>Terms</h2>
+        <mat-divider></mat-divider>
+        <div>
+            Default deposite Amount:
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                <mat-hint>Required!</mat-hint>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  This field is
+                  <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </form>
+    
+          </div>
+          <div>
+            Minimum Deposite Amount:
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                  <mat-hint>Required!</mat-hint>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    This field is
+                    <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </form>
+      
+            
+            Maximum deposite Amount:
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                  <mat-hint>Required!</mat-hint>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    This field is
+                    <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </form>
+      
+          </div>
+          <div>
+              Interest compounding period:
+              <mat-form-field>
+                <mat-select placeholder="Daily" [formControl]="animalControl" required>
+                  <mat-option>Daily</mat-option>
+                  <mat-option *ngFor="let interestcomp of interestcomps" [value]="interestcomp">
+                    {{interestcomp.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+      
+              </mat-form-field>
+              Interest posting period:
+              <mat-form-field>
+                <mat-select placeholder="Monthly" [formControl]="animalControl" required>
+                  <mat-option>Monthly</mat-option>
+                  <mat-option *ngFor="let interestpost of interestposts" [value]="interestpost">
+                    {{interestpost.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+      
+              </mat-form-field>
+            </div>
+            <div>
+              Interest calculated using:
+              <mat-form-field>
+                <mat-select placeholder="Daily Balance" [formControl]="animalControl" required>
+                  <mat-option>Daily Balance</mat-option>
+                  <mat-option *ngFor="let interestcalc of interestcalcs" [value]="interestcalc">
+                    {{interestcalc.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+      
+              </mat-form-field>
+              Days in year:
+              <mat-form-field>
+                <mat-select placeholder="365 Days" [formControl]="animalControl" required>
+                  <mat-option>365 Days</mat-option>
+                  <mat-option *ngFor="let currency of currencies" [value]="day">
+                    {{day.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+      
+              </mat-form-field>
+            </div>
+          <h2>Settings</h2>
+          <mat-divider></mat-divider>
+          <div>
+            Is Mandatory Deposite<mat-checkbox></mat-checkbox>
+            Adjust advance payments towards future installments<mat-checkbox></mat-checkbox>
+            </div>
+            <div>
+              Allow withdrawals<mat-checkbox></mat-checkbox>
+            </div>
+            <div>
+         
+                Lock-in period:
+                <form class="example-form">
+                  <mat-form-field class="example-full-width">
+                    <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                    <mat-hint>Required!</mat-hint>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      This field is
+                      <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </form>
+                <mat-form-field>
+                  <mat-select placeholder="select one " [formControl]="animalControl" required>
+                    <mat-option>select one</mat-option>
+                    <mat-option *ngFor="let period of periods" [value]="period">
+                      {{period.name}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+        
+                </mat-form-field>
+                Minimum Deposite term:
+                <form class="example-form">
+                  <mat-form-field class="example-full-width">
+                    <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                    <mat-hint>Required!</mat-hint>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      This field is
+                      <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </form>
+                <mat-form-field>
+                    <mat-select placeholder="select one " [formControl]="animalControl" required>
+                      <mat-option>select one</mat-option>
+                      <mat-option *ngFor="let period of periods" [value]="period">
+                        {{period.name}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+          
+                  </mat-form-field>
+        
+        
+        
+              </div>
+              <div>
+                And thereafter in multiples of:
+                  <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                      <mat-hint>Required!</mat-hint>
+                      <mat-error *ngIf="emailFormControl.hasError('required')">
+                        This field is
+                        <strong>required</strong>
+                      </mat-error>
+                    </mat-form-field>
+                  </form>
+                  <mat-form-field>
+                    <mat-select placeholder="select one " [formControl]="animalControl" required>
+                      <mat-option>select one</mat-option>
+                      <mat-option *ngFor="let period of periods" [value]="period">
+                        {{period.name}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+          
+                  </mat-form-field> 
+                  
+                  Maximum Deposite term:
+                  <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                      <mat-hint>Required!</mat-hint>
+                      <mat-error *ngIf="emailFormControl.hasError('required')">
+                        This field is
+                        <strong>required</strong>
+                      </mat-error>
+                    </mat-form-field>
+                  </form>
+                  <mat-form-field>
+                      <mat-select placeholder="select one " [formControl]="animalControl" required>
+                        <mat-option>select one</mat-option>
+                        <mat-option *ngFor="let period of periods" [value]="period">
+                          {{period.name}}
+                        </mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+            
+                    </mat-form-field>
+          
+              </div>
+             <div>
+               For pre-mature Closure<mat-checkbox></mat-checkbox>
+               Apply penal interest(less)
+               <form class="example-form">
+                  <mat-form-field class="example-full-width">
+                    <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                    
+                  </mat-form-field>
+                </form>
+                on
+                <mat-form-field>
+                    <mat-select placeholder="Whole term">
+                      <mat-option>Whole term</mat-option>
+                      <mat-option>Till pre-mature withdrawal</mat-option>
+                      <mat-option *ngFor="let term of terms" [value]="term.value">
+                        {{term.viewValue }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+      
+             </div>
+             <div>
+               Is Withhold tax applicable <mat-checkbox></mat-checkbox>
+             </div>
+             <h2>Interest Rate chart</h2>
+             <mat-divider></mat-divider>
+             <div>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker1" placeholder="Valid from Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+                  <br/>
+                  <mat-form-field>
+                    <input matInput [matDatepicker]="picker2" placeholder="End Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                  </mat-form-field>
+             </div>
+             <div>
+               Is primary grouping by amount<mat-checkbox></mat-checkbox>
+             </div>
+             <div>
+                <mat-table #table [dataSource]="dataSource">
+        
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="periodtype">
+                    <mat-header-cell *matHeaderCellDef>Period type</mat-header-cell>
+                    <mat-cell *matCellDef="let element">
+                      {{element.periodtype}}
+                    </mat-cell>
+                  </ng-container>
+        
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="period">
+                    <mat-header-cell *matHeaderCellDef> from/to </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.period}} </mat-cell>
+                  </ng-container>
+        
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="amountrange">
+                    <mat-header-cell *matHeaderCellDef>Amount Range </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.amountrange}} </mat-cell>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="interest">
+                    <mat-header-cell *matHeaderCellDef>Interest</mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.interest}} </mat-cell>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="description">
+                    <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+                  </ng-container>
+        
+        
+                  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+              </div>
+              <h2>charges</h2>
+              <mat-divider></mat-divider>
+              <div>
+                <mat-form-field>
+                  <mat-select placeholder="Select charge">
+                    <mat-option *ngFor="let charge of charges" [value]="charge.value">
+                      {{charge.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <button mat-raised-button color="primary">Add</button>
+              </div>
+              <div>
+                <mat-table #table [dataSource]="dataSource">
+        
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                    <mat-cell *matCellDef="let element">
+                      <a routerLink="{{element.name}}">{{element.name}}</a>
+                    </mat-cell>
+                  </ng-container>
+        
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="type">
+                    <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
+                  </ng-container>
+        
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="amount">
+                    <mat-header-cell *matHeaderCellDef>Amount </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.amount}} </mat-cell>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="collected">
+                    <mat-header-cell *matHeaderCellDef>Collected On</mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.collected}} </mat-cell>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="actions">
+                    <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.actions}} </mat-cell>
+                  </ng-container>
+        
+        
+                  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+              </div>
+              <h2>Accounting</h2>
+              <mat-divider></mat-divider>
+              <div>
+                <mat-radio-group>
+                  <mat-radio-button>None</mat-radio-button>
+                  <mat-radio-button>Cash</mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <mat-divider></mat-divider>
+              <div>
+                <button mat-raised-button color="accent">cancel</button>
+                <button mat-raised-button color="primary">submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      

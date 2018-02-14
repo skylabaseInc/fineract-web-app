@@ -1,0 +1,27 @@
+.example-container{
+    padding-left:20px;
+    height:500px;
+}
+.div1,.div2{
+    
+    width:45%;
+    display:flex;
+    display: inline-block;
+    vertical-align: top;
+    border-collapse:collapse;
+    border-bottom: 0px;
+    
+}
+.div1{
+    height:300px;
+}
+.div2{
+    height: 300px;
+    
+}
+.inside-div{
+    border: 1px solid gray;
+}
+span{
+    font-weight: bold;
+}

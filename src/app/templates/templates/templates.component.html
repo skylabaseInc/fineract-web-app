@@ -6,7 +6,7 @@
           <mat-form-field>
             <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter by name">
           </mat-form-field>
-          <a mat-raised-button color="primary"><mat-icon>add</mat-icon>Create Template</a>
+          <a mat-raised-button color="primary" [routerLink]="['/navbar/admin/templates/create']"><mat-icon>add</mat-icon>Create Template</a>
         </div>
         <mat-table #table [dataSource]="dataSource">
     

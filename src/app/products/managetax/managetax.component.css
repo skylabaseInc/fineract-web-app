@@ -1,0 +1,6 @@
+.fineract-card1,.fineract-card2{
+    display:flex;
+    display:inline-block;
+    vertical-align: top;
+    width:30%;
+}

@@ -1,0 +1,45 @@
+<div class="fineract-div">product / charges
+    <div class="example-container mat-elevation-z8">
+      List of Charges
+  
+      <div class="example-header">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter by name/short name">
+        </mat-form-field>
+        <a mat-raised-button color="primary" [routerLink]="['/navbar/admin/products/loanproducts/createloan']">
+          <mat-icon>add</mat-icon>Create Loan Product</a>
+      </div>
+      <mat-divider></mat-divider>
+      <mat-table #table [dataSource]="dataSource">
+  
+        <!-- Position Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <a routerLink="{{element.name}}">{{element.name}}</a>
+          </mat-cell>
+        </ng-container>
+  
+        <!-- Name Column -->
+        <ng-container matColumnDef="charge">
+          <mat-header-cell *matHeaderCellDef>Charge Applies to </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.charge}} </mat-cell>
+        </ng-container>
+  
+        <!-- Weight Column -->
+        <ng-container matColumnDef="penalty">
+          <mat-header-cell *matHeaderCellDef> Is Penalty? </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.penalty}} </mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="active">
+          <mat-header-cell *matHeaderCellDef>Active </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.active}} </mat-cell>
+        </ng-container>
+  
+  
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+  </div>

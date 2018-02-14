@@ -1,0 +1,19 @@
+<div class="fineract-div">product / product mix / add product mix
+    <div class="example-container mat-elevation-z8">
+      Add Product Mix
+      <div>
+        Select product:
+        <mat-form-field>
+            <mat-select placeholder="Select charge">
+              <mat-option *ngFor="let charge of charges" [value]="charge.value">
+                {{charge.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          </div>
+          <div>
+              <button mat-raised-button color="accent">cancel</button>
+              <button mat-raised-button color="primary">submit</button>
+          </div>
+          </div>
+          </div>

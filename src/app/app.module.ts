@@ -129,8 +129,29 @@ import { AddcodevalueComponent } from './Systems/addcodevalue/addcodevalue.compo
 import { ConfigurationComponent } from './Systems/configuration/configuration.component';
 import { AccountnumberComponent } from './Systems/accountnumber/accountnumber.component';
 import { AddpreferenceComponent } from './Systems/addpreference/addpreference.component';
-
-
+import { CreatetemplateComponent } from './templates/createtemplate/createtemplate.component';
+import { ProductsComponent } from './products/products/products.component';
+import { LoanproductsComponent } from './products/loanproducts/loanproducts.component';
+import { CreateloanproductComponent } from './products/createloanproduct/createloanproduct.component';
+import { SavingsproductsComponent } from './products/savingsproducts/savingsproducts.component';
+import { CreatsavingComponent } from './products/creatsaving/creatsaving.component';
+import { ShareproductsComponent } from './products/shareproducts/shareproducts.component';
+import { CreateshareComponent } from './products/createshare/createshare.component';
+import { ChargesComponent } from './products/charges/charges.component';
+import { CreatechargeComponent } from './products/createcharge/createcharge.component';
+import { ProductmixComponent } from './products/productmix/productmix.component';
+import { AddmixComponent } from './products/addmix/addmix.component';
+import { FixeddepositeproductsComponent} from './products/fixeddepositeproducts/fixeddepositeproducts.component'
+import { CreatefixeddepositprodComponent} from './products/createfixeddepositprod/createfixeddepositprod.component';
+import { RecurringdepositeComponent } from './products/recurringdeposite/recurringdeposite.component';
+import { CreaterecurringdepositeComponent } from './products/createrecurringdeposite/createrecurringdeposite.component';
+import { FoatingratesComponent } from './products/foatingrates/foatingrates.component';
+import { CreatefloatingratesComponent } from './products/createfloatingrates/createfloatingrates.component';
+import { ManagetaxComponent } from './products/managetax/managetax.component';
+import { ManagetaxcomponentsComponent } from './products/managetaxcomponents/managetaxcomponents.component';
+import { ManagetaxgroupsComponent } from './products/managetaxgroups/managetaxgroups.component';
+import { CreatetaxcomponentComponent } from './products/createtaxcomponent/createtaxcomponent.component';
+import { CreatetaxgroupComponent } from './products/createtaxgroup/createtaxgroup.component'
 
 
 
@@ -250,14 +271,31 @@ const ROUTES: Route[] = [
             {path:'addcodevalue',component:AddcodevalueComponent},
             {path:'configuration',component:ConfigurationComponent},
             {path:'accountnumber',component:AccountnumberComponent},
-            {path:'addpreference',component:AddpreferenceComponent}
-
+            {path:'addpreference',component:AddpreferenceComponent},
+  {path:'admin/templates', component:TemplatesComponent},
+  {path:'admin/templates/create', component:CreatetemplateComponent},
+  {path:'admin/products/loanproducts', component:LoanproductsComponent},
+  {path:'admin/products', component:ProductsComponent},
+  {path:'admin/products/loanproducts/createloan', component:CreateloanproductComponent},
+  {path:'admin/products/savingsproducts', component:SavingsproductsComponent},
+  {path:'admin/products/savingsproducts/createsaving', component:CreatsavingComponent},
+  {path:'admin/products/shareproducts', component:ShareproductsComponent},
+  {path:'admin/products/shareproducts/createshare', component:CreateshareComponent},
+  {path:'admin/products/charges', component:ChargesComponent},
+  {path:'admin/products/productmix', component:ProductmixComponent},
+  {path:'admin/products/fixeddepositeproduct', component:FixeddepositeproductsComponent},
+  {path:'admin/products/recurringdepositeproduct', component:RecurringdepositeComponent},
+  {path:'admin/products/floatingrates', component:FoatingratesComponent},
+  {path:'admin/products/managetax', component:ManagetaxComponent},
+  {path:'admin/products/managetax/managetaxcomponents', component:ManagetaxcomponentsComponent},
+  {path:'admin/products/managetax/managetaxgroups', component:ManagetaxgroupsComponent},
         ]
     },
 ]
 
 
 @NgModule({
+
     declarations: [
         AppComponent,
         LoginComponent,
@@ -371,7 +409,30 @@ const ROUTES: Route[] = [
         AddcodevalueComponent,
         ConfigurationComponent,
         AccountnumberComponent,
-        AddpreferenceComponent
+        AddpreferenceComponent,
+        CreatetemplateComponent,
+        ProductsComponent,
+        LoanproductsComponent,
+        CreateloanproductComponent,
+        SavingsproductsComponent,
+        CreatsavingComponent,
+        ShareproductsComponent,
+        CreateshareComponent,
+        ChargesComponent,
+        CreatechargeComponent,
+        ProductmixComponent,
+        AddmixComponent,
+        FixeddepositeproductsComponent,
+        CreatefixeddepositprodComponent,
+        RecurringdepositeComponent,
+        CreaterecurringdepositeComponent,
+        FoatingratesComponent,
+        CreatefloatingratesComponent,
+        ManagetaxComponent,
+        ManagetaxcomponentsComponent,
+        ManagetaxgroupsComponent,
+        CreatetaxcomponentComponent,
+        CreatetaxgroupComponent
     ],
     imports: [
         RouterModule.forRoot(ROUTES),
@@ -384,8 +445,8 @@ const ROUTES: Route[] = [
         MatTableModule, MatCardModule, MatSelectModule, MatListModule, MatDividerModule,
         MatAutocompleteModule, MatRadioModule, MatListModule, MatTabsModule,
          MatExpansionModule,MatDialogModule
-
     ],
+
     providers: [],
     bootstrap: [AppComponent],
     entryComponents: [DeleteprovisioningDialogComponent]
