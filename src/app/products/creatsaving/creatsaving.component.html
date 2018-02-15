@@ -4,32 +4,33 @@
     <mat-divider></mat-divider>
     <div>
       <div>
-        <form class="example-form">
+        <label>Product Name</label>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Product Name" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+            <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
             <mat-error *ngIf="emailFormControl.hasError('required')">
               Name is
               <strong>required</strong>
             </mat-error>
           </mat-form-field>
-        </form>
+        
       </div>
       <div>
-        <form class="example-form">
+        <label>Short name</label>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Short name" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+            <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
             <mat-error *ngIf="emailFormControl.hasError('required')">
               short name is
               <strong>required</strong>
             </mat-error>
           </mat-form-field>
-        </form>
+        
       </div>
       <div>
+        <label>Description</label>
         <mat-form-field>
-          <textarea matInput placeholder="Description" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
+          <textarea matInput matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
         </mat-form-field>
       </div>
       <h2>Currency</h2>
@@ -46,8 +47,8 @@
           <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
 
         </mat-form-field>
-        Decimal places:
-        <form class="example-form">
+       <label class="example-full-width2"> Decimal places:</label>
+        
           <mat-form-field class="example-full-width">
             <input matInput value="2" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
@@ -56,12 +57,12 @@
               <strong>required</strong>
             </mat-error>
           </mat-form-field>
-        </form>
+        
 
       </div>
       <div>
         Multiples of :
-        <form class="example-form">
+        
           <mat-form-field class="example-full-width">
             <input matInput value="0" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
@@ -70,14 +71,14 @@
               <strong>required</strong>
             </mat-error>
           </mat-form-field>
-        </form>
+        
 
       </div>
       <h2>Terms</h2>
       <mat-divider></mat-divider>
       <div>
         Norminal annual interest:
-        <form class="example-form">
+        
           <mat-form-field class="example-full-width">
             <input matInput value="0" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
@@ -86,7 +87,7 @@
               <strong>required</strong>
             </mat-error>
           </mat-form-field>
-        </form>
+        
 
       </div>
       <div>
@@ -101,7 +102,7 @@
           <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
 
         </mat-form-field>
-        Interest posting period:
+       <label class="example-full-width3"> Interest posting period:</label>
         <mat-form-field>
           <mat-select placeholder="Monthly" [formControl]="animalControl" required>
             <mat-option>Monthly</mat-option>
@@ -125,7 +126,7 @@
           <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
 
         </mat-form-field>
-        Days in year:
+       <label class="example-full-width3"> Days in year:</label>
         <mat-form-field>
           <mat-select placeholder="365 Days" [formControl]="animalControl" required>
             <mat-option>365 Days</mat-option>
@@ -141,7 +142,7 @@
       <mat-divider></mat-divider>
       <div>
         Minimum opening balance:
-        <form class="example-form">
+        
           <mat-form-field class="example-full-width">
             <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
@@ -150,10 +151,10 @@
               <strong>required</strong>
             </mat-error>
           </mat-form-field>
-        </form>
+        
 
-        Lock-in period:
-        <form class="example-form">
+        <label class="example-full-width3">Lock-in period:</label>
+        
           <mat-form-field class="example-full-width">
             <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
@@ -162,8 +163,8 @@
               <strong>required</strong>
             </mat-error>
           </mat-form-field>
-        </form>
-        <mat-form-field>
+        
+        <mat-form-field class="example-full-width">
           <mat-select placeholder="select one " [formControl]="animalControl" required>
             <mat-option>select one</mat-option>
             <mat-option *ngFor="let period of periods" [value]="period">
@@ -181,8 +182,8 @@
         Apply Withdrawal fee for transfers
         <mat-checkbox></mat-checkbox>
         Balance Required for Interest Calculation:
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
+        
+          <mat-form-field class="example-full-width3">
             <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
             <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -190,13 +191,13 @@
               <strong>required</strong>
             </mat-error>
           </mat-form-field>
-        </form>
+        
       </div>
       <div>
         Enforce Minimum Balance
         <mat-checkbox></mat-checkbox>
         Minimum Balance:
-        <form class="example-form">
+        
           <mat-form-field class="example-full-width">
             <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
@@ -205,7 +206,7 @@
               <strong>required</strong>
             </mat-error>
           </mat-form-field>
-        </form>
+        
       </div>
       <div>
         Is Overdraft Allowed

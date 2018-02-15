@@ -6,7 +6,7 @@
           <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter by name/short name">
         </mat-form-field>
         <a mat-raised-button color="primary" [routerLink]="['/navbar/admin/products/shareproducts/createshare']">
-          <mat-icon>add</mat-icon>Create Saving Product</a>
+          <mat-icon>add</mat-icon>Create Share Product</a>
       </div>
       <mat-divider></mat-divider>
       <mat-table #table [dataSource]="dataSource">

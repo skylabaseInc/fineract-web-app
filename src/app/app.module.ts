@@ -11,7 +11,7 @@ import {
     MatSelectModule, MatOptionModule, MatDatepickerModule, MatNativeDateModule,
     MatDividerModule, MatAutocompleteModule, MatRadioModule,
     MatTabsModule,
-    MatExpansionModule,MatDialogModule
+    MatExpansionModule, MatDialogModule
 } from '@angular/material';
 
 
@@ -141,8 +141,8 @@ import { ChargesComponent } from './products/charges/charges.component';
 import { CreatechargeComponent } from './products/createcharge/createcharge.component';
 import { ProductmixComponent } from './products/productmix/productmix.component';
 import { AddmixComponent } from './products/addmix/addmix.component';
-import { FixeddepositeproductsComponent} from './products/fixeddepositeproducts/fixeddepositeproducts.component'
-import { CreatefixeddepositprodComponent} from './products/createfixeddepositprod/createfixeddepositprod.component';
+import { FixeddepositeproductsComponent } from './products/fixeddepositeproducts/fixeddepositeproducts.component'
+import { CreatefixeddepositprodComponent } from './products/createfixeddepositprod/createfixeddepositprod.component';
 import { RecurringdepositeComponent } from './products/recurringdeposite/recurringdeposite.component';
 import { CreaterecurringdepositeComponent } from './products/createrecurringdeposite/createrecurringdeposite.component';
 import { FoatingratesComponent } from './products/foatingrates/foatingrates.component';
@@ -151,7 +151,9 @@ import { ManagetaxComponent } from './products/managetax/managetax.component';
 import { ManagetaxcomponentsComponent } from './products/managetaxcomponents/managetaxcomponents.component';
 import { ManagetaxgroupsComponent } from './products/managetaxgroups/managetaxgroups.component';
 import { CreatetaxcomponentComponent } from './products/createtaxcomponent/createtaxcomponent.component';
-import { CreatetaxgroupComponent } from './products/createtaxgroup/createtaxgroup.component'
+import { CreatetaxgroupComponent } from './products/createtaxgroup/createtaxgroup.component';
+import { ManageReportsComponent } from './Systems/manage-reports/manage-reports.component';
+import { CreateReportsComponent } from './Systems/create-reports/create-reports.component'
 
 
 
@@ -241,54 +243,79 @@ const ROUTES: Route[] = [
             { path: 'newcashier', component: NewcashierComponent },
             { path: 'transaction', component: TransactionComponent },
             { path: 'settlecash', component: SettlecashComponent },
-            {path :'allocatecash',component:AllocatecashComponent},
-            {path:'managefund',component:ManagefundComponent},
-            {path:'smscampaign',component:SmscampaignComponent},
-            {path:'loanprovisioning',component:LoanprovisioningComponent},
-            {path:'viewprovisioning',component:ViewprovisioningComponent},
-            {path:'deleteprovisioning-dialog',component:DeleteprovisioningDialogComponent},
-            {path:'createprovisioningcriteria',component:CreateprovisioningcriteriaComponent},
-            {path:'fundmapping',component:FundmappingComponent},
-            {path:'entitydata',component:EntitydataComponent},
-            {path:'deleteEntitydata-dialog',component:DeleteEntitydataDialogComponent},
-            {path:'createntitydata-dialog',component:CreatentitydataDialogComponent},
-            {path:'createsmscampaign',component:CreatesmscampaignComponent},
-            {path:'user',component:UserComponent},
-            {path:'createuser',component:CreateuserComponent},
-            {path:'clickuser',component:ClickuserComponent},
-            {path:'deleteuser-dialog',component:DeleteuserDialogComponent},
-            {path:'changepassword-dialog',component:ChangepasswordDialogComponent},
-            {path:'system',component:SystemComponent},
-            {path:'addrole',component:AddroleComponent},
-            {path:'viewrole',component:ViewroleComponent},
-            {path:'managehook',component:ManagehookComponent},
-            {path:'createhook',component:CreatehookComponent},
-            {path:'managesurvey',component:ManagesurveyComponent},
-            {path:'createsurvey',component:CreatesurveyComponent},
-            {path:'managecode',component:ManagecodeComponent},
-            {path:'addcode',component:AddcodeComponent},
-            {path:'clickmanagecode',component:ClickmanagecodeComponent},
-            {path:'addcodevalue',component:AddcodevalueComponent},
-            {path:'configuration',component:ConfigurationComponent},
-            {path:'accountnumber',component:AccountnumberComponent},
-            {path:'addpreference',component:AddpreferenceComponent},
-  {path:'admin/templates', component:TemplatesComponent},
-  {path:'admin/templates/create', component:CreatetemplateComponent},
-  {path:'admin/products/loanproducts', component:LoanproductsComponent},
-  {path:'admin/products', component:ProductsComponent},
-  {path:'admin/products/loanproducts/createloan', component:CreateloanproductComponent},
-  {path:'admin/products/savingsproducts', component:SavingsproductsComponent},
-  {path:'admin/products/savingsproducts/createsaving', component:CreatsavingComponent},
-  {path:'admin/products/shareproducts', component:ShareproductsComponent},
-  {path:'admin/products/shareproducts/createshare', component:CreateshareComponent},
-  {path:'admin/products/charges', component:ChargesComponent},
-  {path:'admin/products/productmix', component:ProductmixComponent},
-  {path:'admin/products/fixeddepositeproduct', component:FixeddepositeproductsComponent},
-  {path:'admin/products/recurringdepositeproduct', component:RecurringdepositeComponent},
-  {path:'admin/products/floatingrates', component:FoatingratesComponent},
-  {path:'admin/products/managetax', component:ManagetaxComponent},
-  {path:'admin/products/managetax/managetaxcomponents', component:ManagetaxcomponentsComponent},
-  {path:'admin/products/managetax/managetaxgroups', component:ManagetaxgroupsComponent},
+            { path: 'allocatecash', component: AllocatecashComponent },
+            { path: 'managefund', component: ManagefundComponent },
+            { path: 'smscampaign', component: SmscampaignComponent },
+            { path: 'loanprovisioning', component: LoanprovisioningComponent },
+            { path: 'viewprovisioning', component: ViewprovisioningComponent },
+            { path: 'deleteprovisioning-dialog', component: DeleteprovisioningDialogComponent },
+            { path: 'createprovisioningcriteria', component: CreateprovisioningcriteriaComponent },
+            { path: 'fundmapping', component: FundmappingComponent },
+            { path: 'entitydata', component: EntitydataComponent },
+            { path: 'deleteEntitydata-dialog', component: DeleteEntitydataDialogComponent },
+            { path: 'createntitydata-dialog', component: CreatentitydataDialogComponent },
+            { path: 'createsmscampaign', component: CreatesmscampaignComponent },
+            { path: 'user', component: UserComponent },
+            { path: 'createuser', component: CreateuserComponent },
+            { path: 'clickuser', component: ClickuserComponent },
+            { path: 'deleteuser-dialog', component: DeleteuserDialogComponent },
+            { path: 'changepassword-dialog', component: ChangepasswordDialogComponent },
+            { path: 'system', component: SystemComponent },
+            { path: 'addrole', component: AddroleComponent },
+            { path: 'viewrole', component: ViewroleComponent },
+            { path: 'managehook', component: ManagehookComponent },
+            { path: 'createhook', component: CreatehookComponent },
+            { path: 'managesurvey', component: ManagesurveyComponent },
+            { path: 'createsurvey', component: CreatesurveyComponent },
+            { path: 'managecode', component: ManagecodeComponent },
+            { path: 'addcode', component: AddcodeComponent },
+            { path: 'clickmanagecode', component: ClickmanagecodeComponent },
+            { path: 'addcodevalue', component: AddcodevalueComponent },
+            { path: 'configuration', component: ConfigurationComponent },
+            { path: 'accountnumber', component: AccountnumberComponent },
+            { path: 'addpreference', component: AddpreferenceComponent },
+
+            { path: 'admin/templates/create', component: CreatetemplateComponent },
+            { path: 'admin/products/loanproducts', component: LoanproductsComponent },
+            { path: 'admin/products', component: ProductsComponent },
+            { path: 'admin/products/loanproducts/createloan', component: CreateloanproductComponent },
+            { path: 'admin/products/savingsproducts', component: SavingsproductsComponent },
+            { path: 'admin/products/savingsproducts/createsaving', component: CreatsavingComponent },
+            { path: 'admin/products/shareproducts', component: ShareproductsComponent },
+            { path: 'admin/products/shareproducts/createshare', component: CreateshareComponent },
+            { path: 'admin/products/charges', component: ChargesComponent },
+            { path: 'admin/products/charges/createcharge', component: CreatechargeComponent },
+            { path: 'admin/products/productmix', component: ProductmixComponent },
+            { path: 'admin/products/productmix/add', component: AddmixComponent },
+            { path: 'admin/products/fixeddepositeproduct', component: FixeddepositeproductsComponent },
+            { path: 'admin/products/fixeddeposite/create', component: CreatefixeddepositprodComponent },
+            { path: 'admin/products/recurringdepositeproduct', component: RecurringdepositeComponent },
+            { path: 'admin/products/recurringdeposite/create', component: CreaterecurringdepositeComponent },
+            { path: 'admin/products/floatingrates', component: FoatingratesComponent },
+            { path: 'admin/products/createfloatingrate', component: CreatefloatingratesComponent },
+            { path: 'admin/products/managetax', component: ManagetaxComponent },
+            { path: 'admin/products/managetax/managetaxcomponents', component: ManagetaxcomponentsComponent },
+            { path: 'admin/products/createtaxcomponent', component: CreatetaxcomponentComponent },
+            { path: 'admin/products/managetax/managetaxgroups', component: ManagetaxgroupsComponent },
+            { path: 'admin/products/createtaxgroup', component: CreatetaxgroupComponent },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         ]
     },
 ]
@@ -432,7 +459,9 @@ const ROUTES: Route[] = [
         ManagetaxcomponentsComponent,
         ManagetaxgroupsComponent,
         CreatetaxcomponentComponent,
-        CreatetaxgroupComponent
+        CreatetaxgroupComponent,
+        ManageReportsComponent,
+        CreateReportsComponent
     ],
     imports: [
         RouterModule.forRoot(ROUTES),
@@ -444,7 +473,7 @@ const ROUTES: Route[] = [
         MatToolbarModule, MatSidenavModule, MatListModule, MatCheckboxModule, MatInputModule,
         MatTableModule, MatCardModule, MatSelectModule, MatListModule, MatDividerModule,
         MatAutocompleteModule, MatRadioModule, MatListModule, MatTabsModule,
-         MatExpansionModule,MatDialogModule
+        MatExpansionModule, MatDialogModule
     ],
 
     providers: [],

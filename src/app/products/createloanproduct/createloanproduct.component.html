@@ -234,7 +234,7 @@
       </mat-form-field>
     </div>
     <div>
-      Minimum days between disbursal<br> and first repayment date
+      Minimum days between disbursal and first repayment date
       
         <mat-form-field class="example-full-width">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
@@ -298,26 +298,30 @@
     </div>
     <div>
       Moratorium:
-      <form class="example-form">
+      
         <mat-form-field class="example-full-width">
           <input matInput placeholder="On principal payment" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
-          <input matInput placeholder="On Interest payment" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+          
         </mat-form-field>
-      </form>
+        <mat-form-field class="example-full-width3">
+          
+            <input matInput placeholder="On Interest payment" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+          </mat-form-field>
+      
     </div>
     <div>
       Interest free period:
-      <form class="example-form">
+      
         <mat-form-field class="example-full-width">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
         </mat-form-field>
-      </form>
-      Arrears tolerance:
-      <form class="example-form">
+      
+      <label class="example-full-width3">Arrears tolerance:</label>
+      
         <mat-form-field class="example-full-width">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
         </mat-form-field>
-      </form>
+      
     </div>
     <div>
       Days in year:
@@ -331,7 +335,7 @@
         <mat-error *ngIf="animalControl.hasError('required')">this field is required</mat-error>
 
       </mat-form-field>
-      Days in month:
+     <label class="example-full-width2"> Days in month:</label>
       <mat-form-field>
         <mat-select placeholder="Actual" [formControl]="animalControl" required>
           <mat-option>Actual</mat-option>
@@ -346,30 +350,30 @@
     Allow fixing of the installment amount
     <mat-checkbox></mat-checkbox>
     <div>
-      Number of days a loan may be over due before moving into arears: Arrears tolerance:
-      <form class="example-form">
+      Number of days a loan may be over due before moving into arears:
+      
         <mat-form-field class="example-full-width">
           <input matInput placeholder="On Arrears Aging" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
         </mat-form-field>
-      </form>
+      
     </div>
     <div>
-      Maximun number of days a loan may be over due before moving into an NPA(non performing asset) Arrears tolerance:
-      <form class="example-form">
+      Maximun number of days a loan may be over due before moving into an NPA(non performing asset):
+      
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Overdue Days For NPA" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
         </mat-form-field>
-      </form>
+      
     </div>
     Amount moves out of NPA only after all arrears have been cleared?
     <mat-checkbox></mat-checkbox>
     <div>
-      Principal threshold (%) For Last Installment: Arrears tolerance:
-      <form class="example-form">
+      Principal threshold (%) For Last Installment:
+      
         <mat-form-field class="example-full-width">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
         </mat-form-field>
-      </form>
+      
     </div>
     <div>
       <mat-checkbox></mat-checkbox>Is Variable Installments Allowed?
@@ -404,24 +408,24 @@
     <div>
       Amortization
       <mat-checkbox></mat-checkbox>
-      Interest Method
+      <label class="example-full-width2">Interest Method</label>
       <mat-checkbox></mat-checkbox>
     </div>
     <div>
       Repayment Strategy
       <mat-checkbox></mat-checkbox>
-      Interest Calculation Period
+      <label class="example-full-width2">Interest Calculation Period</label>
       <mat-checkbox></mat-checkbox>
     </div>
     <div>Arrears Tolerance
       <mat-checkbox></mat-checkbox>
-      Repaid every
+      <label class="example-full-width2">Repaid every</label>
       <mat-checkbox></mat-checkbox>
     </div>
     <div>
       Moratorium
       <mat-checkbox></mat-checkbox>
-      Number of days a loan may be overdue before moving into arrears
+      <label class="example-full-width3">Number of days a loan may be overdue before moving into arrears</label>
       <mat-checkbox></mat-checkbox>
     </div>
     <h2>charges</h2>

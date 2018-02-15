@@ -5,6 +5,9 @@
 .example-container{
     padding-left:20px;
 }
+mat-form-field{
+    width:50%;
+}
 .fineract-button{
-    margin-left:70%;
+    margin-left:200px;
 }

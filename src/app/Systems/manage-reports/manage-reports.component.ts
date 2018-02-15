@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
 
+
 @Component({
-  selector: 'app-charges',
-  templateUrl: './charges.component.html',
-  styleUrls: ['./charges.component.css']
+  selector: 'app-manage-reports',
+  templateUrl: './manage-reports.component.html',
+  styleUrls: ['./manage-reports.component.css']
 })
-export class ChargesComponent implements OnInit {
-  displayedColumns = ['name', 'charge', 'penalty', 'active'];
+export class ManageReportsComponent implements OnInit {
+  displayedColumns = ['name','type','subtype','category','core', 'user'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   applyFilter(filterValue: string) {
@@ -24,9 +25,13 @@ export class ChargesComponent implements OnInit {
 }
 export interface Element {
   name: string;
-  charge: number;
-  penalty: number;
-  active:boolean;
+  type:string;
+  subtype: string;
+  category:string;
+  core: string;
+  user:string;
+
+ 
 }
 
 const ELEMENT_DATA: Element[] = [

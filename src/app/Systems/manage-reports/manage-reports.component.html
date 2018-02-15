@@ -1,0 +1,59 @@
+<div class="fineract-div">System / Manage Reports
+  <div class="example-container mat-elevation-z8">
+    <br>
+    <div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="example-header">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter by name/short name">
+        </mat-form-field>
+        <a mat-raised-button class="fineract-button" color="primary" [routerLink]="['/navbar/admin/products/createfloatingrate']">
+          <mat-icon>add</mat-icon>Create Floating Rates</a>
+      </div>
+    <br>
+    <mat-divider></mat-divider>
+    <mat-table #table [dataSource]="dataSource">
+  
+        <!-- Position Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef>Report Name </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <a routerLink="{{element.name}}">{{element.name}}</a>
+          </mat-cell>
+        </ng-container>
+  
+        <!-- Name Column -->
+        <ng-container matColumnDef="type">
+          <mat-header-cell *matHeaderCellDef> Report Type</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="subtype">
+            <mat-header-cell *matHeaderCellDef>Report Subtype</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.subtype}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="category">
+              <mat-header-cell *matHeaderCellDef> Report Category</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.category} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="core">
+                <mat-header-cell *matHeaderCellDef>Core Report</mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.core}} </mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="user">
+                  <mat-header-cell *matHeaderCellDef> User Report</mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.user}} </mat-cell>
+                </ng-container>
+      
+    
+          
+  
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+  </div>
+  
+        
