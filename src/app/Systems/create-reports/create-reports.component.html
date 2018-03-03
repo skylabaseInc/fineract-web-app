@@ -5,7 +5,7 @@
       </div>
       <mat-divider></mat-divider>
       <div>
-          Report Name:
+          <label class="example-full-width3">Report Name:</label>
         
           <mat-form-field class="example-full-width">
             <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
@@ -29,7 +29,7 @@
             </mat-form-field>
             <label>Report subtype</label>
 
-            <mat-form-field>
+            <mat-form-field class="example-full-width3">
                 <mat-select placeholder="Select one">
                   <mat-option *ngFor="let charge of charges" [value]="charge.value">
                     {{charge.viewValue }}
@@ -41,7 +41,7 @@
       <div>
       Report<br>
       Details
-      <label>Report category</label>
+      <label class="example-full-width3">Report category</label>
           <mat-form-field class="example-full-width">
             <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
@@ -54,7 +54,7 @@
           <mat-checkbox></mat-checkbox>User Input(UI)
       </div>
       <div>
-          <label>Description</label>
+          <label class="example-full-width3">Description</label>
           <mat-form-field>
             <textarea matInput matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
           </mat-form-field>
@@ -62,8 +62,8 @@
       </div>
       <div>
           <label>sql</label>
-          <mat-form-field>
-            <textarea matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
+          <mat-form-field class="example-full-width3">
+            <textarea matInput matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
           </mat-form-field>
       </div>
       <div>
@@ -76,7 +76,7 @@
           </mat-form-field>
           <button mat-raised-button color="primary">Add</button>
         </div>
-        <div>
+        <div class="fineract-button">
             <button mat-raised-button color="accent">cancel</button>
             <button mat-raised-button color="primary">submit</button>
           </div>

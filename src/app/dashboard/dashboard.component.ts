@@ -6,7 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  value : String ="Day";
   selectedValue: string;
+
+  onClick(){
+    this.value="Week";
+  }
+  onAdd(){
+    this.value="Month";
+
+  }
+  onSubmit(){
+    this.value="Day"
+
+  }
 
   offices = [
     {value: 'office-1', viewValue: '--Office--'},

@@ -1,6 +1,8 @@
-<div class="flex-container">
-  <mat-toolbar>
-    <ul id="menu" class="search2">
+<div class="flex-container" fullscreen>
+  <mat-toolbar class="my-toolbar">
+    <div>
+      <div class="search2">
+    <ul id="menu">
       <li>
         <button mat-button (click)="sidenav.toggle()" class="dropdown-button">
           <mat-icon class="fineract-toolicon">menu</mat-icon>
@@ -53,7 +55,9 @@
       </li>
 
     </ul>
-    <ul class="search1" id="menu">
+    </div>
+    <div class="search1">
+    <ul id="menu">
       <li>
         <input placeholder="Search activities" type="text" class="fineract-toolsearch">
       </li>
@@ -87,12 +91,14 @@
         </mat-menu>
       </li>
     </ul>
+    </div>
+    </div>
   </mat-toolbar>
 </div>
 
 
 
-<mat-sidenav-container class="app-container">
+<mat-sidenav-container class="app-container" >
   <mat-sidenav #sidenav class="app-sidenav mat-elevation-z2" mode="side" opened="true">
     <mat-list>
       <a mat-list-item [routerLink]="['/navbar/keyboardshortcut']">
@@ -182,5 +188,6 @@
     <div class="wrapper">
       <router-outlet></router-outlet>
     </div>
+    <p class="fineract-para2">Realise version: 17.07.01.RELEASE | fineract Release date: 4/Jul/2017</p>
   </div>
 </mat-sidenav-container>

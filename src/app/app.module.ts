@@ -11,7 +11,7 @@ import {
     MatSelectModule, MatOptionModule, MatDatepickerModule, MatNativeDateModule,
     MatDividerModule, MatAutocompleteModule, MatRadioModule,
     MatTabsModule,
-    MatExpansionModule, MatDialogModule
+    MatExpansionModule, MatDialogModule,MatChipsModule
 } from '@angular/material';
 
 
@@ -153,7 +153,19 @@ import { ManagetaxgroupsComponent } from './products/managetaxgroups/managetaxgr
 import { CreatetaxcomponentComponent } from './products/createtaxcomponent/createtaxcomponent.component';
 import { CreatetaxgroupComponent } from './products/createtaxgroup/createtaxgroup.component';
 import { ManageReportsComponent } from './Systems/manage-reports/manage-reports.component';
-import { CreateReportsComponent } from './Systems/create-reports/create-reports.component'
+import { CreateReportsComponent } from './Systems/create-reports/create-reports.component';
+import { AuditComponent } from './Systems/audit/audit.component';
+import { ManageSchedularJobComponent } from './Systems/manage-schedular-job/manage-schedular-job.component';
+import { ExternalServicesComponent } from './Systems/external-services/external-services.component';
+import { ViewExternalServiceConfigurationComponent } from './Systems/view-external-service-configuration/view-external-service-configuration.component';
+import { ViewConfigurationEmailComponent } from './Systems/view-configuration-email/view-configuration-email.component';
+import { ViewConfigurationSmsComponent } from './Systems/view-configuration-sms/view-configuration-sms.component';
+import { EditconfS3Component } from './Systems/editconf-s3/editconf-s3.component';
+import { EditconfSmsComponent } from './Systems/editconf-sms/editconf-sms.component';
+import { EditconfEmailComponent } from './Systems/editconf-email/editconf-email.component';
+import { EntityToEntityMappingComponent } from './Systems/entity-to-entity-mapping/entity-to-entity-mapping.component';
+import { SidenavOverviewExampleComponent } from './sidenav-overview-example/sidenav-overview-example.component';
+import { ToolbarComponent } from './toolbar/toolbar.component'
 
 
 
@@ -161,6 +173,7 @@ import { CreateReportsComponent } from './Systems/create-reports/create-reports.
 
 const ROUTES: Route[] = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: 'sidenav', component: SidenavOverviewExampleComponent },
     { path: 'login', component: LoginComponent },
     {
         path: 'navbar', component: NavbarComponent, children: [
@@ -298,6 +311,26 @@ const ROUTES: Route[] = [
             { path: 'admin/products/createtaxcomponent', component: CreatetaxcomponentComponent },
             { path: 'admin/products/managetax/managetaxgroups', component: ManagetaxgroupsComponent },
             { path: 'admin/products/createtaxgroup', component: CreatetaxgroupComponent },
+            { path: 'managereports', component: ManageReportsComponent},
+            { path: 'managereport/create', component: CreateReportsComponent },
+            { path: 'schedularjobs', component: ManageSchedularJobComponent },
+            { path: 'externalservices', component: ExternalServicesComponent },
+            { path: 'externalservices/S3', component: ViewExternalServiceConfigurationComponent },
+            { path: 'externalservices/Email', component: ViewConfigurationEmailComponent },
+            { path: 'externalservices/SMS', component: ViewConfigurationSmsComponent },
+            { path: 'S3/editconf', component: EditconfS3Component },
+            { path: 'Email/editconf', component: EditconfEmailComponent },
+            { path: 'SMS/editconf', component: EditconfSmsComponent },
+            { path: 'audit', component: AuditComponent },
+            { path: 'entitytoentitymapping', component: EntityToEntityMappingComponent },
+           
+
+
+
+
+
+
+
 
 
 
@@ -461,7 +494,19 @@ const ROUTES: Route[] = [
         CreatetaxcomponentComponent,
         CreatetaxgroupComponent,
         ManageReportsComponent,
-        CreateReportsComponent
+        CreateReportsComponent,
+        AuditComponent,
+        ManageSchedularJobComponent,
+        ExternalServicesComponent,
+        ViewExternalServiceConfigurationComponent,
+        ViewConfigurationEmailComponent,
+        ViewConfigurationSmsComponent,
+        EditconfS3Component,
+        EditconfSmsComponent,
+        EditconfEmailComponent,
+        EntityToEntityMappingComponent,
+        SidenavOverviewExampleComponent,
+        ToolbarComponent
     ],
     imports: [
         RouterModule.forRoot(ROUTES),
@@ -473,7 +518,7 @@ const ROUTES: Route[] = [
         MatToolbarModule, MatSidenavModule, MatListModule, MatCheckboxModule, MatInputModule,
         MatTableModule, MatCardModule, MatSelectModule, MatListModule, MatDividerModule,
         MatAutocompleteModule, MatRadioModule, MatListModule, MatTabsModule,
-        MatExpansionModule, MatDialogModule
+        MatExpansionModule, MatDialogModule, MatChipsModule
     ],
 
     providers: [],
