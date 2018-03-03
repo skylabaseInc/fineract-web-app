@@ -39,7 +39,7 @@
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+        <a [routerLink]="['/navbar/entitytoentitymapping']">
           <mat-icon></mat-icon>Entity to Entity Mapping
           <br> Define or modify entity to entity mappings
         </a>
@@ -57,21 +57,21 @@
   <mat-card class="card2">
     <mat-list>
       <mat-list-item>
-        <a>
+        <a [routerLink]="['/navbar/audit']">
           <mat-icon></mat-icon>Audit Trails
           <br>Audit logs of all the activities such as create client,disburse loans etc
         </a>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+        <a [routerLink]="['/navbar/managereports']">
           <mat-icon></mat-icon>Manage Reports
           <br> Add new and classify reports
         </a>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+        <a [routerLink]="['/navbar/schedularjobs']">
           <mat-icon></mat-icon>Scheduler Jobs
           <br> Schedule a job,modify or delete jobs
         </a>
@@ -92,7 +92,7 @@
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <a>
+        <a [routerLink]="['/navbar/externalservices']">
           <mat-icon>settings</mat-icon>External Services
           <br> External serives configuration
         </a>

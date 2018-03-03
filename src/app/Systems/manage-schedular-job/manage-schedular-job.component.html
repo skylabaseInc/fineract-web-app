@@ -1,0 +1,60 @@
+<div class="fineract-div">System/Manage Schedular Job
+  <div class="my-box mat-elevation-z8">
+    <h2>Schedular Status : Active &nbsp; <button mat-raised-button color="accent">
+      <mat-icon>cancel</mat-icon>Suspend
+    </button></h2>
+    <div>
+      <mat-table #table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="checkbox">
+          <mat-header-cell *matHeaderCellDef><mat-checkbox></mat-checkbox></mat-header-cell>
+          <mat-cell *matCellDef="let element"><mat-checkbox></mat-checkbox></mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <a routerLink="{{element.name}}">{{element.name}}</a>
+          </mat-cell>
+        </ng-container>
+
+        
+        <ng-container matColumnDef="next">
+          <mat-header-cell *matHeaderCellDef>Next Run </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.next}} </mat-cell>
+        </ng-container>
+
+        
+        <ng-container matColumnDef="previous">
+          <mat-header-cell *matHeaderCellDef>Previous Run </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.previous}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <mat-header-cell *matHeaderCellDef>Previous Run Status</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="current">
+          <mat-header-cell *matHeaderCellDef> Current Running</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.current}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="error">
+          <mat-header-cell *matHeaderCellDef> Error Log </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.error}} </mat-cell>
+        </ng-container>
+
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+    <div>
+      <button mat-raised-button color="primary">Run Selected Jobs</button>
+      <button mat-raised-button color="primary">Refresh</button>
+
+    </div>
+  </div>
+</div>
+

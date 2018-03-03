@@ -2,8 +2,8 @@
   
     <h2>Dashboard</h2>
     <div class="fineract-div">
-    <a mat-raised-button color="primary" >Dashboard</a>
-    <a mat-raised-button color="primary">Home</a>
+    <a [routerLink]="['/navbar/home/Dashboard']" mat-raised-button color="primary" >Dashboard</a>
+    <a [routerLink]="['/navbar/home']" mat-raised-button color="primary">Home</a>
   </div>
   <mat-divider></mat-divider>
   <div class="flex-container">
@@ -81,7 +81,7 @@
       <mat-card class="fineract-card4">
         
       
-          Clients Trends For Head Office (Days)
+          Clients Trends For Head Office ({{value}})
           <mat-divider></mat-divider>
           <form>
             <mat-form-field>
@@ -92,9 +92,9 @@
               </mat-select>
             </mat-form-field>
             <div>
-              <a mat-raised-button color="primary"><mat-icon>today</mat-icon>Week</a>
-              <a mat-raised-button color="primary"><mat-icon>today</mat-icon>Month</a>
-              <a mat-raised-button color="primary"><mat-icon>today</mat-icon>Day</a>
+              <a mat-raised-button color="primary" (click)="onClick()"><mat-icon>today</mat-icon>Week</a>
+              <a mat-raised-button color="primary" (click)="onAdd()"><mat-icon>today</mat-icon>Month</a>
+              <a mat-raised-button color="primary" (click)="onSubmit()"><mat-icon>today</mat-icon>Day</a>
                 </div>
           
           
