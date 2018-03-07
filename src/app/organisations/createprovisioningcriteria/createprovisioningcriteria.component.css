@@ -1,9 +1,5 @@
 
-.createprovisioning{
-    margin-left: 2%;
-    margin-top: 3%;
-}
-.example-full-width{
+.app-input{
     width:40%;
 }
 
@@ -25,7 +21,9 @@ th, td {
 }
 
 .mat-table{
-    width:100%;
+    
+    max-width:100%;
+    
 }
 th{
     background-color: #ddd;

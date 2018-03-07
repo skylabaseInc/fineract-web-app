@@ -1,31 +1,31 @@
-<p class="createsurvey">
+<p class="page-space">
   <a [routerLink]="['/navbar/system']">System</a>
-  <a>/ Create Survey</a>
+  <span class="current-page">/ Create Survey</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <mat-tab-group>
     <mat-tab label="Basic Information">
-      <h3 class="header">Create Survey</h3>
+      <h3 class="heading">Create Survey</h3>
       <hr>
-      <form class="example-form" [formGroup]="form">
+      <form class="app-form" [formGroup]="form">
         Key*:
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput type="number" class="form-control" [formControl]="key" formControlName="key">
           <mat-error *ngIf="key.hasError('required')">Required field</mat-error>
         </mat-form-field>
         <br> Name*:
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput type="text" class="form-control" [formControl]="name" formControlName="name">
           <mat-error *ngIf="name.hasError('required')">Required field</mat-error>
         </mat-form-field>
         <br> Country Code*:
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput type="number" class="form-control" [formControl]="code" formControlName="code">
           <mat-error *ngIf="code.hasError('required')">Required field</mat-error>
         </mat-form-field>
         <br> Description:
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <textarea type="text" matInput formControlName="description"></textarea>
         </mat-form-field>
         <br>
@@ -42,19 +42,19 @@
         <mat-icon>add</mat-icon>Create Surveys</button>
    
     <div *ngIf="show">
-        <form [formGroup]="form1" class="example-form"  >
+        <form [formGroup]="form1" class="app-form"  >
             Key*:
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="app-input">
               <input matInput type="number" class="form-control" [formControl]="key1" formControlName="key1">
               <mat-error *ngIf="key1.hasError('required')">Required field</mat-error>
             </mat-form-field>
             <br> Text*:
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="app-input">
               <input matInput type="text" class="form-control" [formControl]="text1" formControlName="text1">
               <mat-error *ngIf="text1.hasError('required')">Required field</mat-error>
             </mat-form-field>
             <br> Description:
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="app-input">
               <textarea type="text" matInput formControlName="description1"></textarea>
             </mat-form-field>
             <br>

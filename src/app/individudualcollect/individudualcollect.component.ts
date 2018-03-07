@@ -7,7 +7,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./individudualcollect.component.css']
 })
 export class IndividudualcollectComponent implements OnInit {
-  animalControl = new FormControl('', [Validators.required]);
+  myControl = new FormControl('', [Validators.required]);
 
   offices = [
     {name: 'Head Office'},

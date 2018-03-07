@@ -1,9 +1,10 @@
-<p class="workingday">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/organisation']">Organisation</a>
-  <a>/ Working Days</a>
+  <span class="current-page">/ Working Days</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <h2>Working Days</h2>
   <hr>
   <p class="work">Working Days</p>
@@ -33,7 +34,7 @@
   </ul>
 
   Payments due on non working days
-  <mat-form-field class="example-full-width" required>
+  <mat-form-field class="app-input" required>
     <mat-select placeholder="">
       <mat-option *ngFor="let option of options" [value]="option.value">
         {{ option.viewValue }}
@@ -48,4 +49,5 @@
     <button mat-button mat-raised-button color="primary">Submit</button>
   </form>
 
+</div>
 </div>

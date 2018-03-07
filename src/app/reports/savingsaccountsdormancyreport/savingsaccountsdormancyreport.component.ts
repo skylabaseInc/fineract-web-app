@@ -8,7 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./savingsaccountsdormancyreport.component.css']
 })
 export class SavingsaccountsdormancyreportComponent implements OnInit {
- animalControl = new FormControl('', [Validators.required]); 
+ myControl = new FormControl('', [Validators.required]); 
 
   offices = [
     { name: 'Head office' },

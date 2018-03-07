@@ -1,19 +1,20 @@
-<p class="addrule">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/accounting']">Accounting</a>
   <a [routerLink]="['/navbar/accountingrules']">/Accounting Rules</a>
-  <a>/Add Rule</a>
+  <span class="current-page">/Add Rule</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <h3>Create An Accounting Rule</h3>
   <hr>
-  <form class="example-form">
+  <form class="app-form">
     Accounting rule name*:
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
       <input type="text" matInput [formControl]="myControl">
     </mat-form-field>
     <br> Office*:
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
       <mat-select placeholder="">
         <mat-option *ngFor="let option of options" [value]="option.value">
           {{ option.viewValue }}
@@ -21,7 +22,7 @@
       </mat-select>
     </mat-form-field>
     <br> Comment
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <textarea matInput placeholder=""></textarea>
     </mat-form-field>
     <br>
@@ -38,7 +39,7 @@
         <mat-radio-button value="2" (click)="debit=!debit">List of Account</mat-radio-button>
       </mat-radio-group>
       <br>
-      <mat-form-field class="example-full-width" required>
+      <mat-form-field class="app-input" required>
         <mat-select placeholder="select an option">
           <mat-option *ngFor="let debit of debits" [value]="debit.value">
             {{ debit.viewValue }}
@@ -55,7 +56,7 @@
         <mat-radio-button value="2" (click)="credit=!credit">List of Account</mat-radio-button>
       </mat-radio-group>
       <br>
-      <mat-form-field class="example-full-width" required>
+      <mat-form-field class="app-input" required>
         <mat-select placeholder="select an option">
           <mat-option *ngFor="let credit of credits" [value]="credit.value">
             {{ credit.viewValue }}
@@ -144,4 +145,5 @@
     <button mat-button mat-raised-button class="btn">Cancel</button>
     <button mat-button mat-raised-button color="primary">Submit</button>
   </form>
+</div>
 </div>

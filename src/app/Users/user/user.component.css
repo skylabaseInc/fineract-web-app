@@ -1,4 +1,4 @@
-.example-container{
+.main-div{
     margin-left: 3%;
     
 }
@@ -26,6 +26,6 @@ tr:hover {
 th{
     background-color: #ddd;
 }
-.example-full-width{
+.app-input{
     width:50%;
 }

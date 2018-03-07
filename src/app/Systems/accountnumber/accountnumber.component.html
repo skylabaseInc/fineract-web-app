@@ -1,10 +1,10 @@
-<p class="accountnumber">
+<p class="page-space">
   <a [routerLink]="['/navbar/system']">System</a>
-  <a>/ Account Number preferences</a>
+  <span class="current-page">/ Account Number preferences</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
-  <mat-form-field class="example-full-width">
+<div class="main-div mat-elevation-z2">
+  <mat-form-field class="app-input">
     <input matInput type="text" placeholder="Filter by name">
   </mat-form-field>
   <button mat-button mat-raised-button class="btn" color="primary" [routerLink]="['/navbar/addpreference']">

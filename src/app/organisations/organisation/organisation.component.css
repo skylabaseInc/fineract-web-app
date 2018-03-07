@@ -1,18 +1,21 @@
-.example-container{
-    margin-left: 5%;
-    margin-top: 3%;
-    
+.my-div{
+    margin-left: 2%;
+    margin-right:2%;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #e6e6ff;
+    min-height: 100%;
 }
 
-div mat-card{
+.card1,.card2{
     display:inline-block;
     vertical-align: top;
     margin-top: 2%;
     width:40%;
+    margin-left: 2%;
 }
 a {
     font-size: 14px;
 }
-.card2{
-    margin-left: 2%;
+mat-list-item{
+    padding:3%;
 }

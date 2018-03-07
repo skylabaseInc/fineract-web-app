@@ -1,6 +1,9 @@
 .dropdown-button{
 
-    color:teal;
+    color:#3498dB;
+}
+::placeholder{
+    color: #3498dB;
 }
 .app-container {
     flex: 1;
@@ -11,29 +14,34 @@
   }
   .my-toolbar{
       height:37px;
+      background-color: #363636;
+      opacity:100%;
   }
   
 
 .app-sidenav-content{
     display:flex;
-    height:100%;
+    min-height:100%;
+    
     flex-direction:column;
+    opacity: 40%;
    
 }
 .app-sidenav{
     display:flex;
     height:100%;
     flex-direction:column;
-    background-color: #333333;
+    background-color: #363636;
+    opacity:40%;
     
     
 }
 mat-list > a{
 
-    color:teal;
+    color:white;
 }
 .fineract-toolicon{
-    color:teal;
+    color:white;
 }
 .wrapper{
     margin:50px;
@@ -44,26 +52,30 @@ ul#menu li{
 }
 .search1{
     
-    margin-left:10%;
+    margin-left:3%;
     
 }
 .fineract-toolsearch{
-    width:110px;
+    width:210px;
 }
-.search2{
-    padding-left:0%;
-}
+
+
 .fineract-logo{
     width:40px;
     height:37px;
+    vertical-align: bottom;
     
 }
-.fineract-para2{
-    color: aqua;
-    text-align: center;
-
+.logo-title{
+    vertical-align: middle;
+    font-size:11px;
+    color:white;
 }
+
 .search1,.search2{
     display: inline-block;
 }
   
+.menu1{
+    padding:0;
+}

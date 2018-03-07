@@ -1,15 +1,16 @@
-<p class="smscampaign">
-  <a [routerLink]="['/navbar/organisation']">Organisation</a>
-  <a>/ SMS Campaigns</a>
+<div class="page-space">
+  <p>
+    <a [routerLink]="['/navbar/organisation']">Organisation</a>
+  <span class="current-page">/ SMS Campaigns</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <h2 class="header"> SMS Campaigns </h2>
   <hr>
-  <mat-form-field class="example-full-width" required>
+  <mat-form-field class="app-input" required>
     <input matInput type="text" placeholder="New Fund">
   </mat-form-field>
-  <button mat-button mat-raised-button color="primary" [routerLink]="['/navbar/createsmscampaign']">
+  <button mat-button mat-raised-button class="btn" color="primary" [routerLink]="['/navbar/createsmscampaign']">
     <mat-icon>add</mat-icon>Create Campaign</button>
   
   <table class="mat-table">
@@ -23,4 +24,5 @@
     </tr>
   </table>  
 
+</div>
 </div>

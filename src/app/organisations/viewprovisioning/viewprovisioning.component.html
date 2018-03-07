@@ -1,10 +1,11 @@
-<p class="viewprovisioning">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/organisation']">Organisation</a>
   <a [routerLink]="['/navbar/loanprovisioning']"> / Provisioning Criteria</a>
-  <a>View Provisioning Criteria</a>
+  <span class="current-page">View Provisioning Criteria</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <p class="header">Car Loan Provisioning
     <button mat-button mat-raised-button class="btn" color="primary" [routerLink]="['/navbar/createprovisioningcriteria']">
       <mat-icon>edit</mat-icon>Edit</button>
@@ -12,7 +13,7 @@
   </p>
   <hr>
   <p class="para">Loan Product
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <textarea matInput type="text" placeholder="Group loan short term" disabled></textarea>
       </mat-form-field>
     </p>
@@ -58,4 +59,5 @@
               <td>Expense provisi</td>
             </tr>
     </table>
+  </div>
   </div>

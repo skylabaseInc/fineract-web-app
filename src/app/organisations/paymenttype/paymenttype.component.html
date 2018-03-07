@@ -1,9 +1,10 @@
-<p class="paymenttype">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/organisation']">Organisation</a>
-  <a>/ Payment Type</a>
+  <span class="current-page">/ Payment Type</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <p class="header"> Payment Type
     <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/addpayment']">
       <mat-icon>add</mat-icon>Add Payment Type</button>
@@ -25,4 +26,5 @@
       <td><mat-icon>close</mat-icon></td>
     </tr>
   </table>
+</div>
 </div>

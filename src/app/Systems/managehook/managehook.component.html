@@ -1,10 +1,10 @@
-<p class="managehook">
+<p class="page-space">
   <a [routerLink]="['/navbar/system']">System</a>
-  <a>/ Manage Hooks</a>
+  <span class="current-page">/ Manage Hooks</span>
 </p>
 
-<div class="example-conatainer mat-elevation-z2">
-  <mat-form-field class="example-full-width">
+<div class="main-div mat-elevation-z2">
+  <mat-form-field class="app-input">
     <input matInput type="text" placeholder="Filter by name">
   </mat-form-field>
   <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/createhook']">

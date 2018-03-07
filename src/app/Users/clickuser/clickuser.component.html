@@ -1,9 +1,9 @@
-<p>
+<p class="page-space">
   <a [routerLink]="['/navbar/user']">User</a>
-  <a>/First Name .Last Name</a>
+  <span class="current-page">/First Name .Last Name</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/createuser']">
     <mat-icon>edit</mat-icon>Edit</button>
   <button mat-button mat-raised-button color="warn" (click)="openDialog()">Delete</button>

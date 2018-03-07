@@ -1,20 +1,30 @@
-.example-container{
-    margin-left: 5%;
-    margin-top: 3%;
-    
-}
-
-.card{
+.my-div{
+    margin-left: 2%;
     margin-right:2%;
-    margin-left:2%;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #e6e6ff;
+    min-height: 100%;
+   
 }
-div mat-card{
-    display:inline-block;
-    vertical-align: top;
-    width:42%;
-    margin-bottom:2%;
 
+.card1{
+    margin-right:20px;
+    margin-left:20px;
 }
-a {
+
+mat-list-item {
+    padding-top: 10px;
     font-size: 14px;
+    padding-bottom: 10px;
+}
+.card,.card1{
+    
+    display:inline-block;
+    
+    vertical-align: top;
+    width:40%;
+   
+}
+.card{
+    margin-left:2%; 
 }

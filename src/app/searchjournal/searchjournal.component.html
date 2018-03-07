@@ -1,23 +1,24 @@
-<p class="searchjournal">
+<div class="page-space">
+<p>
   <a [routerLink]="['/navbar/accounting']">Accounting</a>
-  <a>/ Search Journal Entries</a>
+  <span class="current-page">/ Search Journal Entries</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
-  <mat-form-field class="example-full-width" required>
+<div class="main-div mat-elevation-z2">
+  <mat-form-field class="app-input" required>
     <mat-select placeholder="Select Account name or code">
       <mat-option value="option">Select Account name or Code</mat-option>
     </mat-select>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width" required>
+  <mat-form-field class="app-input" required>
     <mat-select placeholder="select office">
       <mat-option value="option">Select Office</mat-option>
       <mat-option value="option">Head Office</mat-option>
     </mat-select>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width" required>
+  <mat-form-field class="app-input" required>
     <mat-select placeholder="select filter">
       <mat-option value="option">Select filter</mat-option>
       <mat-option value="option">All</mat-option>
@@ -26,29 +27,30 @@
     </mat-select>
   </mat-form-field>
 
-  <button mat-button mat-raised-button color="primary">
+  <button mat-raised-button color="primary" class="btn">
     <mat-icon>close</mat-icon>
   </button>
 
   <p class="dat">Date Range</p>
-  <mat-form-field class="example-full-width">
+  <mat-form-field class="app-input">
     <input matInput [matDatepicker]="picker" placeholder="From Date">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
+  <mat-form-field class="app-input">
     <input matInput [matDatepicker]="picker1" placeholder="To Date">
     <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
     <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
   </mat-form-field>
 
   <p class="dat" >Transaction ID</p>
-  <mat-input-container class="example-full-width">
+  <mat-input-container class="app-input">
     <input matInput placeholder="Search by transaction">
   </mat-input-container>
-  <button mat-button mat-raised-button color="primary">Search
+  <button mat-raised-button color="primary" class="btn">Search
     <mat-icon>search</mat-icon>
   </button>
 
+</div>
 </div>

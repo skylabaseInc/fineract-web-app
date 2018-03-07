@@ -1,13 +1,13 @@
-<p class="addfinancialactivity">
+<p class="page-space">
   <a [routerLink]="['/navbar/accounting']">Accounting</a>
   <a [routerLink]="['/navbar/financialactivity']">/Financial Activity Mappings</a>
-  <a>/Add Financial Activity Mapping</a>
+  <span class="current-page">/Add Financial Activity Mapping</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <h3 class="header">Add Financial Activity Mapping</h3>
-  <hr>
-  <mat-form-field class="example-full-width" required>
+  <mat-divider></mat-divider>
+  <mat-form-field class="app-form" required>
     <mat-select placeholder="Financial Activity">
       <mat-option value="option">Asset Transfer</mat-option>
       <mat-option value="option">Liability Transfer</mat-option>
@@ -20,7 +20,7 @@
     </mat-form-field>
     <br>
 
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-form" required>
       <mat-select placeholder="Account">
       <mat-option value="option">Select Office</mat-option>
       </mat-select>
@@ -28,7 +28,7 @@
       <br>
       <br>
 
-    <button mat-button mat-raised-button class="btn">cancel</button>
-    <button mat-button mat-raised-button color="primary">Submit</button>
-
+   
+    <button mat-button mat-raised-button color="primary" class="btn">Submit</button>
+    <button mat-button mat-raised-button >cancel</button>
   </div>

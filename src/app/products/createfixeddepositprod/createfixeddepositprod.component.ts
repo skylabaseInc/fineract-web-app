@@ -20,7 +20,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./createfixeddepositprod.component.css']
 })
 export class CreatefixeddepositprodComponent implements OnInit {
-  animalControl = new FormControl('', [Validators.required]);
+  myControl = new FormControl('', [Validators.required]);
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,

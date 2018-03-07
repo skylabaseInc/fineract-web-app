@@ -1,38 +1,39 @@
-<p class="closure">
+<p class="page-space">
   <a [routerLink]="['/navbar/accounting']">Accounting</a>
   <a [routerLink]="[ '/navbar/accountclosure']">/Account Closure</a>
-  <a>/Create Closure</a>
+  <span class="current-page">/Create Closure</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <h3>Create Closure</h3>
   <hr>
 
-  <form class="example-form" [formGroup]="form" ngSubmit="onSubmit()" novalidate>
-    <mat-form-field class="example-full-width">
+  <form class="app-form" [formGroup]="form" ngSubmit="onSubmit()" novalidate>
+    <mat-form-field class="app-input">
       <mat-select placeholder="Head Office">
         <mat-option value="option">Option</mat-option>
       </mat-select>
     </mat-form-field>
     <br>
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput [matDatepicker]="picker" placeholder="Submitted on" formControlName="date">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
     </mat-form-field>
     <br>
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <textarea matInput placeholder="Comment" formControlName="comment"></textarea>
     </mat-form-field>
 
-    <div class="example-container2">
+    <div class="another-div">
+        <button mat-button mat-raised-button color="primary">
+            Submit
+          </button>
       <button mat-button mat-raised-button>
         Cancel
       </button>
 
-      <button mat-button mat-raised-button color="primary">
-        Submit
-      </button>
+      
     </div>
 
   </form>

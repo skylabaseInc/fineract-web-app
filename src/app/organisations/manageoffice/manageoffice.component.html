@@ -1,16 +1,17 @@
-<p class="manageoffice">
+<div class="page-space">
+  <p>
     <a [routerLink]="['/navbar/organisation']">Organisation</a>
-    <a>/ Manage Offices</a>
+    <span class="current-page">/ Manage Offices</span>
   </p>
 
-  <div class="example-container mat-elevation-z2">
+  <div class="main-div mat-elevation-z2">
       <p>
         <button mat-button mat-raised-button color="primary" class="btn"[routerLink]="['/navbar/treeview-org']">Tree View</button>
         <button mat-button mat-raised-button color="primary" [routerLink]="['/navbar/createoffice']">
           <mat-icon>add</mat-icon>Create Office</button>
       </p>
       <hr>
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="app-input">
           <input type="text" placeholder="Filter by name/external id" matInput>
         </mat-form-field>
 
@@ -46,3 +47,4 @@
           </div>
 
       </div>
+</div>

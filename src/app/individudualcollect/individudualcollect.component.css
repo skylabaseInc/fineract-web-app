@@ -1,4 +1,4 @@
-.example-card{
+.app-card{
     width:350;
 }
 .fineract-button{
@@ -6,7 +6,7 @@
     margin-left:50%;
 }
 
-.fineract-div{
+.page-space{
     margin:5%;
 }
 mat-form-field{

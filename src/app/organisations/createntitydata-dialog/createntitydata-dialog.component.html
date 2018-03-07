@@ -2,9 +2,9 @@
   <h2>Create Entity-Data Table Check</h2>
 </div>
 <hr>
-<form class="example-form" [formGroup]="form">
+<form class="app-form" [formGroup]="form">
   Entity*:
-  <mat-form-field class="example-full-width" required>
+  <mat-form-field class="app-input" required>
       <mat-select placeholder="Entity" formCOntrolName="entity">
           <mat-option value="option" (click)="Onshow1()">Client</mat-option>
           <mat-option value="option1" (click)="Onshow()">Loan</mat-option>
@@ -14,14 +14,14 @@
       </mat-form-field>
       <br>
    Status*:
-   <mat-form-field class="example-full-width" required>
+   <mat-form-field class="app-input" required>
       <mat-select placeholder="Entity" formCOntrolName="status">
           <mat-option value="option">option1</mat-option>
         </mat-select>
         </mat-form-field>
     <br>
     Data Table*:
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
         <mat-select placeholder="Entity" formCOntrolName="data">
             <mat-option value="option">option1</mat-option>
           </mat-select>
@@ -30,7 +30,7 @@
             
       <div *ngIf=show2>
          Product
-         <mat-form-field class="example-full-width">
+         <mat-form-field class="app-input">
          <mat-select placeholder="Product">
               <mat-option value="option">Income Generating Loan</mat-option>
               <mat-option value="option1">For Prepay-Calculate till preclosure</mat-option>

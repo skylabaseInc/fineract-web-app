@@ -1,45 +1,47 @@
-<p class="managefund">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/organisation']">Organisation</a>
-  <a>/ Manage Funds</a>
+  <span class="current-page">/ Manage Funds</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <h2 class="header">Manage Funds</h2>
   <hr>
-  <mat-form-field class="example-full-width" required>
+  <mat-form-field class="app-input" required>
     <input matInput type="text" placeholder="New Fund">
   </mat-form-field>
-  <button mat-button mat-raised-button color="primary">
+  <button mat-raised-button color="primary" class="btn">
     <mat-icon>add</mat-icon>
   </button>
 
   <div class="one">
     <form [formGroup]="form">
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="app-input">
         <input matInput type="text" placeholder="1111" id="num" formControlName="num">
       </mat-form-field>
-      <button mat-button mat-raised-button color="primary" (click)="toggle()">
+      <button mat-raised-button color="primary" (click)="toggle()">
         <mat-icon>edit</mat-icon>
       </button>
       </form>
   </div>
 
   <div class="two">
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput type="text" placeholder="22222222" disabled>
     </mat-form-field>
-    <button mat-button mat-raised-button color="primary">
+    <button mat-raised-button color="primary">
       <mat-icon>edit</mat-icon>
     </button>
   </div>
 
   <div class="three">
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput type="text" placeholder="90000" disabled>
     </mat-form-field>
-    <button mat-button mat-raised-button color="primary">
+    <button mat-raised-button color="primary">
       <mat-icon>edit</mat-icon>
     </button>
   </div>
 
+</div>
 </div>

@@ -9,7 +9,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./incomestatement.component.css']
 })
 export class IncomestatementComponent implements OnInit {
-  animalControl = new FormControl('', [Validators.required]);
+  myControl = new FormControl('', [Validators.required]);
 
   decimals = [
     { value: 'zero', viewValue: 'Zero decimal places' },

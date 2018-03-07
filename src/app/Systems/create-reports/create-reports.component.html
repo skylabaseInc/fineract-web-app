@@ -1,13 +1,13 @@
-<div class="fineract-div">System/Manage Reports/Create reports 
-    <div class="example-container mat-elevation-z8">
+<div class="page-space">System/Manage Reports/Create reports 
+    <div class="main-div mat-elevation-z8">
       <br>
       <div>
       </div>
       <mat-divider></mat-divider>
       <div>
-          <label class="example-full-width3">Report Name:</label>
+          <label class="app-input3">Report Name:</label>
         
-          <mat-form-field class="example-full-width">
+          <mat-form-field class="app-input">
             <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
             <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -17,19 +17,19 @@
           </mat-form-field>
 
           <label>Report type</label>
-          <mat-form-field class="example-full-width">
-              <mat-select placeholder="Table " [formControl]="animalControl" required>
+          <mat-form-field class="app-input">
+              <mat-select placeholder="Table " [formControl]="myControl" required>
                 <mat-option>Table</mat-option>
                 <mat-option *ngFor="let period of periods" [value]="period">
                   {{period.name}}
                 </mat-option>
               </mat-select>
-              <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+              <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
     
             </mat-form-field>
             <label>Report subtype</label>
 
-            <mat-form-field class="example-full-width3">
+            <mat-form-field class="app-input3">
                 <mat-select placeholder="Select one">
                   <mat-option *ngFor="let charge of charges" [value]="charge.value">
                     {{charge.viewValue }}
@@ -41,8 +41,8 @@
       <div>
       Report<br>
       Details
-      <label class="example-full-width3">Report category</label>
-          <mat-form-field class="example-full-width">
+      <label class="app-input3">Report category</label>
+          <mat-form-field class="app-input">
             <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
             <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -54,7 +54,7 @@
           <mat-checkbox></mat-checkbox>User Input(UI)
       </div>
       <div>
-          <label class="example-full-width3">Description</label>
+          <label class="app-input3">Description</label>
           <mat-form-field>
             <textarea matInput matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
           </mat-form-field>
@@ -62,7 +62,7 @@
       </div>
       <div>
           <label>sql</label>
-          <mat-form-field class="example-full-width3">
+          <mat-form-field class="app-input3">
             <textarea matInput matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
           </mat-form-field>
       </div>

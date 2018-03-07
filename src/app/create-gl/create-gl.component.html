@@ -1,15 +1,16 @@
-<p class="creategl">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/accounting']">Accounting</a>
   <a [routerLink]="['/navbar/chartaccount']">/ Chart of Accounts</a>
-  <a>/Create GL Account</a>
+  <span class="current-page">/Create GL Account</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <h3> Create GL Account</h3>
   <hr>
-  <form class="example-form" [formGroup]="form">
+  <form class="app-form" [formGroup]="form">
     Account type:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <mat-select placeholder="">
         <mat-option value="option">Asset</mat-option>
         <mat-option value="option">Liability</mat-option>
@@ -20,7 +21,7 @@
     </mat-form-field>
 
     Parent:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <mat-select placeholder="select parent">
         <mat-option value="option">jimione</mat-option>
         <mat-option value="option">yty</mat-option>
@@ -30,17 +31,17 @@
       </mat-select>
     </mat-form-field>
     <br> GL code:
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
       <input matInput formControlName="code" type="number">
     </mat-form-field>
 
     Account Name:
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
       <input matInput formControlName="name" type="text">
     </mat-form-field>
     <br> 
     Account Usage:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <mat-select placeholder="">
         <mat-option *ngFor="let option of options" [value]="option.value">
           {{ option.viewValue }}
@@ -49,7 +50,7 @@
     </mat-form-field>
 
     Tag:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <mat-select placeholder="Select Tag">
         <mat-option *ngFor="let tag of tags" [value]="tag.value">
           {{ tag.viewValue }}
@@ -61,12 +62,14 @@
     <mat-checkbox class="check">Manual entries allowed</mat-checkbox>
     <br> 
     Description:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <textarea matInput placeholder=""></textarea>
     </mat-form-field>
     <br>
-    <button mat-button mat-raised-button class="btn">Cancel</button>
-    <button mat-button mat-raised-button color="primary">Submit</button>
+    <button mat-button mat-raised-button color="primary" class="btn">Submit</button>
+    <button mat-button mat-raised-button >Cancel</button>
+    
 
   </form>
+</div>
 </div>

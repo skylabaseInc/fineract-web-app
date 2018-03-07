@@ -8,7 +8,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./fundsdatessummaryoffice.component.css']
 })
 export class FundsdatessummaryofficeComponent implements OnInit {
-  animalControl = new FormControl('', [Validators.required]);
+  myControl = new FormControl('', [Validators.required]);
 
   currencies = [
     { name: 'US Dollar' },

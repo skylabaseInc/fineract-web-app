@@ -1,9 +1,10 @@
-<p class="addcurrency">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/organisation']">Organisation</a>
-  <a>/ Currency Configuration</a>
+  <span class="current-page">/ Currency Configuration</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <p>
     <a [routerLink]="['/navbar/organisation']">Organisation</a>
     <a> / Edit Currency Configuration</a>
@@ -17,7 +18,7 @@
   <table class="mat-table">
     <tr>
       <td>
-        <mat-form-field class="example-full-width" required>
+        <mat-form-field class="app-input" required>
           <input matInput type="text" id="position" placeholder="New Currency">
         </mat-form-field>
       </td>
@@ -41,7 +42,9 @@
   </table>
   <br>
   <br>
-   <button mat-button mat-raised-button class="btn2">Cancel</button>
-   <button mat-button mat-raised-button color="primary">Submit</button>
+  <button mat-button mat-raised-button color="primary" class="btn2">Submit</button>
+   <button mat-button mat-raised-button >Cancel</button>
+   
  </form>
+</div>
 </div>

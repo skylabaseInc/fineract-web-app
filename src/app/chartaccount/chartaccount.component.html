@@ -1,16 +1,18 @@
-<p class="chartaccount">
+<p class="page-space">
   <a [routerLink]="['/navbar/accounting']">Accounting</a>
-  <a>/ Chart of Accounts</a>
+  <span class="current-page">/ Chart of Accounts</span>
 </p>
-<div class="example-container mat-elevation-z2">
-  <p class="header">Chart of Accounts
+<div class="main-div mat-elevation-z2">
+  <div>
+  <p class="heading">Chart of Accounts
     <button mat-button mat-raised-button color="primary" 
     class="btn"[routerLink]="['/navbar/treeview']">Tree View</button>
-    <button mat-button mat-raised-button color="primary" [routerLink]="['/navbar/create-gl']">
+    <button mat-raised-button color="primary" [routerLink]="['/navbar/create-gl']" >
       <mat-icon>add</mat-icon>Add Account</button>
   </p>
+  </div>
 
-  <mat-form-field class="example-full-width">
+  <mat-form-field class="app-input">
     <input type="text" placeholder="Filter by Account/GL code/Account type" matInput>
   </mat-form-field>
 

@@ -1,5 +1,5 @@
-<div class="example-container mat-elevation-z2">
-  <h3>Accounting</h3>
+<div class="my-div mat-elevation-z2">
+  <h3 class="heading">Accounting</h3>
   <hr>
   <mat-card class="card">
     <mat-list>
@@ -33,18 +33,18 @@
       <mat-divider></mat-divider>
       <mat-list-item>
         <a [routerLink]="['/navbar/migrateopening']">
-          <mat-icon>currency</mat-icon>Migrate Opening Balances(Office-wise)
+          <mat-icon>monetization_on</mat-icon>Migrate Opening Balances(Office-wise)
           <br> Set or update office-level opening balances for GL Accounts
         </a>
       </mat-list-item>
     </mat-list>
   </mat-card>
 
-  <mat-card>
+  <mat-card class="card1">
     <mat-list>
       <mat-list-item>
         <a [routerLink]="['/navbar/chartaccount']">
-          <mat-icon></mat-icon>Chart of Accounts
+          <mat-icon>domain</mat-icon>Chart of Accounts
           <br> List of the accounts used by the organisation
         </a>
       </mat-list-item>

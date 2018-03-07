@@ -1,15 +1,7 @@
 /* Structure */
-.fineract-div{
-  margin:50px;
-}
-.example-container {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-    
-  }
+
   
-  .example-header {
+  .app-header {
     min-height: 64px;
     padding: 8px 24px 0;
   }
@@ -19,9 +11,5 @@
     width: 100%;
   }
   
-  .mat-table {
-    overflow: auto;
-    max-height: 500px;
-  }
   
   

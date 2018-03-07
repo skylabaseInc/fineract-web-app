@@ -1,19 +1,21 @@
-<p class="accountclosure">
-  <a [routerLink]="['/accounting']">Accounting</a>
-  <a>/Account Closure</a>
+<p class="page-space">
+  <a [routerLink]="['/navbar/accounting']">Accounting</a>
+  <span class="current-page">/Account Closure</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
-
-  <p class="account">Accounting Closures
-    <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/createclosure']">
-      <mat-icon>add</mat-icon>
-      Create Closure</button>
-  </p>
-  <p>Filter By Office</p>
+<div class="main-div mat-elevation-z2">
 
   <p>
-    <mat-form-field class="example-full-width">
+    <span class="heading">Accounting Closures</span>
+    <button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/createclosure']">
+      <mat-icon>add</mat-icon>
+      Create Closure</button>
+    </p>
+  <hr>
+  Filter By Office
+
+  <p>
+    <mat-form-field class="app-filter">
       <mat-select placeholder="All Offices">
         <mat-option value="option">Head office</mat-option>
       </mat-select>

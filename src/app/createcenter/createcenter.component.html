@@ -1,25 +1,25 @@
-  <p class="center">
-      <a [routerLink]="['/navbar/center']">Centers</a>
-      <a>/Create center</a>
-    </p>
-<div class="example-container mat-elevation-z2">
-  <h3>Create Clients</h3>
+<p class="page-space">
+  <a [routerLink]="['/navbar/center']">Centers</a>
+  <span class="current-page">/Create center</span>
+</p>
+<div class="main-div mat-elevation-z2">
+  <h3 class="heaaing">Create Clients</h3>
   <hr>
 
-  <form class="example-form" [formGroup]="form" ngSubmit="onSubmit()" novalidate>
-    <mat-form-field class="example-full-width">
+  <form class="app-form" [formGroup]="form" ngSubmit="onSubmit()" novalidate>
+    <mat-form-field class="app-input">
       <input matInput placeholder="Name" formControlName="name" required>
     </mat-form-field>
     <br>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <mat-select placeholder="Head Office">
         <mat-option value="option">Option</mat-option>
       </mat-select>
     </mat-form-field>
     <br>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <mat-select placeholder="Staff">
         <mat-option value="option">Option</mat-option>
       </mat-select>
@@ -29,32 +29,33 @@
     <mat-checkbox>Active</mat-checkbox>
     <br>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput placeholder="External Id" formControlName="id" type="number">
     </mat-form-field>
     <br>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput [matDatepicker]="picker" placeholder="Submitted on">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
     </mat-form-field>
     <br>
-    <mat-form-field class="example-full-width">
-        <mat-select placeholder="select and add groups">
-          <mat-option value="option">Option</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <br>
+    <mat-form-field class="app-input">
+      <mat-select placeholder="select and add groups">
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
 
-    <div class="example-container2">  
-    <button mat-button mat-raised-button>
-      Cancel
-    </button>
+    <div class="another-div">
+      <button mat-button mat-raised-button color="primary">
+        Submit
+      </button>
+      <button mat-button mat-raised-button>
+        Cancel
+      </button>
 
-    <button mat-button mat-raised-button color="primary">
-      Submit
-    </button>
+
     </div>
 
 

@@ -7,7 +7,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./trialbalance.component.css']
 })
 export class TrialbalanceComponent implements OnInit {
-  animalControl = new FormControl('', [Validators.required]);
+  myControl = new FormControl('', [Validators.required]);
 
   decimals = [
     { value: 'zero', viewValue: 'Zero decimal places' },

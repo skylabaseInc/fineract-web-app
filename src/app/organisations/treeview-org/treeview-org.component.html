@@ -2,11 +2,11 @@
   <a [routerLink]="['/navbar/organisation']">Organisation</a>
   <a>/ Manage Offices</a>
 </p>
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <p>
     <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/manageoffice']">
       <mat-icon>list</mat-icon>List View</button>
-    <button mat-button mat-raised-button color="primary" [routerLink]="['/']">
+    <button mat-button mat-raised-button color="primary" [routerLink]="['/navbar/createoffice']">
       <mat-icon>add</mat-icon>Create Office</button>
   </p>
   <hr>
@@ -14,7 +14,7 @@
     <button mat-button (click)="show=!show">Expand All</button>/
     <button mat-button (click)="show=!hide">Collapse All</button>
   </p>
-  <button mat-button mat-raised-button color="primary" ><mat-icon>add</mat-icon>() Head Office</button>
+  <button mat-raised-button color="primary" class="headOffice-btn" ><mat-icon>add</mat-icon>() Head Office</button>
   <div *ngIf="show" class="list">
     <br>
     <mat-radio-group>

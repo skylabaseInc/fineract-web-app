@@ -7,7 +7,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./clientlistingpentaho.component.css']
 })
 export class ClientlistingpentahoComponent implements OnInit {
-  animalControl = new FormControl('', [Validators.required]);
+  myControl = new FormControl('', [Validators.required]);
 
   offices = [
     {name: 'Head office'},

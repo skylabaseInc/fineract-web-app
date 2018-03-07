@@ -1,13 +1,14 @@
-<p class="addjournalentry">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/accounting']">Accounting</a>
-  <a>/ Add Journal Entry</a>
+  <span class="current-page">/ Add Journal Entry</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
-  <h3>Add Journal Entry</h3>
-  <form class="example-form"s>
+<div class="main-div mat-elevation-z2">
+  <h3 class="heading">Add Journal Entry</h3>
+  <form class="app-form"s>
     Office*:
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
       <mat-select placeholder="">
         <mat-option *ngFor="let option of options" [value]="option.value">
           {{ option.viewValue }}
@@ -15,7 +16,7 @@
       </mat-select>
     </mat-form-field>
     Currency*:
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
       <mat-select placeholder="">
         <mat-option *ngFor="let currency of currencies" [value]="currency.value">
           {{ currency.viewValue }}
@@ -29,13 +30,13 @@
     </button>
     <br>
  <!--  <div *ngIf="show">
-      <mat-form-field class="example-full-width" required>
+      <mat-form-field class="app-input" required>
         <mat-select placeholder="select debit">
           <mat-option value="option">option</mat-option>
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="app-input">
         <input type="text" placeholder="" matInput>
       </mat-form-field>
       <button mat-button mat-raised-button color="primary">
@@ -51,13 +52,13 @@
   </p>
     <br>
  <!--   <div *ngIf="show">
-      <mat-form-field class="example-full-width" required>
+      <mat-form-field class="app-input" required>
         <mat-select placeholder="select Credit">
           <mat-option value="option">option</mat-option>
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="app-input">
         <input type="text" placeholder="" matInput>
       </mat-form-field>
       <button mat-button mat-raised-button color="primary">
@@ -67,11 +68,11 @@
     </div>-->
 
     Reference Number:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input type="number" placeholder="" matInput>
     </mat-form-field>
     Transaction date:
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
       <input matInput [matDatepicker]="picker" placeholder="">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
@@ -83,7 +84,7 @@
 
     <div *ngIf="show" class="detail">
       Payment Type:
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="app-input">
         <input type="text" placeholder="" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" required>
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option value="option"></mat-option>
@@ -91,23 +92,23 @@
         </mat-autocomplete>
       </mat-form-field>
       Account#:
-      <mat-form-field class="example-full-width">
-        <input type="number" matInput [formControl]="myControl">
-      </mat-form-field>
+      
+        <input type="number" [formControl]="myControl" class="app-input">
+      
       <br> Cheque#:
-      <mat-form-field class="example-full-width">
-        <input type="number" matInput [formControl]="myControl">
-      </mat-form-field>
+      
+        <input type="number"  [formControl]="myControl" class="app-input">
+      
       Routing Code:
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="app-input">
         <input type="text" matInput [formControl]="myControl">
       </mat-form-field>
       <br> Receipt#:
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="app-input">
         <input type="number" matInput [formControl]="myControl">
       </mat-form-field>
       Bank#:
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="app-input">
         <input type="number" matInput [formControl]="myControl">
       </mat-form-field>
 
@@ -115,14 +116,15 @@
 
     <br>
      Comment
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <textarea matInput placeholder=""></textarea>
     </mat-form-field>
     <br>
-
-    <button mat-button mat-raised-button class="btn">Cancel</button>
-    <button mat-button mat-raised-button color="primary">Submit</button>
+    <button mat-button mat-raised-button color="primary"  class="btn">Submit</button>
+    <button mat-button mat-raised-button>Cancel</button>
+    
 
 
   </form>
+</div>
 </div>

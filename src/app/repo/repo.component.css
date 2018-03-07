@@ -1,15 +1,12 @@
 
 .fineract-para{
     font-size:22px;
+    
+}
+.page-input{
     color:gray;
 }
-.fineract-div{
-    color:gray;
-}
-.example-card{
-    width:75%;
-    margin-left: 5%;
-}
+
 
 .alist{
     margin-left:70%;
@@ -20,6 +17,12 @@
 }
 
 .fineract-search{
-    width:100%;
+    width:75%;
+    margin-top:10px;
+}
+.fineract-para2{
+    color: aqua;
+    text-align: center;
+
 }
 
