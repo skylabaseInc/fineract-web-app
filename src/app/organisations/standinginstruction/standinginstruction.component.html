@@ -1,21 +1,22 @@
-<p class="standinginstruction">
+<div class="page-space">
+  <p>
     <a [routerLink]="['/navbar/organisation']">Organisation</a>
-    <a>/ Standing Instruction History</a>
+    <span class="current-page">/ Standing Instruction History</span>
   </p>
   
-  <div class="example-container mat-elevation-z2">
+  <div class="main-div mat-elevation-z2">
 
     <div *ngIf="hide" class="history">
       <form>
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput type="text" placeholder="Client Name">
         </mat-form-field>
 
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput type="number" placeholder="Client Id">
         </mat-form-field>
 
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
             <mat-select placeholder="type">
                 <mat-option value="option">Transfer Type</mat-option>
                 <mat-option value="option1">Account Transfer</mat-option>
@@ -23,7 +24,7 @@
               </mat-select>
             </mat-form-field>
 
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="app-input">
                 <mat-select placeholder=" Accounttype">
                     <mat-option value="option" (click)="Onshow1()">Account Type</mat-option>
                     <mat-option value="option1" (click)="Onshow()">Savings Account</mat-option>
@@ -32,18 +33,18 @@
                 </mat-form-field>
 
                 <div *ngIf=show2>
-                    <mat-form-field class="example-full-width">
+                    <mat-form-field class="app-input">
                         <input matInput type="number" placeholder="From Account Id">
                       </mat-form-field>
                 </div>
 
-                <mat-form-field class="example-full-width">
+                <mat-form-field class="app-input">
                     <input matInput [matDatepicker]="picker" placeholder="From Date">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
                   </mat-form-field>
                   
-                  <mat-form-field class="example-full-width">
+                  <mat-form-field class="app-input">
                     <input matInput [matDatepicker]="picker1" placeholder="To Date">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
@@ -113,4 +114,5 @@
       </div>
     
 
+  </div>
   </div>

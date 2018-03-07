@@ -1,17 +1,13 @@
-.example-container{
-    margin-left: 5%;
-    margin-right: 5%;
-    
-}
-.chartaccount{
-    margin-left: 5%;
-    margin-top: 3%;
-}
-.example-full-width{
+
+.app-input{
     width:95%;
     margin-left: 2%;
 }
 .btn{
     margin-left: 50%;
     margin-top: 2%;
+}
+.btn2{
+    width: 200px;
+    margin-left: 40%;
 }

@@ -1,15 +1,16 @@
-<p class="createemployee">
+<div class="page-space">
+  <p>
     <a [routerLink]="['/navbar/organisation']">Organisation</a>
     <a [routerLink]="['/navbar/manageemployee']">/Manage Employee</a>
-    <a>/Create Employee</a>
+    <span class="current-page">/Create Employee</span>
   </p>
   
-  <div class="example-container mat-elevation-z2">
+  <div class="main-div mat-elevation-z2">
     <h2>Create Employee</h2>
     <hr>
-    <form class="example-form" [formGroup]="form" novalidate>
+    <form class="app-form" [formGroup]="form" novalidate>
       Office*:
-      <mat-form-field class="example-full-width" required>
+      <mat-form-field class="app-input" required>
           <mat-select placeholder="">
             <mat-option *ngFor="let option of options" [value]="option.value">
               {{ option.viewValue }}
@@ -18,14 +19,14 @@
         </mat-form-field>
         <br>
         First Name*:
-        <mat-form-field class="example-full-width" required>
+        <mat-form-field class="app-input" required>
           <input matInput type="text" id="fname" class="form-control" [formControl]="fname" formControlName="fname">
           <mat-error *ngIf="fname.hasError('required')">Required field</mat-error>
         </mat-form-field>
         <br>
 
         Last Name*:
-        <mat-form-field class="example-full-width" required>
+        <mat-form-field class="app-input" required>
           <input matInput type="text" id="lname" class="form-control" [formControl]="lname" formControlName="lname">
           <mat-error *ngIf="lname.hasError('required')">Required field</mat-error>
         </mat-form-field>
@@ -33,12 +34,12 @@
         <mat-checkbox>Is Loan Officer?</mat-checkbox>
         <br>
         Mobile Number for SMS:
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput type="tel" class="form-control" [formControl]="mobile" formControlName="mobile" >
         </mat-form-field>
         <br>
         Joined On:
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
             <input matInput [matDatepicker]="picker" placeholder="" required formControlName="date">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
@@ -48,4 +49,5 @@
           <button mat-button mat-raised-button color="primary" type="submit">Submit</button>
 
     </form>
+  </div>
   </div>

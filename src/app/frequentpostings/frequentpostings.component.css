@@ -1,13 +1,5 @@
-.example-container{
-    margin-left: 5%;
-    margin-right: 5%;
-    
-}
-.frequentpostings{
-    margin-left: 10%;
-    margin-top: 5%;
-}
-.example-full-width{
+
+.app-input{
     width:25%;
     margin-left: 2%;
 }
@@ -17,6 +9,6 @@
 .detail{
     margin-left: 2%;
 }
-.example-form{
+.app-form{
     margin-left: 2%;
 }

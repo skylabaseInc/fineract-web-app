@@ -1,11 +1,11 @@
-<div class="fineract-div">Product / Recurring deposite products / Create 
-    <div class="example-container mat-elevation-z8">
+<div class="page-space">Product / Recurring deposite products / Create 
+    <div class="main-div mat-elevation-z8">
       <h2>Details</h2>
       <mat-divider></mat-divider>
       <div>
         <div>
           Product name
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="app-input">
               <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
               <mat-hint>Required!</mat-hint>
               <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -17,7 +17,7 @@
         </div>
         <div>
           <label>Short name</label>
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="app-input">
               <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
               <mat-hint>Required!</mat-hint>
               <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -38,18 +38,18 @@
         <div>
           Currency:
           <mat-form-field>
-            <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+            <mat-select placeholder="--select one--" [formControl]="myControl" required>
               <mat-option>--select one--</mat-option>
               <mat-option *ngFor="let currency of currencies" [value]="currency">
                 {{currency.name}}
               </mat-option>
             </mat-select>
-            <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+            <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
   
           </mat-form-field>
-          <label class="example-full-width2">Decimal places:</label>
+          <label class="app-input2">Decimal places:</label>
           
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="app-input">
               <input matInput value="2" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
               <mat-hint>Required!</mat-hint>
               <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -63,7 +63,7 @@
         <div>
           Multiples of :
         
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="app-input">
               <input matInput value="0" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
               <mat-hint>Required!</mat-hint>
               <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -79,7 +79,7 @@
         <div>
             Default deposite Amount:
             
-              <mat-form-field class="example-full-width">
+              <mat-form-field class="app-input">
                 <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                 <mat-hint>Required!</mat-hint>
                 <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -93,7 +93,7 @@
           <div>
             Minimum Deposite Amount:
             
-                <mat-form-field class="example-full-width">
+                <mat-form-field class="app-input">
                   <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                   <mat-hint>Required!</mat-hint>
                   <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -104,9 +104,9 @@
               
       
             
-            <label class="example-full-width2">Maximum deposite Amount:</label>
+            <label class="app-input2">Maximum deposite Amount:</label>
             
-                <mat-form-field class="example-full-width">
+                <mat-form-field class="app-input">
                   <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                   <mat-hint>Required!</mat-hint>
                   <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -120,48 +120,48 @@
           <div>
               Interest compounding period:
               <mat-form-field>
-                <mat-select placeholder="Daily" [formControl]="animalControl" required>
+                <mat-select placeholder="Daily" [formControl]="myControl" required>
                   <mat-option>Daily</mat-option>
                   <mat-option *ngFor="let interestcomp of interestcomps" [value]="interestcomp">
                     {{interestcomp.name}}
                   </mat-option>
                 </mat-select>
-                <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+                <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
       
               </mat-form-field>
-             <label class="example-full-width2">Interest posting period:</label>
+             <label class="app-input2">Interest posting period:</label>
               <mat-form-field>
-                <mat-select placeholder="Monthly" [formControl]="animalControl" required>
+                <mat-select placeholder="Monthly" [formControl]="myControl" required>
                   <mat-option>Monthly</mat-option>
                   <mat-option *ngFor="let interestpost of interestposts" [value]="interestpost">
                     {{interestpost.name}}
                   </mat-option>
                 </mat-select>
-                <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+                <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
       
               </mat-form-field>
             </div>
             <div>
               Interest calculated using:
               <mat-form-field>
-                <mat-select placeholder="Daily Balance" [formControl]="animalControl" required>
+                <mat-select placeholder="Daily Balance" [formControl]="myControl" required>
                   <mat-option>Daily Balance</mat-option>
                   <mat-option *ngFor="let interestcalc of interestcalcs" [value]="interestcalc">
                     {{interestcalc.name}}
                   </mat-option>
                 </mat-select>
-                <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+                <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
       
               </mat-form-field>
               <label>Days in year:</label>
               <mat-form-field>
-                <mat-select placeholder="365 Days" [formControl]="animalControl" required>
+                <mat-select placeholder="365 Days" [formControl]="myControl" required>
                   <mat-option>365 Days</mat-option>
                   <mat-option *ngFor="let currency of currencies" [value]="day">
                     {{day.name}}
                   </mat-option>
                 </mat-select>
-                <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+                <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
       
               </mat-form-field>
             </div>
@@ -178,7 +178,7 @@
          
                 Lock-in period:
                 
-                  <mat-form-field class="example-full-width">
+                  <mat-form-field class="app-input">
                     <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                     <mat-hint>Required!</mat-hint>
                     <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -187,19 +187,19 @@
                     </mat-error>
                   </mat-form-field>
                 
-                <mat-form-field class="example-full-width">
-                  <mat-select placeholder="select one " [formControl]="animalControl" required>
+                <mat-form-field class="app-input">
+                  <mat-select placeholder="select one " [formControl]="myControl" required>
                     <mat-option>select one</mat-option>
                     <mat-option *ngFor="let period of periods" [value]="period">
                       {{period.name}}
                     </mat-option>
                   </mat-select>
-                  <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+                  <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
         
                 </mat-form-field>
                 Minimum Deposite term:
                 
-                  <mat-form-field class="example-full-width">
+                  <mat-form-field class="app-input">
                     <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                     <mat-hint>Required!</mat-hint>
                     <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -209,13 +209,13 @@
                   </mat-form-field>
                 
                 <mat-form-field>
-                    <mat-select placeholder="select one " [formControl]="animalControl" required>
+                    <mat-select placeholder="select one " [formControl]="myControl" required>
                       <mat-option>select one</mat-option>
                       <mat-option *ngFor="let period of periods" [value]="period">
                         {{period.name}}
                       </mat-option>
                     </mat-select>
-                    <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+                    <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
           
                   </mat-form-field>
         
@@ -225,7 +225,7 @@
               <div>
                 And thereafter in multiples of:
                   
-                    <mat-form-field class="example-full-width">
+                    <mat-form-field class="app-input">
                       <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                       <mat-hint>Required!</mat-hint>
                       <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -235,19 +235,19 @@
                     </mat-form-field>
                   
                   <mat-form-field>
-                    <mat-select placeholder="select one " [formControl]="animalControl" required>
+                    <mat-select placeholder="select one " [formControl]="myControl" required>
                       <mat-option>select one</mat-option>
                       <mat-option *ngFor="let period of periods" [value]="period">
                         {{period.name}}
                       </mat-option>
                     </mat-select>
-                    <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+                    <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
           
                   </mat-form-field> 
                   
                   Maximum Deposite term:
                   
-                    <mat-form-field class="example-full-width">
+                    <mat-form-field class="app-input">
                       <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                       <mat-hint>Required!</mat-hint>
                       <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -257,13 +257,13 @@
                     </mat-form-field>
                   
                   <mat-form-field>
-                      <mat-select placeholder="select one " [formControl]="animalControl" required>
+                      <mat-select placeholder="select one " [formControl]="myControl" required>
                         <mat-option>select one</mat-option>
                         <mat-option *ngFor="let period of periods" [value]="period">
                           {{period.name}}
                         </mat-option>
                       </mat-select>
-                      <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+                      <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
             
                     </mat-form-field>
           
@@ -271,8 +271,8 @@
              <div>
                For pre-mature Closure<mat-checkbox></mat-checkbox>
                Apply penal interest(less)
-               <form class="example-form">
-                  <mat-form-field class="example-full-width">
+               <form class="app-form">
+                  <mat-form-field class="app-input">
                     <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                     
                   </mat-form-field>

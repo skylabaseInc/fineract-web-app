@@ -1,10 +1,12 @@
-<div class="fineract-div">System / Manage Reports
-  <div class="example-container mat-elevation-z8">
+<div class="page-space">
+  <a [routerLink]="['/navbar/system']">System</a>
+  <span class="current-page">/ Manage Reports</span>
+  <div class="main-div mat-elevation-z2">
     <br>
     <div>
     </div>
     <mat-divider></mat-divider>
-    <div class="example-header">
+    <div class="app-header">
         <mat-form-field>
           <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter by name/short name">
         </mat-form-field>

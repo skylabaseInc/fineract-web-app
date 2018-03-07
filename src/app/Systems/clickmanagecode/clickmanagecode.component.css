@@ -1,14 +1,9 @@
-.example-container{
-    margin-left: 3%;
-    
-}
+
 .clickmanagecode{
     margin-left: 3%;
     margin-top: 3%;
 }
-.header{
-    margin:2%;
-}
+
 .btn{
     margin-top: 2%;
     margin-left: 60%;
@@ -19,9 +14,7 @@ th, td {
     border-bottom: 1px solid #ddd;
     margin:15px;
 }
-.mat-table{
-   width:100%;
-}
+
 th{
     background-color: #ddd;
 }

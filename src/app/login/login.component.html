@@ -1,92 +1,21 @@
-<div class="example-container2">
-  <p>change language:
-    <mat-form-field>
-      <mat-select placeholder="English">
-        <mat-option *ngFor="let language of languages" [value]="language.value">
-          {{ language.viewValue }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </p>
-</div>
-<div>
-  <img class="fineract-logo" src="assets/index1.png">
-</div>
-
-<div class="mifos">
-  <h3>Fineract</h3>
-</div>
-
-
-<!--login form here -->
-<div class="example-container">
-  <form [formGroup]="form">
-    <mat-input-container class="full-width-input">
-      <input matInput placeholder="User" formControlName="userName" required>
-    </mat-input-container>
+<div class="main-background" style="background-image:url('assets/Background.png');">
+  <div class="image-div">
+    <img src="assets/fineract.png" class="image">
     <br>
-
-    <mat-input-container class="full-width-input">
-      <input matInput type="password" placeholder="Password" formControlName="password" required>
-    </mat-input-container>
-    <br>
-
-    <button mat-raised-button color="primary" type="submit" (click)="onLoginClick(loginForm)">Login</button>
-  </form>
-</div>
-
-
-
-<br>
-<br>
-<br>
-
-<div>
-  <mat-card>
-    <p class="center-align">RESOURCES</p>
-    <p class="center-align">
-      <a href="#"> User Manual</a>
-      <br>
-      <a href="#">Functional Specifications</a>
-      <br>
-      <a href="#"> Developer Zone</a>
-    </p>
-  </mat-card>
-
-  <mat-card>
-    <h6 class="center-align">COMMUNITY</h6>
-    <p class="center-align">
-      <a href="#">User Group</a>
-      <br>
-      <a href="#">Developer Group</a>
-      <br>
-      <a href="#">IRC</a>
-    </p>
-  </mat-card>
-
-  <mat-card>
-    <h6 class="center-align">CONTRIBUTE</h6>
-    <p class="center-align">
-      <a href="#">Key design principles</a>
-      <br>
-      <a href="#">Working with code</a>
-      <br>
-      <a href="#"> Donate</a>
-    </p>
-  </mat-card>
-</div>
-
-<br>
-<br>
-<div class="example-container1">
-  <p>Mifos X is designed by the
-    <a href="#"> Mifos Initiative</a>.
-    <a href="#">A global community </a>that aims to speed</p>
-  <p>the elimination of poverty by enabling Organizations to more effectively and efficiently deliver </p>
-  <p>responsible financial services to the world’s poor and unbanked </p>
-  <p>Sounds interesting?
-    <a href="#">Get involved!</a>
+    <span style="color:white;margin-left:50px;">Apache Fineract</span>
+  </div>
+<div class="login-div mat-elevation-z2">
+  <mat-icon class="app-input">person</mat-icon>
+  <input mat-input placeholder="Username" class="app-input">
+  <br>
+  <mat-icon class="app-input">https</mat-icon>
+  <input mat-input placeholder="password" class="app-input">
+  <p>
+  <button mat-raised-button color="primary" type="submit" class="btn" (click)="onLoginClick(loginForm)">Sign In</button>
   </p>
-  <p>Version 17.07.01.RELEASE </p>
-  <p>Mifos X is upto date</p>
+  <p class="app-input">Forgot password?<span style="color:#3498dB;" class="app-input">Contact your Administrator</span></p>
+</div> 
+  
+
+  
 </div>

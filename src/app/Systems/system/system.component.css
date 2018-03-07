@@ -1,14 +1,16 @@
-.example-container{
-    margin-left: 3%;
-    margin-top: 3%;
-    
+.my-div{
+    margin-left: 2%;
+    margin-right:2%;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #e6e6ff;
+    min-height: 100%;
 }
-
 .header{
     margin-left:2%;
 }
 
-div mat-card{
+.card1,.card2{
+    display: flex;
     display:inline-block;
     vertical-align: top;
     margin-top: 2%;
@@ -24,3 +26,8 @@ a {
 .card1{
     margin-left: 3%;
 }
+mat-list-item{
+    padding:3%;
+
+}
+

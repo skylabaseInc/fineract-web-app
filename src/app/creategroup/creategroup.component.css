@@ -1,28 +1,12 @@
-.example-container{
-    margin-left: 5%;
-    margin-right: 10%;
-}
 
-.example-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .example-container > * {
-    width: 100%;
-  }
-
-  .example-full-width {
+  .app-input {
     width: 40%;
   }
 
-  .example-form{
+  .app-form{
     padding-left: 5%;
 }
 
 .group{
     padding-left: 5%;
-}
-.example-container2{
-    padding-left: 30%;
 }

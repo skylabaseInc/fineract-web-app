@@ -1,6 +1,7 @@
-<p class="group">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/group']">Groups</a>
-  <a>/Create Group</a>
+  <span class="current-space">/Create Group</span>
 </p>
 <p class="group">
       <mat-icon>arrow_forward</mat-icon>
@@ -11,34 +12,34 @@
 </p>
 
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <h3>Create Group</h3>
   <hr>
 
-  <form class="example-form" [formGroup]="form" ngSubmit="onSubmit()" novalidate>
-    <mat-form-field class="example-full-width">
+  <form class="app-form" [formGroup]="form" ngSubmit="onSubmit()" novalidate>
+    <mat-form-field class="app-input">
       <label>Office:</label>
       <mat-select>
         <mat-option value="option">Option</mat-option>
       </mat-select>
     </mat-form-field>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput placeholder="External Id" formControlName="externalId" type="number">
     </mat-form-field>
     <br>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-inut">
       <input matInput placeholder="Name" formControlName="name" required>
     </mat-form-field>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput [matDatepicker]="picker" placeholder="Submitted on">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
     </mat-form-field>
     <br>
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <label>staff:</label>
       <mat-select>
         <mat-option value="option">Option</mat-option>
@@ -49,39 +50,41 @@
     <mat-checkbox>Active</mat-checkbox>
     <br>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput placeholder="Add Client" formControlName="addclient">
     </mat-form-field>
     <button mat-button mat-raised-button color="primary">
       Add >>
     </button>
     <br>
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput placeholder=" Client Details" formControlName="client">
     </mat-form-field>
     <br>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput placeholder=" Name" formControlName="name1">
     </mat-form-field>
     <br>
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput placeholder=" Id" formControlName="id" required type="number">
     </mat-form-field>
     <br>
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput placeholder=" office" formControlName="office">
     </mat-form-field>
     <br>
 
-    <div class="example-container2">
+    <div class="another-div">
+        <button mat-button mat-raised-button color="primary">
+            Submit
+          </button>
     <button mat-button mat-raised-button>
         Cancel
       </button>
 
-      <button mat-button mat-raised-button color="primary">
-        Submit
-      </button>
+      
      </div>
   </form>
+</div>
 </div>

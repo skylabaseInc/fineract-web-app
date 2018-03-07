@@ -1,14 +1,14 @@
-<p class="addpreference">
+<p class="page-space">
   <a [routerLink]="['/navbar/accountnumber']">Account Number Preferences</a>
-  <a>/ Add Account Number Preferences</a>
+  <span class="current-page">/ Add Account Number Preferences</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
-  <h3 class="header">Add Account Number Preferences</h3>
+<div class="main-div mat-elevation-z2">
+  <h3 class="heading">Add Account Number Preferences</h3>
   <hr>
-  <form class="example-form" [formGroup]="form">
+  <form class="app-form" [formGroup]="form">
     Select Account type*:
-    <mat-form-field class="example-full-width" >
+    <mat-form-field class="app-input" >
       <mat-select placeholder="--Select Account type--" class="form-control"  formControlName="account">
         <mat-option *ngFor="let option of options" [value]="option.value">
           {{ option.viewValue }}
@@ -21,19 +21,20 @@
 
     <div *ngIf="show">
       Prefix Field:
-      <mat-form-field class="example-full-width" required>
+      <mat-form-field class="app-input" required>
         <mat-select placeholder="--select prefix type--">
           <mat-option value="option">Option</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
     <br>
-    <button mat-button mat-raised-button class="btn">
+    <button mat-button mat-raised-button color="primary"  class="btn">
+      Submit
+    </button>
+    <button mat-button mat-raised-button>
       Cancel
     </button>
 
-    <button mat-button mat-raised-button color="primary">
-      Submit
-    </button>
+   
   </form>
 </div>

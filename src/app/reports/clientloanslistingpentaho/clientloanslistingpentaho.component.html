@@ -1,53 +1,55 @@
-<div class="fineract-div">Reports/ Run report
-<div class="example-container mat-elevation-z8">
+<div class="page-space">
+    <a [routerLink]="['/navbar/reports/allreports']">Reports</a>
+      <span class="current-page">/ Run report</span>
+<div class="main-div mat-elevation-z2">
   Client Loan Listing
   <div>
       Fund:      
       <mat-form-field>
-        <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+        <mat-select placeholder="--select one--" [formControl]="myControl" required>
           <mat-option>-office-</mat-option>
           <mat-option *ngFor="let fund of funds" [value]="fund">
             {{fund.name}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+        <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
         
       </mat-form-field>
         
         <br/>
         Currency:      
     <mat-form-field>
-      <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+      <mat-select placeholder="--select one--" [formControl]="myControl" required>
         <mat-option>--select one--</mat-option>
         <mat-option *ngFor="let currency of currencies" [value]="currency">
           {{currency.name}}
         </mat-option>
       </mat-select>
-      <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+      <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
       
     </mat-form-field>
     <br/>
     Office:      
     <mat-form-field>
-      <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+      <mat-select placeholder="--select one--" [formControl]="myControl" required>
         <mat-option>--select one--</mat-option>
         <mat-option *ngFor="let office of offices" [value]="office">
           {{office.name}}
         </mat-option>
       </mat-select>
-      <mat-error *ngIf="animalControl.hasError('required')">Please choose an office</mat-error>
+      <mat-error *ngIf="myControl.hasError('required')">Please choose an office</mat-error>
       
     </mat-form-field>
     <br/>
     Loan Purpose:      
     <mat-form-field>
-      <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+      <mat-select placeholder="--select one--" [formControl]="myControl" required>
         <mat-option>--select one--</mat-option>
         <mat-option *ngFor="let purpose of purposes" [value]="purpose">
           {{purpose.name}}
         </mat-option>
       </mat-select>
-      <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+      <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
       
     </mat-form-field>
     

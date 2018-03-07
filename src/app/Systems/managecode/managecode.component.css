@@ -1,18 +1,12 @@
-.example-container{
-    margin-left: 3%;
-    
-}
-.managecode{
-    margin-left: 3%;
-    margin-top: 3%;
-}
-.example-full-width{
+
+.app-input{
     width:40%;
     margin-left: 2%;
 }
 .btn{
     margin-top: 2%;
     margin-left: 35%;
+    width:150px;
 }
 th, td {
     padding: 15px;

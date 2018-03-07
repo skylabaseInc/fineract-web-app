@@ -1,4 +1,4 @@
-.example-container {
+.main-div1 {
     display: flex;
     flex-direction: column;
     max-height: 500px;
@@ -7,35 +7,21 @@
   
   }
 
-  .example-container1{
-    max-height: 500px;
-    min-width: 300px;
-
-  }
-
-  .example-full-width{
+  
+  .app-input{
     width:360px;
   }
 
-  .example-full-width1{
+  .app-input1{
     width:300px;
   }
 
-  .header{
-    margin-top: 2%;
-     margin-left: 2%;
   
-  }
   
-  .mat-table {
-    max-width:1000px;
-    max-height: 500px;
-    margin-left: 1%;
-  }
   
   .btn{
     margin-left:80%;
     margin-top:5px;
-    size:13%;
-    width:15%;
+    
+    
   }

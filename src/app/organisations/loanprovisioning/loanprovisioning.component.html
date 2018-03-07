@@ -1,10 +1,11 @@
-<p class="loanprovisioning">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/organisation']">Organisation</a>
-  <a>/ Provisioning Criteria</a>
+  <span class="current-page">/ Provisioning Criteria</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
-  <mat-form-field class="example-full-width" required>
+<div class="main-div mat-elevation-z2">
+  <mat-form-field class="app-input" required>
     <input matInput type="text" placeholder="Filter by Name">
   </mat-form-field>
   <button mat-button mat-raised-button color="primary" [routerLink]="['/navbar/createprovisioningcriteria']">
@@ -32,4 +33,5 @@
       <td>Mifos</td>
     </tr>
   </table>
+</div>
 </div>

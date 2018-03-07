@@ -1,13 +1,8 @@
-.example-container{
-    margin-left: 10%;
-    margin-right: 5%;
-    
+.btn{
+    width: 100px;
+    margin-left: 40%;
 }
-.searchjournal{
-    margin-left: 10%;
-    margin-top: 5%;
-}
-.example-full-width{
+.app-input{
     width:20%;
     margin-left: 2%;
 }

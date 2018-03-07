@@ -1,13 +1,5 @@
-.example-container{
-    margin-left: 10%;
-    margin-right: 5%;
-    
-}
-.addrule{
-    margin-left: 10%;
-    margin-top: 5%;
-}
-.example-full-width{
+
+.app-input{
     width:30%;
 }
 .btn{
@@ -15,7 +7,7 @@
     margin-top:5%;
     margin-bottom:5%;
 }
-.example-form{
+.app-form{
 margin-left:2%;
 }
 .entries,.debit,.credit{

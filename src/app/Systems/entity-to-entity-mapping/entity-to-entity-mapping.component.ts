@@ -18,7 +18,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./entity-to-entity-mapping.component.css']
 })
 export class EntityToEntityMappingComponent implements OnInit {
-  animalControl = new FormControl('', [Validators.required]);
+  myControl = new FormControl('', [Validators.required]);
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,

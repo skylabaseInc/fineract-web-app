@@ -1,10 +1,11 @@
-<p class="manageemployee">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/organisation']">Organisation</a>
-  <a>/ Manage Employee</a>
+  <span class="current-page">/ Manage Employee</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
-  <mat-form-field class="example-full-width">
+<div class="main-div mat-elevation-z2">
+  <mat-form-field class="app-input">
     <input matInput type="text" placeholder="Filter by name">
   </mat-form-field>
   <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/createemployee']">
@@ -40,4 +41,5 @@
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
   </div>
+</div>
 </div>

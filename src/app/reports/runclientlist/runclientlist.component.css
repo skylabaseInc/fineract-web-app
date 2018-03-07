@@ -1,9 +1,4 @@
-.fineract-div{
-    margin:50px;
-  }
-  .example-container{
-    padding-left:20px;
-}
+
 .fineract-table {
     display: flex;
     flex-direction: column;
@@ -15,10 +10,7 @@
       border:1px solid black;
   }
   
-  .mat-table {
-    overflow: auto;
-    max-height: 500px;
-  }
+  
   .fineract-button{
       margin-left:80%;
   }

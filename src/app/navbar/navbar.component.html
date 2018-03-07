@@ -2,7 +2,7 @@
   <mat-toolbar class="my-toolbar">
     <div>
       <div class="search2">
-    <ul id="menu">
+    <ul id="menu" class="menu1">
       <li>
         <button mat-button (click)="sidenav.toggle()" class="dropdown-button">
           <mat-icon class="fineract-toolicon">menu</mat-icon>
@@ -10,9 +10,12 @@
       </li>
       <li>
         <a [routerLink]="['home']"><img class="fineract-logo" src="assets/index2.png"></a>
+        <span class="logo-title">Apache Fineract</span>
       </li>
       <li>
-        <button mat-button [matMenuTriggerFor]="client" class="dropdown-button">Clients
+       
+        <button mat-button [matMenuTriggerFor]="client" class="dropdown-button"> 
+          <mat-icon>group</mat-icon>Clients
           <mat-icon>arrow_drop_down</mat-icon>
         </button>
         <mat-menu #client="matMenu">
@@ -23,7 +26,6 @@
       </li>
       <li>
         <button mat-button  [routerLink]="['/navbar/accounting']"  class="dropdown-button">Accounting
-          <mat-icon>arrow_drop_down</mat-icon>
         </button>
       </li>
       <li>
@@ -41,7 +43,9 @@
         </mat-menu>
       </li>
       <li>
-        <button mat-button [matMenuTriggerFor]="admin" class="dropdown-button">Admin
+       
+        <button mat-button [matMenuTriggerFor]="admin" class="dropdown-button">
+           <mat-icon>build</mat-icon>Admin
           <mat-icon>arrow_drop_down</mat-icon>
         </button>
         <mat-menu #admin="matMenu">
@@ -59,21 +63,9 @@
     <div class="search1">
     <ul id="menu">
       <li>
-        <input placeholder="Search activities" type="text" class="fineract-toolsearch">
+        <input placeholder="click or press alt + X to Search" type="text" class="fineract-toolsearch">
       </li>
-      <li>
-        <button mat-button [matMenuTriggerFor]="admin" class="dropdown-button">All
-          <mat-icon>arrow_drop_down</mat-icon>
-        </button>
-        <mat-menu #all="matMenu">
-          <button mat-menu-item>All</button>
-          <button mat-menu-item>Clients</button>
-          <button mat-menu-item>Saving</button>
-          <button mat-menu-item>Loans</button>
-          <button mat-menu-item>Accounting</button>
-          <button mat-menu-item>XBRL</button>
-        </mat-menu>
-      </li>
+     
       <li class="dropdown-button">
         <button mat-button [routerLink]="['/navbar/notification']">
           <mat-icon>notifications</mat-icon></button>
@@ -98,7 +90,7 @@
 
 
 
-<mat-sidenav-container class="app-container" >
+<mat-sidenav-container class="app-container" style="background-image:url('assets/Background.png');">
   <mat-sidenav #sidenav class="app-sidenav mat-elevation-z2" mode="side" opened="true">
     <mat-list>
       <a mat-list-item [routerLink]="['/navbar/keyboardshortcut']">
@@ -185,9 +177,9 @@
 
   </mat-sidenav>
   <div class="app-sidenav-content">
-    <div class="wrapper">
+    <div class="wrapper" >
       <router-outlet></router-outlet>
     </div>
-    <p class="fineract-para2">Realise version: 17.07.01.RELEASE | fineract Release date: 4/Jul/2017</p>
+
   </div>
 </mat-sidenav-container>

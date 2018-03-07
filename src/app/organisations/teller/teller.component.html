@@ -1,11 +1,12 @@
-<p class="teller">
+<div class="page-space">
+  <p>
   <a [routerLink]="['/navbar/organisation']">Organisation</a>
-  <a>/ Tellers</a>
+  <span class="current-page">/ Tellers</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
+<div class="main-div mat-elevation-z2">
   <p>
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
       <input matInput type="text" id="position" placeholder="Filter by name/external id">
     </mat-form-field>
     <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/newteller']">
@@ -63,4 +64,5 @@
       </td>
     </tr>
   </table>
+</div>
 </div>

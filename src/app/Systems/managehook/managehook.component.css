@@ -1,11 +1,4 @@
-.example-container{
-    margin-left: 3%;
-    
-}
-.managehook{
-    margin-left: 3%;
-    margin-top: 3%;
-}
+
 
 .btn{
     margin-top: 2%;
@@ -26,6 +19,6 @@ th{
 tr:hover {
     background-color: rgb(16, 179, 233);
 }
-.example-full-width{
+.app-input{
     width:40%;
 }

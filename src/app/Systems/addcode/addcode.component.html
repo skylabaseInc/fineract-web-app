@@ -1,21 +1,22 @@
-<p class="addcode">
+<p class="page-space">
   <a [routerLink]="['/navbar/system']">System</a>
   <a [routerLink]="['/navbar/managecode']"> / Manage Code</a>
-  <a> / Add Code</a> 
+  <span class="current-page"> / Add Code</span> 
 </p>
 
-<div class="example-container mat-elevation-z2">
-  <h3 class="header">Add Code</h3>
+<div class="main-div mat-elevation-z2">
+  <h3 class="heading">Add Code</h3>
   <hr>
    
-  <form class="example-form" [formGroup]="form">
+  <form class="app-form" [formGroup]="form">
     Code name*:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
         <input matInput type="text" class="form-control" [formControl]="code" formControlName="code">
         <mat-error *ngIf="code.hasError('required')">Required field</mat-error>
     </mat-form-field>
     <br>
-    <button mat-button mat-raised-button class="btn">Cancel</button>
-    <button mat-button mat-raised-button color="primary">Submit</button>
+    <button mat-button mat-raised-button color="primary" class="btn">Submit</button>
+    <button mat-button mat-raised-button >Cancel</button>
+    
   </form>
 </div>

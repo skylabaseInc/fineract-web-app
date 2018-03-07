@@ -1,22 +1,10 @@
-.example-container {
-    display: flex;
-    flex-direction: column;
-    max-height: 500px;
-    min-width: 300px;
-    margin-left: 10%;
-    margin-right:5%;
-  
-  }
 
-  .example-full-width{
+
+  .app-filter{
     width:300px;
     margin-left:1%;
   }
-  .accountclosure{
-    margin-top: 4%;
-     margin-left: 10%;
-  
-  }
+
 
   .mat-table {
     max-width:1000px;
@@ -26,11 +14,4 @@
   .btn{
     margin-left:70%;
   }
-  .account{
-    margin-left:2%;
-  }
-
-.btn2{
-    width:2px;
-    margin-left: 30%;
-}
+ 

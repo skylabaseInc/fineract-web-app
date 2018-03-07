@@ -1,11 +1,11 @@
-<div class="fineract-div">product / loan products / create loan
-  <div class="example-container mat-elevation-z8">
+<div class="page-space">product / loan products / create loan
+  <div class="main-div mat-elevation-z8">
     <h2>Details</h2>
     <mat-divider></mat-divider>
     <div>
       
         <label> Product Name:</label>
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           <mat-hint>Required!</mat-hint>
           <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -15,7 +15,7 @@
         </mat-form-field>
       
       
-        <label class="example-full-width2"> Short Name:</label>
+        <label class="app-input2"> Short Name:</label>
         <mat-form-field class="">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           <mat-hint>Required!</mat-hint>
@@ -32,7 +32,7 @@
        
         <textarea matInput matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>
       </mat-form-field>
-     <label class="example-full-width2"> Fund:</label>
+     <label class="app-input2"> Fund:</label>
       <mat-form-field>
         <mat-select placeholder="Select fund">
           <mat-option *ngFor="let fund of funds" [value]="fund.value">
@@ -48,7 +48,7 @@
         <mat-datepicker #picker1></mat-datepicker>
       </mat-form-field>
 
-      <mat-form-field class="example-full-width2">
+      <mat-form-field class="app-input2">
         <input matInput [matDatepicker]="picker2" placeholder="Close Date">
         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
         <mat-datepicker #picker2></mat-datepicker>
@@ -63,19 +63,19 @@
     <div>
       Currency:
       <mat-form-field>
-        <mat-select placeholder="--select one--" [formControl]="animalControl" required>
+        <mat-select placeholder="--select one--" [formControl]="myControl" required>
           <mat-option>--select one--</mat-option>
           <mat-option *ngFor="let currency of currencies" [value]="currency">
             {{currency.name}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="animalControl.hasError('required')">This field is required</mat-error>
+        <mat-error *ngIf="myControl.hasError('required')">This field is required</mat-error>
 
       </mat-form-field>
       
-      <label class="example-full-width2">Decimal places:</label>
+      <label class="app-input2">Decimal places:</label>
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput value="2" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           <mat-hint>Required!</mat-hint>
           <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -89,7 +89,7 @@
     <div>
      <label> Currency in multiples of :</label>
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput value="0" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           <mat-hint>Required!</mat-hint>
           <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -102,7 +102,7 @@
     <div>
       <label>Installment in multiples of:</label>
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput value="" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           <mat-hint>Required!</mat-hint>
           <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -119,7 +119,7 @@
     <div>
       <label>Principal:</label>
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput placeholder="Minimum" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
          
           <mat-hint>Required!</mat-hint>
@@ -128,7 +128,7 @@
             <strong>required</strong>
           </mat-error>
         </mat-form-field>
-        <mat-form-field class="example-full-width3">
+        <mat-form-field class="app-input3">
          
           <input matInput placeholder="Default" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           
@@ -138,7 +138,7 @@
             <strong>required</strong>
           </mat-error>
         </mat-form-field>
-        <mat-form-field class="example-full-width4">
+        <mat-form-field class="app-input4">
           
           <input matInput placeholder="Maximum" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           <mat-hint>Required!</mat-hint>
@@ -152,7 +152,7 @@
       
       <label>Number of Repayments:</label>
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput placeholder="Minimum" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           
           <mat-hint>Required!</mat-hint>
@@ -161,7 +161,7 @@
             <strong>required</strong>
           </mat-error>
         </mat-form-field>
-        <mat-form-field class="example-full-width3">
+        <mat-form-field class="app-input3">
           
           <input matInput placeholder="Default" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           
@@ -171,7 +171,7 @@
             <strong>required</strong>
           </mat-error>
         </mat-form-field>
-        <mat-form-field class="example-full-width4">
+        <mat-form-field class="app-input4">
          
           <input matInput placeholder="Maximum" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           <mat-hint>Required!</mat-hint>
@@ -188,18 +188,18 @@
     <div>
       Norminal interest rate:
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput placeholder="Minimum" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           
 
         </mat-form-field>
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           
           <input matInput placeholder="Default" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           
           
         </mat-form-field>
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           
           <input matInput placeholder="Maximum" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           
@@ -216,7 +216,7 @@
     <div>
       Repaid Every:
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           <mat-hint>Required!</mat-hint>
           <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -225,7 +225,7 @@
           </mat-error>
         </mat-form-field>
       
-      <mat-form-field class="example-full-width4">
+      <mat-form-field class="app-input4">
         <mat-select placeholder="Months">
           <mat-option *ngFor="let day of days" [value]="day.value">
             {{ day.viewValue }}
@@ -236,7 +236,7 @@
     <div>
       Minimum days between disbursal and first repayment date
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
 
         </mat-form-field>
@@ -247,37 +247,37 @@
     <div>
       Amortization:
       <mat-form-field>
-        <mat-select placeholder="Equal installments" [formControl]="animalControl" required>
+        <mat-select placeholder="Equal installments" [formControl]="myControl" required>
           <mat-option>Equal installments</mat-option>
           <mat-option *ngFor="let amortization of amortizations" [value]="amortization">
             {{amortization.name}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="animalControl.hasError('required')">this field is required</mat-error>
+        <mat-error *ngIf="myControl.hasError('required')">this field is required</mat-error>
 
       </mat-form-field>
       Interest method:
-      <mat-form-field class="example-full-width2">
-        <mat-select placeholder="Declining balance" [formControl]="animalControl" required>
+      <mat-form-field class="app-input2">
+        <mat-select placeholder="Declining balance" [formControl]="myControl" required>
           <mat-option>Flat</mat-option>
           <mat-option *ngFor="let method of methods" [value]="method">
             {{method.name}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="animalControl.hasError('required')">this field is required</mat-error>
+        <mat-error *ngIf="myControl.hasError('required')">this field is required</mat-error>
 
       </mat-form-field>
     </div>
     <div>
       Interest calculation period:
       <mat-form-field>
-        <mat-select placeholder="Same as repayment period" [formControl]="animalControl" required>
+        <mat-select placeholder="Same as repayment period" [formControl]="myControl" required>
           <mat-option>Daily</mat-option>
           <mat-option *ngFor="let system  of systems" [value]="system">
             {{system.name}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="animalControl.hasError('required')">this field is required</mat-error>
+        <mat-error *ngIf="myControl.hasError('required')">this field is required</mat-error>
 
       </mat-form-field>
       calculate interest for exact days in partial periods
@@ -286,24 +286,24 @@
     <div>
       Repayment strategy:
       <mat-form-field>
-      <mat-select placeholder="Penalties,Fees,Interest,Principal order" [formControl]="animalControl" required>
+      <mat-select placeholder="Penalties,Fees,Interest,Principal order" [formControl]="myControl" required>
         <mat-option>Penalties, Fees,Interest,Principal order</mat-option>
         <mat-option *ngFor="let strategy of strategies" [value]="strategy">
           {{strategy.name}}
         </mat-option>
       </mat-select>
-      <mat-error *ngIf="animalControl.hasError('required')">this field is required</mat-error>
+      <mat-error *ngIf="myControl.hasError('required')">this field is required</mat-error>
 
       </mat-form-field>
     </div>
     <div>
       Moratorium:
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput placeholder="On principal payment" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           
         </mat-form-field>
-        <mat-form-field class="example-full-width3">
+        <mat-form-field class="app-input3">
           
             <input matInput placeholder="On Interest payment" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
           </mat-form-field>
@@ -312,13 +312,13 @@
     <div>
       Interest free period:
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
         </mat-form-field>
       
-      <label class="example-full-width3">Arrears tolerance:</label>
+      <label class="app-input3">Arrears tolerance:</label>
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
         </mat-form-field>
       
@@ -326,24 +326,24 @@
     <div>
       Days in year:
       <mat-form-field>
-        <mat-select placeholder="Actual" [formControl]="animalControl" required>
+        <mat-select placeholder="Actual" [formControl]="myControl" required>
           <mat-option>Actual</mat-option>
           <mat-option *ngFor="let yearday of yeardays" [value]="yearday">
             {{yearday.name}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="animalControl.hasError('required')">this field is required</mat-error>
+        <mat-error *ngIf="myControl.hasError('required')">this field is required</mat-error>
 
       </mat-form-field>
-     <label class="example-full-width2"> Days in month:</label>
+     <label class="app-input2"> Days in month:</label>
       <mat-form-field>
-        <mat-select placeholder="Actual" [formControl]="animalControl" required>
+        <mat-select placeholder="Actual" [formControl]="myControl" required>
           <mat-option>Actual</mat-option>
           <mat-option *ngFor="let monthday of monthdays" [value]="monthday">
             {{monthday.name}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="animalControl.hasError('required')">this field is required</mat-error>
+        <mat-error *ngIf="myControl.hasError('required')">this field is required</mat-error>
 
       </mat-form-field>
     </div>
@@ -352,7 +352,7 @@
     <div>
       Number of days a loan may be over due before moving into arears:
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput placeholder="On Arrears Aging" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
         </mat-form-field>
       
@@ -360,7 +360,7 @@
     <div>
       Maximun number of days a loan may be over due before moving into an NPA(non performing asset):
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput placeholder="Overdue Days For NPA" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
         </mat-form-field>
       
@@ -370,7 +370,7 @@
     <div>
       Principal threshold (%) For Last Installment:
       
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="app-input">
           <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
         </mat-form-field>
       
@@ -408,24 +408,24 @@
     <div>
       Amortization
       <mat-checkbox></mat-checkbox>
-      <label class="example-full-width2">Interest Method</label>
+      <label class="app-input2">Interest Method</label>
       <mat-checkbox></mat-checkbox>
     </div>
     <div>
       Repayment Strategy
       <mat-checkbox></mat-checkbox>
-      <label class="example-full-width2">Interest Calculation Period</label>
+      <label class="app-input2">Interest Calculation Period</label>
       <mat-checkbox></mat-checkbox>
     </div>
     <div>Arrears Tolerance
       <mat-checkbox></mat-checkbox>
-      <label class="example-full-width2">Repaid every</label>
+      <label class="app-input2">Repaid every</label>
       <mat-checkbox></mat-checkbox>
     </div>
     <div>
       Moratorium
       <mat-checkbox></mat-checkbox>
-      <label class="example-full-width3">Number of days a loan may be overdue before moving into arrears</label>
+      <label class="app-input3">Number of days a loan may be overdue before moving into arrears</label>
       <mat-checkbox></mat-checkbox>
     </div>
     <h2>charges</h2>

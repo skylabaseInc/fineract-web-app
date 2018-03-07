@@ -8,7 +8,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./fundssummaryofficepentaho.component.css']
 })
 export class FundssummaryofficepentahoComponent implements OnInit {
-  animalControl = new FormControl('', [Validators.required]);
+  myControl = new FormControl('', [Validators.required]);
 
   currencies = [
     { name: 'US Dollar' },

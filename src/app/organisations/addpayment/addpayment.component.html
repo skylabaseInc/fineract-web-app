@@ -1,33 +1,33 @@
-<p class="addpayment">
+<div class="page-space">
+  <p>
     <a [routerLink]="['/navbar/organisation']">Organisation</a>
     <a [routerLink]="['/navbar/paymenttype']">/ Payment Type</a>
-    <a>Create Payment Type</a>
+    <span class="current-page">/Create Payment Type</span>
   </p>
 
-  <div class="example-container mat-elevation-z2">
+  <div class="main-div mat-elevation-z2">
     <h2 class="header">Create Payment Type</h2>
     <hr>
-    <form class="example-form" [formGroup]="form" >
+    <form class="app-form" [formGroup]="form">
       Payment Type*:
-      <mat-form-field class="example-full-width" required>
-          <input matInput type="text" id="fname" class="form-control" [formControl]="type" formControlName="type">
-          <mat-error *ngIf="type.hasError('required')">Required field</mat-error>
-        </mat-form-field>
-        <br>
-      Description:
-      <textarea matInput type="text" formControlName="description"></textarea>  
-       <br>
-       <mat-checkbox>Is Cash Payment?</mat-checkbox>
-       <br>
-       Position:
-       <mat-form-field class="example-full-width" required>
-          <input matInput type="text" id="position" class="form-control" formControlName="position">
-        </mat-form-field>
-        <br>
+      <mat-form-field class="app-input" required>
+        <input matInput type="text" id="fname" class="form-control" [formControl]="type" formControlName="type">
+        <mat-error *ngIf="type.hasError('required')">Required field</mat-error>
+      </mat-form-field>
+      <br> Description:
+      <textarea matInput type="text" formControlName="description"></textarea>
+      <br>
+      <mat-checkbox>Is Cash Payment?</mat-checkbox>
+      <br> Position:
+      <mat-form-field class="app-input" required>
+        <input matInput type="text" id="position" class="form-control" formControlName="position">
+      </mat-form-field>
+      <br>
+      <button mat-button mat-raised-button color="primary" class="btn">Submit</button>
 
-        <button mat-button mat-raised-button class="btn">Cancel</button>
-        <button mat-button mat-raised-button color="primary">Submit</button>
+      <button mat-button mat-raised-button>Cancel</button>
 
 
     </form>
   </div>
+</div>

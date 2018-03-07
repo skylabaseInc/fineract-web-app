@@ -1,14 +1,15 @@
-<p class="bulkloan">
+<div class="page-space">
+  <p>
     <a [routerLink]="['/navbar/organisation']">Organisation</a>
-    <a>/ Bulk Loan Reassignment</a>
+    <span class="current-page">/ Bulk Loan Reassignment</span>
   </p>
 
-  <div class="example-container mat-elevation-z2">
+  <div class="main-div mat-elevation-z2">
     <h2 class="header" >Bulk Loan Reassignment</h2>
     <hr>
-    <form class="example-form" [formGroup]="form">
+    <form class="app-form" [formGroup]="form">
         Office*:
-        <mat-form-field class="example-full-width" required>
+        <mat-form-field class="app-input" required>
             <mat-select placeholder="">
               <mat-option *ngFor="let option of options" [value]="option.value">
                 {{ option.viewValue }}
@@ -17,27 +18,29 @@
           </mat-form-field>
           <br>
           Assignment date*:
-        <mat-form-field class="example-full-width" required>
+        <mat-form-field class="app-input" required>
             <input matInput [matDatepicker]="picker" placeholder="" required formControlName="date">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
           </mat-form-field>
           <br>
           From loan officer*:
-          <mat-form-field class="example-full-width" required>
+          <mat-form-field class="app-input" required>
               <mat-select placeholder="Select one">
                   <mat-option value="option">Option</mat-option>
                 </mat-select>
               </mat-form-field>
               <br>
               To loan officer*:
-          <mat-form-field class="example-full-width" required>
+          <mat-form-field class="app-input" required>
               <mat-select placeholder="Select one">
                   <mat-option value="option">Option</mat-option>
                 </mat-select>
               </mat-form-field>
               <br>
-              <button mat-button mat-raised-button class="btn">Cancel</button>
-              <button mat-button mat-raised-button color="primary">Submit</button>
+              <button mat-button mat-raised-button color="primary" class="btn">Submit</button>
+              <button mat-button mat-raised-button >Cancel</button>
+              
     </form>
+  </div>
   </div>

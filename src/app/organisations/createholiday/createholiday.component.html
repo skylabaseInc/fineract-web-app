@@ -1,30 +1,31 @@
-<p class="createholiday">
+<div class="createholiday">
+  <p>
   <a [routerLink]="['/navbar/organisation']">Organisation</a>
   <a [routerLink]="['/navbar/manageholidays']">/Manage Offices</a>
-  <a>/Create Holiday</a>
+  <span class="current-page">/Create Holiday</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
-  <form class="example-form" [formGroup]="form">
+<div class="main-div mat-elevation-z2">
+  <form class="app-form" [formGroup]="form">
     Name*:
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
       <input matInput type="text" id="office" class="form-control" [formControl]="name" formControlName="name">
       <mat-error *ngIf="name.hasError('required')">Required field</mat-error>
     </mat-form-field>
     <br> From date*:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput [matDatepicker]="picker" placeholder="" required formControlName="fromdate">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
     </mat-form-field>
     To date*:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput [matDatepicker]="picker1" placeholder="" required formControlName="todate">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
     </mat-form-field>
     <br> Repayment Scheduling Type*:
-    <mat-form-field class="example-full-width" required>
+    <mat-form-field class="app-input" required>
       <mat-select placeholder="">
         <mat-option *ngFor="let option of options" [value]="option.value">
           {{ option.viewValue }}
@@ -33,13 +34,13 @@
     </mat-form-field>
     <br>
     Repayment scheduled to*:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
       <input matInput [matDatepicker]="picker2" placeholder="" required formControlName="fromdate">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker2 startView="year" [startAt]="startDate"></mat-datepicker>
     </mat-form-field>
     <br> Description:
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="app-input">
         <textarea matInput placeholder=""></textarea>
       </mat-form-field>
               <br>
@@ -64,5 +65,6 @@
     <button mat-button mat-raised-button class="btn">Cancel</button>
     <button mat-button mat-raised-button color="primary">Submit</button>          
     </form>
+  </div>
   </div>
   

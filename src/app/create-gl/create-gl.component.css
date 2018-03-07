@@ -1,13 +1,5 @@
-.example-container{
-    margin-left: 5%;
-    margin-right: 5%;
-    
-}
-.creategl{
-    margin-left: 5%;
-    margin-top: 3%;
-}
-.example-full-width{
+
+.app-input{
     width:40%;
 
 }
@@ -19,6 +11,6 @@
 .check{
     margin-left: 5%;
 }
-.example-form{
+.app-form{
     margin-left: 2%;
 }

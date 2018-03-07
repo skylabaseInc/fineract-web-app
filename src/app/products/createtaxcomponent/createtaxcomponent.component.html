@@ -1,11 +1,11 @@
-<div class="fineract-div">product / savings products / create saving
-    <div class="example-container mat-elevation-z8">
+<div class="page-space">product / savings products / create saving
+    <div class="main-div mat-elevation-z8">
       <h2>Create Tax Component</h2>
       <mat-divider></mat-divider>
       <div>
       Name:
-      <form class="example-form">
-          <mat-form-field class="example-full-width">
+      <form class="app-form">
+          <mat-form-field class="app-input">
             <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
             <mat-hint>Required!</mat-hint>
             <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -17,8 +17,8 @@
         </div>
         <div>
           Percentage:
-            <form class="example-form">
-                <mat-form-field class="example-full-width">
+            <form class="app-form">
+                <mat-form-field class="app-input">
                   <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                   <mat-hint>Required!</mat-hint>
                   <mat-error *ngIf="emailFormControl.hasError('required')">

@@ -1,9 +1,10 @@
-<p class="currency">
+<div class="page-space">
+  <p>
     <a [routerLink]="['/navbar/organisation']">Organisation</a>
-    <a>/ Currency Configuration</a>
+    <span class="current-page">/ Currency Configuration</span>
   </p>
 
-  <div class="example-container mat-elevation-z2">
+  <div class="main-div mat-elevation-z2">
     <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/addcurrency']">
       <mat-icon>add</mat-icon>Add/Edit</button>
       
@@ -26,3 +27,4 @@
         </tr>
       </table>
   </div>
+</div>

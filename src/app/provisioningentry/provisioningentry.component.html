@@ -1,9 +1,10 @@
-<p class="provisioning">
+<div class="page-space">
+  <p>
     <a [routerLink]="['/navbar/accounting']">Accounting</a>
-    <a>/View Provisioning Entry</a>
+    <span class="current-page">/View Provisioning Entry</span>
   </p>
 
-  <div class="example-container mat-elevation-z2">
+  <div class="main-div mat-elevation-z2">
     <p class="line"> 
     
     <button mat-button mat-raised-button color="primary" class="btn" [routerLink]="['/navbar/createprovisioning']">
@@ -51,9 +52,12 @@
     
       </div>
       <br>
+      <div>
       <button mat-button mat-raised-button color="primary" class="btn2">
         <mat-icon>arrow_back</mat-icon>previous</button>
 
       <button mat-button mat-raised-button color="primary" class="btn3">
        next<mat-icon>arrow_forward</mat-icon> </button>  
+       </div>
+  </div>
   </div>

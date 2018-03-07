@@ -1,24 +1,20 @@
-.example-container {
+.main-div {
     display: flex;
     flex-direction: column;
     max-height: 500px;
     min-width: 300px;
     margin-left: 2%;
   }
-  .example-container1{
+  .app-container1{
     max-height: 500px;
     min-width: 300px;
   
 
   }
-  .example-full-width{
+  .app-input{
     width:300px;
   }
-  .header{
-    margin-top: 2%;
-     margin-left: 2%;
   
-  }
   
   .mat-table {
     max-width:1000px;

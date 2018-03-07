@@ -8,7 +8,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./generalledgerreport.component.css']
 })
 export class GeneralledgerreportComponent implements OnInit {
-  animalControl = new FormControl('', [Validators.required]);
+  myControl = new FormControl('', [Validators.required]);
 
   decimals = [
     { value: 'zero', viewValue: 'Zero decimal places' },

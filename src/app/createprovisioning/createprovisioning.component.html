@@ -1,12 +1,12 @@
-<p class="createprovisioning">
+<p class="page-space">
     <a [routerLink]="['/navbar/accounting']">Accounting</a>
     <a [routerLink]="['/navbar/provisioningentry']">/ View Provisioning Entries</a>
-    <a>/Create Provisioning Entries</a>
+    <span class="current-page">/Create Provisioning Entries</span>
   </p>
 
-  <div class="example-container mat-elevation-z2">
+  <div class="main-div mat-elevation-z2">
    
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="app-input">
           <input matInput [matDatepicker]="picker" placeholder="Provisioning Criteria">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
@@ -14,5 +14,5 @@
 
         <mat-checkbox class="check">Create Journal Entries</mat-checkbox> 
 
-        <button mat-button mat-raised-button color="primary" class="btn">Submit</button>
+        <button mat-raised-button color="primary" class="btn">Submit</button>
   </div>

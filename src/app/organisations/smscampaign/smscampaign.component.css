@@ -1,13 +1,5 @@
-.example-container{
-    margin-left: 5%;
-    margin-right: 5%;
-    
-}
-.smscampaign{
-    margin-left: 5%;
-    margin-top: 5%;
-}
-.example-full-width{
+
+.app-input{
     width:40%;
     margin-left: 2%;
     margin-right: 20%;
@@ -23,4 +15,5 @@ th, td {
 }
 .btn{
     margin-left: 30%;
+    width:200px;
 }

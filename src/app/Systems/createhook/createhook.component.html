@@ -1,14 +1,14 @@
-<p class="createhook">
+<p class="page-space">
   <a [routerLink]="['/navbar/managehook']">Manage Hooks</a>
-  <a> Create Hook</a>
+  <span class="current-page"> Create Hook</span>
 </p>
 
-<div class="example-container mat-elevation-z2">
-  <h3 class="header">Create Hook</h3>
+<div class="main-div mat-elevation-z2">
+  <h3 class="heading">Create Hook</h3>
   <hr>
-  <form class="example-form">
+  <form class="app-form">
   Hook template*:
-  <mat-form-field class="example-full-width">
+  <mat-form-field class="app-input">
     <mat-select placeholder="Select Template">
       <mat-option value="option1">@@@@</mat-option>
       <mat-option value="option2">$$$$$</mat-option>
@@ -17,7 +17,8 @@
   </mat-form-field>
   <br>
   <br>
-  <button mat-button mat-raised-button class="btn">Cancel</button>
-  <button mat-button mat-raised-button color="primary">Submit</button>
+  <button mat-button mat-raised-button color="primary"  class="btn">Submit</button>
+  <button mat-button mat-raised-button>Cancel</button>
+  
 </form>
 </div>

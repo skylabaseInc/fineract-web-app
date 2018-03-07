@@ -7,7 +7,7 @@ import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/form
   styleUrls: ['./createcharge.component.css']
 })
 export class CreatechargeComponent implements OnInit {
-  animalControl = new FormControl('', [Validators.required]);
+  myControl = new FormControl('', [Validators.required]);
 
 
   charges=[{name:'Loan'}, {name:'Savings and Deposit'}, {name:'Client'},{name:'Shares'}];

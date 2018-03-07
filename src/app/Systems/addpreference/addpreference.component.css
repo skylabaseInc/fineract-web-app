@@ -1,19 +1,10 @@
-.example-container{
-    margin-left: 3%;
-    
-}
-.addpreference{
-    margin-left: 3%;
-    margin-top: 3%;
-}
-.example-full-width{
+
+.app-input{
     width:40%;
     margin-left: 2%;
 }
-.header{
-    margin:2%;
-}
-.example-form{
+
+.app-form{
     margin-left: 10%;
 }
 .btn{
