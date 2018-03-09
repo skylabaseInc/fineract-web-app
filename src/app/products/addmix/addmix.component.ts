@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddmixComponent implements OnInit {
 
+  charges=[{value:'select charge',viewvalue:'select charge'},];
+
   constructor() { }
 
   ngOnInit() {

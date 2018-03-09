@@ -42,6 +42,7 @@ dataSource = new MatTableDataSource(ELEMENT_DATA);
   interestcalcs=[{name:'Daily Balance'},{name:'Annual Daily Balance'}];
   days=[{name:'360 Days'}];
   periods=[{name:'Days'},{name:'Weeks'},{name:'Months'},{name:'Years'}];
+  charges=[{value:'select charge',viewvalue:'select charge'},];
 
   constructor() { }
 

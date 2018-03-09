@@ -164,8 +164,7 @@ import { EditconfS3Component } from './Systems/editconf-s3/editconf-s3.component
 import { EditconfSmsComponent } from './Systems/editconf-sms/editconf-sms.component';
 import { EditconfEmailComponent } from './Systems/editconf-email/editconf-email.component';
 import { EntityToEntityMappingComponent } from './Systems/entity-to-entity-mapping/entity-to-entity-mapping.component';
-import { SidenavOverviewExampleComponent } from './sidenav-overview-example/sidenav-overview-example.component';
-import { ToolbarComponent } from './toolbar/toolbar.component'
+
 
 
 
@@ -173,7 +172,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component'
 
 const ROUTES: Route[] = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
-    { path: 'sidenav', component: SidenavOverviewExampleComponent },
+    
     { path: 'login', component: LoginComponent },
     {
         path: 'navbar', component: NavbarComponent, children: [
@@ -505,8 +504,7 @@ const ROUTES: Route[] = [
         EditconfSmsComponent,
         EditconfEmailComponent,
         EntityToEntityMappingComponent,
-        SidenavOverviewExampleComponent,
-        ToolbarComponent
+       
     ],
     imports: [
         RouterModule.forRoot(ROUTES),

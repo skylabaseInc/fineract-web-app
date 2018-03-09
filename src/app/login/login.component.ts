@@ -28,7 +28,7 @@ export class LoginComponent{
     });
   }
 
-public onLoginClick(loginForm){
+public onLoginClick(){
   this.router.navigate(['./navbar']);
 }
 
