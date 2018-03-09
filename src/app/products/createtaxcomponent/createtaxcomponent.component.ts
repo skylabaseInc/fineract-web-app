@@ -33,7 +33,9 @@ export class CreatetaxcomponentComponent implements OnInit {
   {value:'LIABILITY',viewValue:'LIABILITY'},
   {value:'EQUITY',viewValue:'EQUITY'},
   {value:'INCOME',viewValue:'INCOME'},
-  {value:'EXPENSE',viewValue:'EXPENSE'}]
+  {value:'EXPENSE',viewValue:'EXPENSE'}];
+
+  charges=[{value:'select charge',viewvalue:'select charge'},];
 
   constructor() { }
 

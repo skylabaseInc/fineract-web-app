@@ -39,6 +39,8 @@ interestposts=[{name:'Quarterly'},{name:'BiAnnual'},{name:'Annually'}];
 interestcalcs=[{name:'Daily Balance'},{name:'Annual Daily Balance'}];
 days=[{name:'360 Days'}];
 periods=[{name:'Days'},{name:'Weeks'},{name:'Months'},{name:'Years'}];
+charges=[{value:'select charge',viewvalue:'select charge'},];
+terms=[{value:'select term',viewvalue:'select term'},];
 
   constructor() { }
 

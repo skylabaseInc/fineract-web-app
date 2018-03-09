@@ -33,6 +33,8 @@ export class CreateReportsComponent implements OnInit {
     name:'Chart'
   },
 {name:'Pentaho'}];
+periods=[{name:'Days'},{name:'Weeks'},{name:'Months'},{name:'Years'}];
+charges=[{value:'select charge',viewvalue:'select charge'},];
 
   constructor() { }
 
