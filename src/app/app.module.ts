@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router'
+import {HttpModule} from '@angular/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -164,6 +165,7 @@ import { EditconfS3Component } from './Systems/editconf-s3/editconf-s3.component
 import { EditconfSmsComponent } from './Systems/editconf-sms/editconf-sms.component';
 import { EditconfEmailComponent } from './Systems/editconf-email/editconf-email.component';
 import { EntityToEntityMappingComponent } from './Systems/entity-to-entity-mapping/entity-to-entity-mapping.component';
+import { HttpTestComponent } from './http-test/http-test.component';
 
 
 
@@ -172,7 +174,7 @@ import { EntityToEntityMappingComponent } from './Systems/entity-to-entity-mappi
 
 const ROUTES: Route[] = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
-    
+    {path: 'http' , component: HttpTestComponent},
     { path: 'login', component: LoginComponent },
     {
         path: 'navbar', component: NavbarComponent, children: [
@@ -504,11 +506,12 @@ const ROUTES: Route[] = [
         EditconfSmsComponent,
         EditconfEmailComponent,
         EntityToEntityMappingComponent,
+        HttpTestComponent,
        
     ],
     imports: [
         RouterModule.forRoot(ROUTES),
-        BrowserModule,
+        BrowserModule,HttpModule,
         CommonModule, FormsModule, ReactiveFormsModule,
         BrowserAnimationsModule, MatDatepickerModule, MatNativeDateModule,
         MatIconModule, MatButtonModule, MatFormFieldModule, MatMenuModule, MatOptionModule,

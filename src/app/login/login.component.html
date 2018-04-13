@@ -6,12 +6,12 @@
   </div>
 <div class="login-div mat-elevation-z2">
   <mat-icon class="app-input">person</mat-icon>
-  <input mat-input placeholder="Username" class="app-input">
+  <input mat-input placeholder="Username" class="app-input" [(ngModel)]="localUser.username">
   <br>
   <mat-icon class="app-input">https</mat-icon>
-  <input mat-input placeholder="password" class="app-input">
+  <input mat-input placeholder="password" class="app-input" [(ngModel)]="localUser.password">
   <p>
-  <button mat-raised-button color="primary" type="submit" class="btn" (click)="onLoginClick()">Sign In</button>
+  <button mat-raised-button color="primary" type="submit" class="btn" (click)="login()">Sign In</button>
   </p>
   <p class="app-input">Forgot password?<span style="color:#3498dB;" class="app-input">Contact your Administrator</span></p>
 </div> 
