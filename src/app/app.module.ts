@@ -168,6 +168,9 @@ import { EntityToEntityMappingComponent } from './Systems/entity-to-entity-mappi
 import { HttpTestComponent } from './http-test/http-test.component';
 
 
+import { LoginService } from './login.service'
+import { HttpClientModule } from '@angular/common/http';
+import { ClientService } from './client.service';
 
 
 
@@ -325,30 +328,6 @@ const ROUTES: Route[] = [
             { path: 'audit', component: AuditComponent },
             { path: 'entitytoentitymapping', component: EntityToEntityMappingComponent },
            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         ]
     },
@@ -519,10 +498,13 @@ const ROUTES: Route[] = [
         MatToolbarModule, MatSidenavModule, MatListModule, MatCheckboxModule, MatInputModule,
         MatTableModule, MatCardModule, MatSelectModule, MatListModule, MatDividerModule,
         MatAutocompleteModule, MatRadioModule, MatListModule, MatTabsModule,
-        MatExpansionModule, MatDialogModule, MatChipsModule
+        MatExpansionModule, MatDialogModule, MatChipsModule, HttpClientModule
     ],
 
-    providers: [],
+    providers: [
+        LoginService,
+        ClientService
+    ],
     bootstrap: [AppComponent],
     entryComponents: [DeleteprovisioningDialogComponent]
 })

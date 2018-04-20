@@ -1,32 +1,16 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import {Router } from '@angular/router'
-import {HttpServiceService} from '../http-service.service';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
-  providers: [HttpServiceService]
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent{
 
-  localUser = {
-    username: '',
-    password: ''
-  }
-  
-  constructor(private _service:HttpServiceService, private _router:Router){}
-
-  login(){
-    this._service.loginfn(this.localUser).then((res) => {
-      if(res)
-      this._router.navigate(['navbar']);
-      else 
-          console.log(res);
-    })
-  }
-
+  username: string
+  password: string
 
   languages = [
     {value: 'eng', viewValue: 'English'},
@@ -34,10 +18,10 @@ export class LoginComponent{
     {value: 'por', viewValue: 'Portuguese'}
   ];
 
- /* form: FormGroup;                    
+  form: FormGroup;                    
   constructor(
     private fb: FormBuilder,
-    private router:Router,    
+    private loginService: LoginService
   ) {}
 
   ngOnInit() {
@@ -47,9 +31,9 @@ export class LoginComponent{
     });
   }
 
-public onLoginClick(){
-  this.router.navigate(['./navbar']);
-}
-*/
+  login(){
+    this.loginService.authenticate(this.username, this.password)
+  }
+
 
 }
