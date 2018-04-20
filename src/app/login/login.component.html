@@ -6,10 +6,10 @@
   </div>
 <div class="login-div mat-elevation-z2">
   <mat-icon class="app-input">person</mat-icon>
-  <input mat-input placeholder="Username" class="app-input" [(ngModel)]="localUser.username">
+  <input mat-input placeholder="Username" class="app-input" [(ngModel)]="username">
   <br>
   <mat-icon class="app-input">https</mat-icon>
-  <input mat-input placeholder="password" class="app-input" [(ngModel)]="localUser.password">
+  <input mat-input placeholder="password" class="app-input" [(ngModel)]="password" name="password">
   <p>
   <button mat-raised-button color="primary" type="submit" class="btn" (click)="login()">Sign In</button>
   </p>

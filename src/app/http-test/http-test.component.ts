@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpServiceService} from '../http-service.service';
 import { Http, Response, Headers } from '@angular/http';
 
 @Component({
